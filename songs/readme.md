@@ -6,7 +6,7 @@ P2P是直接由用户之间点对点传输，你的下载速度是由其他用�
 **如果你不想使用ResilioSync，请[点我进入网盘下载曲包](http://bs.wgzeyu.com/drive/)**。（在前两个网盘的`歌曲压缩包`文件夹）  
 
 ## 操作步骤
-1. 下载并安装ResilioSync：(在`工具`文件夹内) **<a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank">国内网盘下载</a> | <a href="http://bs.wgzeyu.com/drive/" target="_blank">备用网盘下载</a> | <a href="https://www.resilio.com/individuals/" target="_blank">进入官网下载</a>** (**安装时切勿勾选`安装为服务`**；如果你打不开官网，请通过网盘下载)
+1. [点我进入官网下载Resilio-Sync](https://www.resilio.com/individuals/) 👉 打开下到的文件 👉 不要勾选`安装为服务` 👉 点击下一步即可安装  
 2. 打开ResilioSync 👉 同意协议 👉 点击右上方的【齿轮】图标 👉 将【默认文件夹】改为曲包下载目录（无需放入游戏目录！）
 3. 点击**下方表格内的曲包名称** 👉 点击【打开ResilioSync】 👉 点击【连接】（**不要更改保存位置！**如需更改保存位置，请返回第2步（上一步））
 4. **按照 [PC-BS教程](http://bs.wgzeyu.com/pc-guide/#addsong_foldereditor)/[Quest-BS教程](http://bs.wgzeyu.com/oq-guide/#addsong_addsongpack) 中的 【添加歌曲（合集曲包）】 来添加歌曲包，每个曲包将分类显示为单独歌单**
