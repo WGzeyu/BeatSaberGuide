@@ -1,0 +1,14 @@
+// 👇 optional -> set custom breakpoints
+ $breakpoints: (
+   xs: 32rem,
+   sm: 48rem,
+   md: 60rem,
+   lg: 64rem,
+   xl: 80rem
+ );
+
+@import 'base';
+/*! purgecss start ignore */
+@import 'custom-style';
+@import 'components/**/*.scss';
+/*! purgecss end ignore */

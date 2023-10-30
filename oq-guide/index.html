@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link id="codyframe" rel="stylesheet" href="../assets/codyhouse/css/style.css?v=3">
+    <script>
+      if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+    </script>
+    <title>BeatSaber 新手教程 - Quest平台</title>
+    <link rel="alternate icon" type="image/png" href="../favicon.webp">
+    <meta data-vue-meta="true" itemprop="keywords" name="keywords" content="BeatSaber, Beat Saber, 节奏光剑, 节奏空间, Mod, 自定义歌曲, 添加歌曲, 歌曲, 自制谱, 中文, 模型, 光剑, 角色, 人物, 场景, 歌单, 曲包"/>
+    <meta name="description" content="BeatSaber节奏光剑的新手教程，包含了从Mod安装到自定义歌曲、模型、曲包、游戏翻译等等各种新手教程，持续更新中…">
+    <style>
+      body{
+        margin:0;
+        padding:0;
+        overflow-y:hidden
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125410658-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-125410658-2');
+    </script>
+  </head>
+  <body>
+    <div id="nheader">
+
+      <header class="f-header position-relative js-f-header">
+        <div class="f-header__mobile-content container max-width-lg">
+          <a href="https://space.bilibili.com/557131" target="_blank" class="f-header__logo">
+            <img width="100%" src="../assets/avatar/wgzeyu.webp">
+          </a>
+          <button class="reset anim-menu-btn js-anim-menu-btn js-tab-focus f-header__nav-control" aria-label="Toggle menu">
+            <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="f-header__nav" role="navigation">
+          <div class="f-header__nav-grid container max-width-lg">
+            <div class="f-header__nav-logo-wrapper margin-right-lg@md">
+              <a href="https://space.bilibili.com/557131" target="_blank" class="f-header__logo">
+                <img width="100%" src="../assets/avatar/wgzeyu.webp">
+              </a>
+            </div>
+            <ul class="f-header__list">
+              <li class="f-header__item">
+                <a href="https://bs.wgzeyu.com/" class="f-header__link">
+                  <span>BS基础教程与问题解答</span>
+                  <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+                </a>
+                <ul class="f-header__dropdown">
+                  <li><a href="https://bs.wgzeyu.com/pc-guide/" class="f-header__dropdown-link">PC平台 - BS新手教程</a></li>
+                  <li><a href="https://bs.wgzeyu.com/pc-faq/" class="f-header__dropdown-link">PC平台 - BS问题解答</a></li>
+                  <li><a href="https://bs.wgzeyu.com/oq-guide/" class="f-header__dropdown-link" aria-current="page">Quest平台-BS新手教程</a></li>
+                  <li><a href="https://bs.wgzeyu.com/buy/" class="f-header__dropdown-link">Beat Saber 购买教程</a></li>
+                </ul>
+              </li>
+              <li class="f-header__item">
+                <a href="https://bs.wgzeyu.com/drive/" class="f-header__link">
+                  <span>游戏资源共享</span>
+                  <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+                </a>
+                <ul class="f-header__dropdown">
+                  <li><a href="http://share.wgzeyu.vip/" class="f-header__dropdown-link">主站 | 推荐用于小文件</a></li>
+                  <li><a href="https://bs.wgzeyu.com/drive/" class="f-header__dropdown-link">网盘 | 推荐用于大文件</a></li>
+                  <li><a href="https://bs.wgzeyu.com/songs/" class="f-header__dropdown-link">同步 | 曲包文件夹同步</a></li>
+                </ul>
+              </li>
+              <li class="f-header__item"><a href="https://viounti.wgzeyu.vip/" class="f-header__link">打分指南</a></li>
+              <li class="f-header__item">
+                <a href="#0" class="f-header__link">
+                  <span>相关网站</span>
+                  <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+                </a>
+                <ul class="f-header__dropdown">
+                  <li><a href="https://beatsaver.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">歌曲 | BeatSaver</a></li>
+                  <li><a href="https://modelsaber.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">模型 | ModelSaber</a></li>
+                  <li><a href="https://scoresaber.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">排名 | ScoreSaber</a></li>
+                  <li><a href="https://www.beatleader.xyz/" class="f-header__dropdown-link" target="_blank" rel="nofollow">排名 | BeatLeader</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="f-header__list margin-left-auto@md">
+              <li class="f-header__item"><a href="#0" class="f-header__btn btn btn--accent"  aria-controls="dashang-window" onclick="cimg('ds-img','../assets/img/dashang.png');">捐助</a></li>
+              <li class="f-header__item"><a href="#0" class="f-header__btn btn btn--primary" aria-controls="qq-group">社区Q群</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+    </div>
+    
+    <iframe id="iframea" frameborder="0" src="guide.html" style="width:100%;" height="2560" importance="high"></iframe>
+
+
+    <div class="modal modal--animate-translate-up flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal" id="dashang-window">
+      <div class="modal__content width-100% max-width-xs bg radius-md shadow-md" role="alertdialog" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+        <header class="bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between">
+          <h4 class="text-truncate" id="modal-title-2">捐助教程作者</h4>
+          <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+            <svg class="icon" viewBox="0 0 20 20">
+              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                <line x1="3" y1="3" x2="17" y2="17" />
+                <line x1="17" y1="3" x2="3" y2="17" />
+              </g>
+            </svg>
+          </button>
+        </header>
+        <div class="padding-y-sm padding-x-md">
+          <div class="text-component">
+            <p>
+              <img width="100%" src="../assets/img/dashang.png?v=3">
+              根据规定，微信/支付宝对静态收款码的远程付款做了限制，如果付款失败请换为另一种，还是不行请在下方反馈给我。
+            </p>
+            <p id="modal-description-2">
+              <p>联系作者：<br><a target="_blank" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=785777793&site=qq&menu=yes">QQ 785777793</a>(若无回复请加好友),Discord WGzeyu#7287</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice js-notice" id="oldbrowser">
+      <div class="container">
+        <div class="notice__banner max-width-xxxxs bg padding-sm radius-md shadow-md">
+          <div class="text-component text-sm margin-bottom-md" style="margin-bottom:1em;">
+            <h4>请升级或更换你的浏览器</h4>
+            <p>当前浏览器版本过低，<a style="text-decoration:none;" target="_blank" href="https://bs.wgzeyu.com/test/">不兼容新特性</a>，会导致一些地方不能正确加载、渲染。</p>
+          </div>
+          <ul class="grid gap-xs">
+            <li class="col-12">
+              <a class="btn btn--primary width-100%" target="_blank" href="https://google.cn/chrome/" rel="nofollow">下载新版Chrome浏览器</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--animate-translate-up flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal" id="qq-group">
+      <div class="modal__content width-100% max-width-xs bg radius-md shadow-md" role="alertdialog" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+        <header class="bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between">
+          <h4 class="text-truncate" id="modal-title-2">社区Q群</h4>
+          <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+            <svg class="icon" viewBox="0 0 20 20">
+              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                <line x1="3" y1="3" x2="17" y2="17" />
+                <line x1="17" y1="3" x2="3" y2="17" />
+              </g>
+            </svg>
+          </button>
+        </header>
+        <div class="padding-y-sm padding-x-md">
+          <div class="text-component">
+            <p id="modal-description-2">
+              <p>
+                BeatSaber中文社区③：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=KbI6vcbMS0WpICriZlV5tzKkJWTVzPiR&jump_from=webapi&authKey=aYsaqYyxsyvDy21CS0388DoEW6XvHa7vxqG5E1b0cfJAHBjFNbQHHbVVz42ZfgM2" rel="nofollow">820726281</a>（较冷清）
+              </p>
+              <p>
+                BeatSaber中文社区②：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=g7QnI5e6AucIAS2ArI7TlEObaOclbsK4&jump_from=webapi" rel="nofollow">810303476</a>（较活跃，推荐）
+              </p>
+              <p>
+                BeatSaber中文社区①：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=_HSm69z99NJPi47oynFmVlKH5YA4bOzS&jump_from=webapi" rel="nofollow">639959292</a>（较活跃）
+              </p>
+              <p>
+                BeatSabe<span style="letter-spacing:1.2px;">r的QQ频道</span>：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=NVA0h&businessType=9&from=246610&biz=ka" rel="nofollow">w9dyu18qa0</a>
+              </p>
+              <p>
+                BeatSaber谱面制作群：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=S0_SXiRiJhssWEVPcvCdxs8xZicA4sC5&jump_from=webapi" rel="nofollow">1101964663</a>
+              </p>
+              <p>
+                BeatSaber打分新手群：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=os9__FPk62jciovy1AStFuiXDLho-1sO&jump_from=webapi" rel="nofollow">941873202</a>
+              </p>
+              <p>
+                我们已配置自动审核，如果你的加群申请没有立即通过，很可能是遭到了腾讯风控被屏蔽，请尝试通过其他设备重新加群。
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../assets/codyhouse/js/scripts.min.js?v=3"></script>
+    <script>
+      function ciframe() {
+        var diva = document.getElementById("nheader");
+        document.getElementById("iframea").height = window.innerHeight - diva.offsetHeight;
+      };
+      function cimg(imgid,imgurl){
+        document.getElementById(imgid).src = imgurl;
+      };
+      window.onresize = ciframe;
+
+      window.onload = function() {
+        ciframe();
+      };
+
+      document.location.hash||=(localStorage["_hashStore"]||"");
+      localStorage["_hashStore"]=document.location.hash;
+    </script>
+    <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+          alert("您正在使用的浏览器版本过低，可能会导致网页加载不正常！\n\n\n推荐更换浏览器打开本网页：\n\n如果你开启了系统更新、正在使用Win10/11，\n请使用系统自带的Edge浏览器来打开本网页；\n\n其他情况下请安装Chrome浏览器：google.cn/chrome");
+      } else if (!('IntersectionObserver' in window) || navigator.userAgent.includes("Edge") || getChromiumVersion() < 58) {
+          console.log('兼容性警告');
+      } else {
+          document.getElementById("oldbrowser").style.display = "none";
+      }
+      function getChromiumVersion() {
+        try {
+          if (window.chrome) {
+            const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+            const version = raw ? parseInt(raw[2], 10) : false;
+            return version || 404;
+          }
+        } catch (error) {
+          return 500;
+        }
+        return 501;
+      }
+    </script>
+    <!--OLD-DOMAIN-JUMP-->
+  </body>
+</html>

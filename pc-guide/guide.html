@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BeatSaber 新手教程 - PC平台</title>
+  <meta data-vue-meta="true" itemprop="keywords" name="keywords" content="BeatSaber, Beat Saber, 节奏光剑, 节奏空间, Mod, 自定义歌曲, 添加歌曲, 歌曲, 自制谱, 中文, 模型, 光剑, 角色, 人物, 场景, 歌单, 曲包"/>
+  <meta name="description" content="BeatSaber节奏光剑的新手指南，包含了从Mod安装到自定义歌曲、模型、曲包、游戏翻译等等各种新手教程，持续更新中…">
+  <link rel="alternate icon" type="image/png" href="../favicon.webp">
+  <meta name="robots" content="noindex">
+  <!--link rel="stylesheet" type="text/css" href="../assets/guide/fonts/font-awesome-4.3.0/css/font-awesome.min.css"-->
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/stroke.css">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/bootstrap.css?v=6">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/prettyPhoto.css">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/style.css?v=6">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/js/syntax-highlighter/styles/shCore.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/custom.css?v=2">
+  <!--[if lt IE 9]>
+    <script src="../assets/guide/js/html5shiv.min.js"></script>
+    <script src="../assets/guide/js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+@keyframes rainbow_keyframe2{
+    0%{
+        color:red;
+    }
+    33%{
+        color:green;
+    }
+    67%{
+        color:blue;
+    }
+    100%{
+        color:red;
+    }
+}
+.rainbow2 {
+    color:red;
+    animation-name: rainbow_keyframe2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes rainbownote_keyframe{
+    0%{
+        background-color:red;
+        border:DarkRed;
+    }
+    33%{
+        background-color:green;
+        border:DarkGreen;
+    }
+    67%{
+        background-color:blue;
+        border:DarkBlue;
+    }
+    100%{
+        background-color:red;
+        border:DarkRed;
+    }
+}
+.rainbownote {
+    background-color:red;
+    border:DarkRed;
+    animation-name: rainbownote_keyframe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <div class="container">
+
+      <section id="top" class="section docs-heading">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="big-title text-center">
+              <h1><span style="white-space:nowrap;">Beat Saber</span> <span style="white-space:nowrap;">新手教程</span> <span style="white-space:nowrap;">- PC平台</span></h1>
+              <p class="lead">本教程<b class="rainbow2">仅适用于Steam等PC平台的最新正版BS</b>；<a href="#tiaozhuanoq" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide/';"><b>Quest请点此</b>进入一体机教程 →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+      </section>
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+            <ul class="nav">
+              <li><a href="#jiangji">降级</a>
+              </li>
+
+              <li><a href="#modinstall">一键安装Mod</a>
+                <ul class="nav">
+                  <li><a href="#modinstall_assistant">ModAssistant</a></li>
+                  <li><a href="#modinstall_panduan">检查是否成功</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#chineselng">将语言改为中文</a>
+                <ul class="nav">
+                  <li><a href="#lng-shixian">实现方式</a></li>
+                  <li><a href="#lng-shezhi">设置方法</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#findpath">找到游戏目录</a>
+                <ul class="nav">
+                  <li><a href="#findpath_steam">Steam</a></li>
+                  <li><a href="#findpath_oculus">Rift</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#addsong">添加歌曲 (单曲)</a>
+                <ul class="nav">
+                  <li><a href="#addsong_beatsaver">下载歌曲</a></li>
+                  <li><a href="#addsong_oneclick">一键添加歌曲</a></li>
+                  <li><a href="#addsong_zipsong">手动添加歌曲</a></li>
+                  <li><a href="#addsong_bss" onclick="limg('tranbss');">游戏内下载歌曲 (新)</a></li>
+                  <li><a href="#addsong_moresong" onclick="limg('transong');">游戏内下载歌曲 (旧)</a></li>
+                  <li><a href="#addsong_custom-levels_1">游戏内选项位置</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#addsong_folder">添加歌曲 (合集曲包)</a>
+                <ul class="nav">
+                  <li><a href="#addsong_downloadsongpack">下载歌曲包</a></li>
+                  <li><a href="#addsong_foldereditor">添加曲包为单独歌单</a></li>
+                  <li><a href="#addsong_foldereditor_path">添加曲包 (路径方案)</a></li>
+                  <li><a href="#addsong_foldereditor_playlist">添加曲包 (列表方案)</a></li>
+                  <li><a href="#addsong_custom-levels_2">游戏内选项位置</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#addsong_playlist_playlist">添加歌曲 (歌曲列表)</a>
+                <ul class="nav">
+                  <li><a href="#addsong_playlist">下载歌曲列表</a></li>
+                  <li><a href="#addsong_playlist_oneclick">一键添加歌曲列表</a></li>
+                  <li><a href="#addsong_playlist_modassistant">自动下载歌曲列表</a></li>
+                  <li><a href="#addsong_playlist_ingame">手动添加歌曲列表</a></li>
+                  <li><a href="#addsong_custom-levels_3">游戏内选项位置</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#changemodel">更换光剑、人物等模型</a>
+                <ul class="nav">
+                  <li><a href="#changemodel_installmod">添加模型功能</a></li>
+                  <li><a href="#changemodel_modelsaber">ModelSaber</a></li>
+                  <li><a href="#changemodel_oneclick">一键添加模型</a></li>
+                  <li><a href="#changemodel_file">手动添加模型</a></li>
+                  <li><a href="#changemodel_moremodel">游戏内下载模型</a></li>
+                  <li><a href="#changemodel_mods">切换模型选项位置</a></li>
+                </ul>
+              </li>
+              <li><a href="#modmanual" onclick="limg('oldmodinstallgif');">手动安装Mod</a>
+                <ul class="nav">
+                  <li><a href="#modmanual_download" onclick="limg('oldmodinstallgif');">下载Mod</a></li>
+                  <li><a href="#modmanual_install" onclick="limg('oldmodinstallgif');">安装Mod</a></li>
+                </ul>
+              </li>
+              <li><a href="#otherguine" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide/';">其他平台教程 (Quest)</a>
+              </li>
+
+            </ul>
+          </nav >
+        </div>
+
+        <div class="col-md-9">
+
+
+          <section class="welcome">
+
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">前言<hr></h2>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12">
+                <p>
+                  <strong>当前页面只介绍PC平台（Steam、Rift平台）的新手基础操作，<br>
+                  Quest平台请<a href="#tiaozhuanoq" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide/';">点我进入一体机教程</a>；</strong><b class="rainbow2">遇到问题请<a href="https://bs.wgzeyu.com/pc-faq/" target="_blank">点我查看PC问题解答</a></b><strong>。<br>
+                  如果你还没有购买游戏，请<a href="#tiaozhuanbuy" onclick="top.location.href='https://bs.wgzeyu.com/buy/#bs_steam';">点我进入BeatSaber游戏购买教程</a>。</strong>
+                </p>
+                <p>
+                  Beat Saber已正式官方支持自定义歌曲，虽然不装Mod也能导歌，不过我们还是推荐安装Mod。<br>
+                  Mod能极大地丰富自定义歌曲功能，例如排序、排行、搜索、回放等，加载速度更快，还能下载歌曲。
+                </p>
+                <p>
+                  虽然游戏更新会导致Mod失效，但其实只需要重新打开Mod安装器，一键安装，就都回来了。<br>
+                  这并非游戏开发商封杀Mod，更新游戏需要更改代码，有时会影响到一些Mod。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你按照B站视频教程操作遇到了问题，请完全重新按照本页的教程来操作，<br>
+                    <i class="fa fa-exclamation-triangle"></i> 我们强烈不建议按视频教程操作，很多信息都已过期，甚至可能根本就不完整，不正确。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 本教程中出现的 <code>BS</code> 是 <code>BeatSaber</code> 的简称，<code>PC</code> 是 <code>电脑</code> 的简称。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+
+          <section id="jiangji" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">降级<hr></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>
+                  <b>由于以下几种原因，目前推荐先降级再安装Mod：</b><br>
+                   　·近期游戏更新了底层的Unity引擎，造成了一些问题，也不兼容旧的自定义模型<br>
+                   　·官方提供了便捷的降级方式，一键降级1.29.1（旧Unity）且不会被自动更新<br>
+                   　·游戏热度降低，部分Mod作者可能已经疲于频繁的游戏更新，还没有适配新版游戏<br>
+                   　·<strong>最新版游戏的Mod数量还比较少，常用的Mod都还不全，而1.29.1版本的Mod非常丰富</strong><br>
+                   　·1.29.1与最新版游戏之间差不多，除了Unity版本不同，没有什么明显的变化<br>
+                   如果你不是很想降级，那么你可以忽略这个步骤，只不过Mod可能会少一些。
+                </p>
+                <p>
+                  降级教程：<br>
+                  　0. 关闭ModAssistant<br>
+                  　1. 在Steam中找到<code>Beat Saber</code><br>
+                  　2. 右键 > <code>属性</code> > <code>测试版</code><br>
+                  　3. 点击“参与测试”右侧的 <b><code>无</code></b>，将其切换至<code>legacy<b>1.29.1</b>_unity_ver2019.4.28f1……</code><br>
+                  　4. 等待下载完成，即可完成降级
+                </p>
+                <div class="intro2 clearfix rainbownote">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> Pico串流助手与旧版游戏存在冲突，降级后出现手柄问题请 <a href="https://bbs.picoxr.com/post/7265210266523975739" target="_blank">点我打开手柄解决方法</a> 即可完全解决。<br>
+                    <i class="fa fa-exclamation-triangle"></i> Pico串流助手与Mod还可能有冲突，若出现断连或卡死可以 <a href="https://bs.wgzeyu.com/pc-faq/#modp" target="_blank">点我打开问题解答</a> 试试，也许能解决。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 请勿填写测试代码，也不要点击 <code>检查代码</code>，这不是测试版，只是利用该功能来提供旧版本游戏。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+          <section id="modinstall" class="section">
+
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">一键安装Mod<hr></h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h3 id="modinstall_assistant">ModAssistant</h3>
+                <p><img src="img/man2.png" alt="ModAssistant" class="img-responsive img-thumbnail"></p>
+                <p>目前唯一推荐的Mod安装器，具有很完善的Mod相关功能，还可以用于支持OneClick一键添加资源功能。</p>
+                <hr>
+                <h4>ModAssistant（增强版）</h4>
+                <p>目前ModAssistant有两个不同版本，<strong>下方只提供推荐的增强版</strong>，<span onclick="window.open('https://github.com/Assistant/ModAssistant/releases/latest','_blank','');">如需下载不推荐的原版请点我</span>。<br>增强版为中文Mod列表、默认国际源、可切换国内源；而原版为英文Mod列表、只能使用国际下载源。</p>
+                <a href="https://github.com/beatmods-top/ModAssistant/releases/latest/download/ModAssistant.exe" target="_blank" class="btn btn-primary">GH一键下载</a> <a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank" class="btn btn-info">国内网盘下载</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用网盘下载</a> <a href="https://github.com/beatmods-top/ModAssistant/releases/latest" target="_blank" class="btn btn-info">GitHub下载</a> <strong> （网盘下载需进入其中的<code>工具</code>文件夹）</strong>
+                <hr>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 若提示 <code>通常不会下载ModAssistant...</code>，请点击：右侧的三个点 → 保留 → 显示详细信息 → 仍然保留<br>
+                    <i class="fa fa-exclamation-triangle"></i> 若提示 <code>Windows已保护你的电脑</code>，请点击：更多信息 → 仍要运行<br>
+                    <i class="fa fa-exclamation-triangle"></i> 上方提供的多个下载按钮均为相同内容，互为备份，随便选一个就行，要是这都能卡住你那就别整了。<br>
+                    <i class="fa fa-exclamation-triangle"></i> <b>Pico</b>玩家需注意，Pico串流助手与Mod可能有冲突，要是出问题可以试试 <a href="https://bs.wgzeyu.com/pc-faq/#modp" target="_blank"><u>问题解答(点我打开)</u></a> 的方法
+                  </p>
+                </div>
+                <p>
+                  首先，你需要确保在最后一次安装或更新游戏之后，至少运行过一次游戏，退出后才能安装Mod。<br>
+                  直接双击打开软件即可使用，无需放入游戏目录。
+                </p>
+                <p>
+                  <strong>仔细阅读简介内容</strong>，同意后在左侧切换到<code>Mod</code>选项，勾选Mod后<span class="rainbow2"><b>点击右下角的</b></span><code>安装或更新</code>，即可一键完成安装。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 必须要点击右下角的 <code>安装或更新</code> 按钮才能完成Mod安装，不点击则不会进行任何操作！
+                  </p>
+                </div>
+                <p>
+                  安装后在下次运行游戏时Mod将会添加至游戏目录，至此才算完成Mod安装流程，在此之前会暂存在IPA目录。<br>
+                  如果你打算在这之后手动安装其他Mod，需要确保上次用完ModAssistant以后至少启动过一次游戏，退出游戏以后才能手动安装。
+                </p>
+                <p>
+                  <strong>ModAssistant只包含作者正式发布并审核通过的Mod，对于测试版或其他未正式发布Mod，请<a href="#modmanual" onclick="limg('oldmodinstallgif');">手动安装该Mod</a>。</strong>
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> ModAssistant会自动检测游戏版本，请不要手动将其切换为不兼容的游戏版本，否则会破坏你的游戏！<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果ModAssistant提示你让你检查左下角游戏版本是否正确，请必须先检查确保没问题才能安装Mod！<br>
+                    游戏的地板脚印上会显示版本号，必须确保这个版本号与左下角选择的游戏版本相同，否则会把游戏弄坏！<br>
+                    <i class="fa fa-exclamation-triangle"></i> <b>Pico</b>玩家需注意，Pico串流助手与Mod可能有冲突，要是出问题可以试试 <a href="https://bs.wgzeyu.com/pc-faq/#modp" target="_blank"><u>问题解答(点我打开)</u></a> 的方法<br>
+                    <i class="fa fa-exclamation-triangle"></i> <b>不</b>推荐将 <code>选项</code> 中的下载源切换为 <code>包子源</code>，推荐使用 <code>国内源</code> 或 <code>国际源</code>，包子源有时会出问题。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果在安装Mod过程中遇到问题，请<a href="https://bs.wgzeyu.com/pc-faq/#modp" target="_blank"><u>点我查看Mod问题解答</u></a>，还是解决不了可在右上角加群提问。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你安装了360等第三方杀软，推荐先将其更换为系统自带杀软（Windows Defender）再装Mod。<br>
+                    360这类三方杀软容易无提示误拦截导致全部或部分Mod不生效，而系统自带杀软就没问题，查杀率还更高
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h3 id="modinstall_panduan">检查是否成功</h3>
+                <p>进入歌曲界面、选中自定义歌曲分类（图中黄框），<strong>与图片对比即可得知默认勾选的基础Mod是否成功生效，</strong><br>没生效也不要着急，图片下方就有解决方法链接。</p>
+                <p><img src="../speedlimit/pc-guide/modpanduannew.s.webp" id="modpanduanimg" data-src="../speedlimit/pc-guide/modpanduannew.webp" onclick="limg('modpanduanimg');" style="image-rendering:-webkit-optimize-contrast" class="lzy_img img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix rainbownote">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你装不上任何Mod，请<a href="https://bs.wgzeyu.com/pc-faq/#modp" target="_blank"><u>点我进入Mod问题解答</u></a>，里面有解决方案。（注：歌曲数量与Mod无关）
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <section id="chineselng" class="section">
+
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">将语言改为中文<hr></h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h3 id="lng-shixian">实现方式</h3>
+                <p><code>社区翻译|SiraLocalizer</code>这个<b>Mod</b>可以将社区翻译添加至游戏中，为游戏提供更多语言选项。</p>
+                <p>它现在没有上架ModAssistant，所以你需要从下方网盘中下载这个Mod，<br>然后按照<a href="#modmanual_install" onclick="limg('oldmodinstallgif');"><b>手动安装Mod教程</b></a>来操作，即可完成安装。</p>
+                <hr>
+                <h4>BeatSaber游戏资源共享</h4>
+                <p>
+                  依次进入<code>Mod相关文件</code> → <code>【Steam与Rift平台】你的游戏版本</code>文件夹即可下载该Mod。<br>
+                  游戏版本可以在游戏菜单界面地板上的脚印内看到。
+                </p>
+                <a href="http://share.wgzeyu.vip/?Ly9Nb2QlRTclOUIlQjglRTUlODUlQjMlRTYlOTYlODclRTQlQkIlQjYv" target="_blank" class="btn btn-primary">进入主站 (推荐)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">进入网盘</a>
+                <hr>
+                <p class="rainbow2"><a href="#modmanual_install" onclick="limg('oldmodinstallgif');" class="rainbow2">下载后，<b>点我进入手动安装Mod教程</b>，跟着该教程操作即可完成安装。</a></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 请务必按照本页 <a href="#modmanual_install" onclick="limg('oldmodinstallgif');"><u>手动安装Mod教程</u></a> 来操作，否则缺失步骤将不生效，和没装一样<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你确认操作无误但就是不能成功汉化、没有中文选项，请在右上角加群反馈给WGzeyu
+                  </p>
+                </div>
+
+                <!--div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 游戏刚刚更新至1.16.1，该Mod暂时还没有更新，需要等待该Mod更新后才能切换为中文。<br>若急用可 <a target="_blank" href="https://bs.wgzeyu.com/drive/">点我进入资源网盘</a> 下载1.15.0备份，临时替换游戏降级后再安装Mod。
+                  </p>
+                </div-->
+              </div>
+
+              <div class="col-md-12">
+                <h3 id="lng-shezhi">设置方法</h3>
+                <p>
+                  最新版<code>SiraLocalizer</code>可以在首次启动时自动检测并切换为系统语言，<br>
+                  如果因为某些原因没有自动切换，可以在以下位置找到该选项：
+                </p>
+                <p>如果你的浏览器不支持自动加载该动图，请<a href="#lngchongzai" onclick="limg('lngvideo');">点我重新加载</a>。</p>
+                <video id="lngvideo" muted data-src="../speedlimit/pc-guide/lngnew4.mp4" class="img-responsive img-thumbnail lzy_img" autoplay="autoplay" loop="loop" style="height:480px !important;">
+                  你的浏览器不支持播放当前视频
+                </video>
+
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 选择 <code>简体中文</code> 点击 <code>OK</code> 后，如果游戏还是英文、选项跳回 <code>English</code>，请<b>以正常方式</b>退出再打开游戏
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+
+          <section id="findpath" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">找到游戏目录<hr></h2>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+                <h3 id="findpath_steam">Steam</h3>
+              </div>
+
+              <div class="col-md-6">
+                <p><img src="img/path-steam-1.png" alt="找到游戏目录-Steam1" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-6">
+                <p><img src="img/path-steam-2.png?v=2" alt="找到游戏目录-Steam2" class="img-responsive img-thumbnail"></p>
+              </div>
+
+              <div class="col-md-12">
+                <h3 id="findpath_oculus">Rift</h3>
+              </div>
+
+              <div class="col-md-6">
+                <p><img src="img/path-oculus-1.png" alt="找到游戏目录-Oculus1" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-6">
+                <p><img src="img/path-oculus-2.png" alt="找到游戏目录-Oculus2" class="img-responsive img-thumbnail"></p>
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <section id="addsong" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">添加自定义歌曲（单曲）<hr></h2>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-12">
+
+                <h3 id="addsong_beatsaver">下载歌曲</h3>
+                <p>Beat Saber是一个挥砍音符的音乐游戏，要有人为歌曲摆放音符你才有东西砍，这一步骤被称为“作谱”，完整能玩的歌曲也被称为“谱面”，这也就是说游戏识别不了<code>.mp3</code>这类纯音频文件，因为不含谱面，<strong>你需要从教程给出渠道来下歌才能添加至游戏</strong>。如果喜欢的歌没谱，可以自己作谱 (右上角有群)，或<span onclick="window.open('https://beatsage.com/','_blank','');">使用AI生成 (太差不推荐, 点我进入)</span></p>
+                <hr>
+                <h4>BeatSaver</h4>
+                <p>
+                  目前最大的BeatSaber自定义歌曲(谱面)下载网站，也是各位谱师唯一的发布地址。<br>
+                  <span class="rainbow2">若源站下载过慢甚至无法下载，可以尝试国内中转</span>。
+                </p>
+                <a href="https://beatsaver.com/" target="_blank" class="btn btn-primary">进入源站(推荐)</a> <a href="http://beatsaver.wgzeyu.vip/" target="_blank" class="btn btn-info">国内中转</a> <a href="https://bsaber.org/?from_cache=1&sort=uploaded_desc" target="_blank" class="btn btn-info">国外镜像</a>
+                <hr>
+                <p>进入<a href="https://beatsaver.com/" target="_blank">BeatSaver</a>，输入搜索内容或设置过滤方式以后，点击<code>Search</code>就可以找到歌曲，如果不打算搜索可以不填。</p>
+                <p><img src="img/newbeatsaver.webp" alt="Beatsaver" class="img-responsive img-thumbnail"></p>
+                <p>点开歌曲可以查看详细介绍、各难度详情以及排行榜，下面是各难度详情的图标翻译：</p>
+                <p><img src="img/lavel_info.png" alt="Beatsaver" class="img-responsive img-thumbnail"></p>
+                
+                <h3 id="addsong_oneclick">一键添加歌曲</h3>
+                <p><img src="img/oneclick-beatsaver.png" alt="Beatsaver启用一键添加" class="img-responsive img-thumbnail"></p>
+                <p>
+                  在<a href="#modinstall_assistant">ModAssistant</a>的<code>选项</code>界面中启用BeatSaver的一键添加后，重启浏览器，<br>
+                  从<a href="https://beatsaver.com/" target="_blank">BeatSaver</a>找到歌曲后点击<code>One-Click</code>图标即可一键添加歌曲到游戏中。
+                </p>
+              </div>
+              <div class="col-md-8">
+                <p><img src="img/newbeatsaver_oneclick.png" alt="Beatsaver" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-4">
+                <p><img src="img/newbeatsaver_oneclick_f.png" alt="Beatsaver" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-12">
+                <p>点击后会弹出OneClick窗口，可以在里面看到执行状态。</p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果下载缓慢或下载失败，请尝试在ModAssistant界面左下方切换OneClick下载源。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 通过ModAssistant注册OneClick以后，请不要对ModAssistant或其所在文件夹执行更名、挪动、删除等操作，这会导致注册失效；如果注册已失效，可打开ModAssistant取消勾选OneClick后重新勾选回去。
+                  </p>
+                </div>
+
+                <h3 id="addsong_zipsong">手动添加歌曲</h3>
+              </div>
+              <div class="col-md-8">
+                <p><img src="img/newbeatsaver_download.png" alt="Beatsaver" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-4">
+                <p><img src="img/newbeatsaver_download_f.png" alt="Beatsaver" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-12">
+                <p>
+                  在<a href="https://beatsaver.com/" target="_blank">BeatSaver</a>中点击<code>Download</code>图标即可下载，下载之后多选压缩包，右键<code>解压每个压缩文件到单独的文件夹</code>。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果下载缓慢或下载失败，请尝试更换为<a href="http://beatsaver.wgzeyu.vip/" target="_blank">国内中转</a>再下载，上方有链接。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 图中是多选压缩包时的选项，如果你只选中了一个压缩包，选项名将变成 <code>解压到[压缩包名称]</code>
+                  </p>
+                </div>
+                <p><img src="img/song-unzip.png" alt="歌曲解压" class="img-responsive img-thumbnail"></p>
+                <p>
+                  随后，将解压出的文件夹放入游戏的自定义歌曲目录中即可完成添加。<br>
+                  自定义歌曲目录：<code>Beat Saber\Beat Saber_Data\CustomLevels</code>
+                </p>
+                <p><img src="img/path_song.png" alt="歌曲目录" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 游戏可能不会自动创建该文件夹，安装核心Mod之后再运行游戏，或者是使用其他方式添加歌曲，才会自动创建该目录。如果你不打算安装Mod，请手动创建该文件夹，建议从上方复制名称，确保名称路径正确<br>
+                    <i class="fa fa-exclamation-triangle"></i> 安装核心Mod后将不支持识别嵌套子文件夹，而若是不装Mod，歌曲加载又会超级慢，所以强烈不建议通过嵌套子文件夹形式来进行分类，如果你想要通过文件夹分类导入歌曲，<a href="#addsong_foldereditor_path"><b>请点我进入分类添加歌曲教程</b></a>
+                  </p>
+                </div>
+               
+                <h3 id="addsong_bss">游戏内下载歌曲（新）</h3>
+                <p>使用<a href="#modinstall_assistant">ModAssistant</a>安装<code>更好的歌曲搜索|BetterSongSearch</code>后，<br>从游戏主界面左侧Mod选项中进入<code>BETTER SONG SEARCH</code>即可下载歌曲。</p>
+                <p><img src="img/TBSSNS.webp" id="tranbss" data-src="../speedlimit/TBSSN.webp" onclick="limg('tranbss');" class="lzy_img img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果下载歌曲非常缓慢或下载失败，你可以将下载地址切换为我提供的国内中转，操作步骤为：<br>
+                    <code>MORE▼</code> > <code>BETTERSONGSEARCH SETTINGS</code> > <code>Use Chinese BeatSaver Mirror</code> > 打开开关 > <code>OK, ENABLE</code>
+                  </p>
+                </div>
+
+                <h3 id="addsong_moresong">游戏内下载歌曲（旧）</h3>
+                <p>使用<a href="#modinstall_assistant">ModAssistant</a>安装过默认勾选的Mod后，从游戏主界面左侧Mod选项中进入<code>MORE SONGS</code>即可下载歌曲。</p>
+                <p><img src="img/Tnewloading.webp" id="transong" data-src="../speedlimit/pc-guide/Tmoresong.new.webp" onclick="limg('transong');" class="lzy_img img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果加载或者下载速度非常缓慢，可以尝试切换为国内版插件，从WGzeyu提供的国内中转下载。<br>
+                    从<a href="http://share.wgzeyu.vip/?Ly9Nb2QlRTclOUIlQjglRTUlODUlQjMlRTYlOTYlODclRTQlQkIlQjYv" target="_blank"><u>BS游戏资源共享</u></a>的Mod目录中下载Mod后，按照<a href="#modmanual_install" onclick="limg('oldmodinstallgif');"><u>手动安装Mod教程</u></a>安装即可。<br>
+                    注意：加粗字体可点击；安装国内版之后再使用ModAssistant会覆盖为原版，可重新手动覆盖回去来解决
+                  </p>
+                </div>
+
+                <h3 id="addsong_custom-levels_1">游戏内选项位置</h3>
+                <p><img src="img/custom-levels-8.webp" alt="Beat Saber 自定义歌曲选项位置" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果某一首歌曲的 <code>Play</code> 按钮为灰色点不了，通常是缺失Mod导致的，点击右上角的问号可查看详情。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果在添加歌曲过程中遇到问题，请<a href="https://bs.wgzeyu.com/pc-faq/#songp" target="_blank"><u>点我查看歌曲问题解答</u></a>，还是解决不了可在右上角加群提问。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="addsong_folder" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">添加自定义歌曲（合集曲包）<hr></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+
+                <h3 id="addsong_downloadsongpack">下载歌曲包</h3>
+              </div>
+              <div class="col-md-6">
+                <p><img src="img/qbv51.png" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-6">
+                <p><img src="img/qbv52.png" class="img-responsive img-thumbnail"></p>
+              </div>
+              <div class="col-md-12">
+                <hr>
+                <h4>Beat Saber游戏资源共享</h4>
+                <p>我们整理的大量BeatSaber歌曲包都保存在这里，下载曲包后解压至单独的文件夹即可添加。<br>（多选压缩包时的右键选项才有<code>解压至单独文件夹</code>，而单选时，这个选项叫做<code>解压至[压缩包名]</code>）</p>
+                <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-primary">进入网盘</a> （推荐从前两个网盘的<code>歌曲压缩包</code>目录中下载）
+                <hr>
+                <h4>Beat Saber曲包资源同步</h4>
+                <p>
+                  曲包内容与上方的网盘相同，但这个渠道是通过P2P下载、不走服务器，还能自动更新歌曲文件。<br>
+                  只要保持ResilioSync运行，每天自动更新最新的曲包到游戏中（歌曲路径方案），无需重复操作添加！
+                </p>
+                <a href="https://bs.wgzeyu.com/songs/" target="_blank" class="btn btn-primary">进入下载</a>
+                <hr>
+                <h4>BeatSpider</h4>
+                <p>WGzeyu为了整理曲包制作的专业谱面整理、下载软件，拥有非常多的功能来处理歌曲包、歌曲列表。</p>
+                <a href="https://github.com/WGzeyu/BeatSpider/releases/latest" target="_blank" class="btn btn-primary">GitHub下载</a> <a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank" class="btn btn-info">备用下载(国内)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用下载(网盘)</a> （备用下载在<code>工具</code>目录内）
+                <hr>
+
+                <h3 id="addsong_foldereditor">添加曲包为单独歌单</h3>
+                <p>在PC平台，有两种完全不同的方案可以将曲包以单独歌单形式添加至游戏中，以下是他们之间的区别：</p>
+                <p>
+                  歌曲路径方案：操作更<strong>简单</strong>，不同曲包的重复歌曲<strong>会</strong>重复占用空间，可通过ResilioSync实现<strong>自动</strong>更新曲包；<br>
+                  歌曲列表方案：操作稍<strong>复杂</strong>，不同曲包的重复歌曲<strong>不会</strong>重复占用空间，用我提供的列表可实现<strong>一键</strong>更新曲包。
+                </p>
+                <p>如果你打算添加的曲包数量不是特别多，我推荐歌曲路径方案，否则，推荐歌曲列表方案。</p>
+                <p>
+                  <strong>如果你想实现自动/一键更新曲包，要注意：</strong><br>
+                  歌曲路径方案：必须通过上方<code>Beat Saber曲包资源同步</code>中的ResilioSync渠道下载，才能实现自动更新；<br>
+                  歌曲列表方案：必须从网盘中下载我提供的歌曲列表才能实现一键更新，推荐从前两个网盘下载歌曲压缩包。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 请不要同时使用两种方案添加同一曲包，只会白白浪费时间与硬盘空间。
+                  </p>
+                </div>
+
+                <h3 id="addsong_foldereditor_path">添加曲包为单独歌单（歌曲路径方案）</h3>
+                <p><img src="img/bssongfoldereditor.png?v=2" alt="Beat Saber 歌曲路径管理器" class="img-responsive img-thumbnail"></p>
+                <hr>
+                <h4>Beat Saber 歌曲路径管理器 (Beat Saber Song Folder Manager)</h4>
+                <p>WGzeyu使用易语言编写的歌曲路径管理工具，支持拖入添加、路径纠错、更换封面等诸多功能，使用简单。</p>
+                <a href="https://github.com/wgzeyu/Beat-Saber-Song-Folder-Manager/releases/latest" target="_blank" class="btn btn-primary">GitHub下载(推荐)</a> <a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank" class="btn btn-info">备用下载(国内)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用下载(网盘)</a> （备用下载在<code>工具</code>目录内）
+                <hr>
+                <p>下载<code>歌曲路径管理器</code>之后直接运行即可使用，这个软件可以将游戏外的文件夹设置为自定义歌曲目录。</p>
+                <p><strong>打开软件，将曲包解压出的文件夹拖入窗口内，然后点击<code>保存列表</code>，即可完成曲包添加。</strong></p>
+                <p>无需复制文件！无需放到游戏的歌曲目录！<code>保存列表</code>后再打开游戏，将直接可以看到这些曲包！</p>
+                <div class="intro2 clearfix rainbownote">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 游戏顶部显示 <code>Loading x Additional Song folder</code> 代表正在加载你添加的歌曲文件夹，请耐心等待；添加大量歌曲后的首次启动，加载就是会很慢，可能需要十多分钟，首次加载完成后再次加载速度就快了。
+                  </p>
+                </div><br>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 需要使用<a href="#modinstall_assistant"><u>ModAssistant</u></a>安装 <code>SongCore</code> 这个默认勾选的核心Mod，装好之后添加的曲包才能生效。
+                  </p>
+                </div>
+
+                <h3 id="addsong_foldereditor_playlist">添加曲包为单独歌单（歌曲列表方案）</h3>
+                <p>
+                  歌曲包就是歌曲文件本身，而歌曲列表只是记录了歌曲的一个<strong>歌单</strong>列表，在游戏中相当于一个索引的作用；<br>
+                  把歌曲全混在一起放进歌曲目录，然后再把列表放进列表目录，游戏就能靠歌曲列表来识别出独立的分类。<br>
+                  没有歌曲列表(歌单)一样能识别歌曲，只是不能实现以独立的分类歌单形式来显示不同的合集曲包，会混在一起。
+                </p>
+                <p><strong>首先</strong>，按照“<a href="#addsong_playlist_ingame">手动添加歌曲列表</a>”教程，将歌曲列表复制到歌曲列表目录。（支持嵌套子文件夹）</p>
+                <p><img src="img/path_list.png" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你只有曲包没有列表，请查看下方的<a href="#addsong_playlist">歌曲列表</a>教程，可以用 <code>BS歌曲路径管理器</code> 将曲包生成为列表
+                  </p>
+                </div>
+                <p><br><strong>然后</strong>，按照“<a href="#addsong_zipsong">手动添加歌曲</a>”教程，将所有歌曲移动至同一文件夹内，一起添加至歌曲目录。<br><span class="rainbow2"><b>（不支持嵌套子文件夹，若存在相同歌曲，跳过即可）</b></span></p>
+                <p><img src="img/path_song.png" alt="歌曲目录" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你只有列表没有曲包，<a href="#addsong_playlist_ingame">请点我进入对应教程</a>
+                  </p>
+                </div>
+                <p><br>至此，曲包添加完成。</p>
+                <p>后续如果想要更新该曲包，先点击列表顶部的标题，然后再点击右上角的同步按钮即可一键完成更新，新歌单以及歌曲文件都会一起下载，无需进行其他操作。</p>
+                <p><img src="img/playlist_sync.webp" class="img-responsive img-thumbnail"></p>
+                <details>
+                  <summary>
+                    <div class="intro2 clearfix">
+                      <p>
+                        <i class="fa fa-exclamation-triangle"></i> 需要先<a href="#modinstall"><u>一键安装</u></a>或<a href="#modmanual" onclick="limg('oldmodinstallgif');"><u>手动安装</u></a> <code>PlaylistManager</code> 这个Mod，装好之后添加的曲包才能生效。<br>
+                        <i class="fa fa-exclamation-triangle"></i> 首次下载歌曲时推荐通过网盘下载，不推荐游戏内下载，由于我的曲包太大，会消耗服务器大量流量，下的还慢；以后再下载（一键同步）时，只会下载新增歌曲，数量少，直接让他自动下载就行。<br>
+                        <i class="fa fa-exclamation-triangle"></i> 部分歌曲列表不支持一键同步；我整理的歌曲列表，在 2022/11/23 之前发布的均不支持一键同步；<br>
+                        <i class="fa fa-exclamation-triangle"></i> 如果你想要通过旧版同步方式添加歌曲列表，可<b>点我</b>在下方展开使用ResilioSync同步的注意事项
+                      </p>
+                    </div>
+                  </summary>
+                  <p>
+                    如果你想通过ResilioSync实现曲包同步更新，需要注意：<br>
+                    1. 首次下载曲包文件时，通过网盘或同步下载均可，之后请不要尝试通过ResilioSync同步更新歌曲文件；<br>
+                    2. 首次下载曲包文件时不推荐在游戏内下载，由于我的曲包太大，会下的很慢，还会消耗歌曲网站大量流量；<br>
+                    3. 下载歌曲列表时，请通过ResilioSync将列表下载到<a href="#addsong_playlist_ingame">游戏的歌曲列表目录</a>，（支持嵌套子文件夹）；<br>
+                    4. 必须要在ResilioSync的歌曲列表的<code>首选项</code>中，取消勾选<code>在文件夹存档中存储已删除的文件</code>；<br>
+                    5. 后续曲包更新后，可以<a href="#addsong_playlist_ingame">在游戏内通过歌曲列表下载缺失歌曲</a>，变动歌曲一般不多，所以不会下多久。
+                  </p>
+                </details>
+                <h3 id="addsong_custom-levels_2">游戏内选项位置</h3>
+                <p><img src="img/custom-levels-8.webp" alt="Beat Saber 自定义歌曲选项位置" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果某一首歌曲的 <code>Play</code> 按钮为灰色点不了，通常是缺失Mod导致的，点击右上角的问号可查看详情。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果在添加歌曲过程中遇到问题，请<a href="https://bs.wgzeyu.com/pc-faq/#songp" target="_blank"><u>点我查看歌曲问题解答</u></a>，还是解决不了可在右上角加群提问。
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <section id="addsong_playlist_playlist" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">添加自定义歌曲（歌曲列表）<hr></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+
+                <h3 id="addsong_playlist">下载歌曲列表</h3>
+                <p>
+                  歌曲列表（Playlist）就如同字面意义，是一个<code>.bplist</code>格式的歌曲列表，内容只是记录了有哪些歌曲，不含歌曲文件本身，所以这些歌曲列表文件都非常小，便于分享。
+                </p>
+                <p>
+                  大多数情况下BS歌单为<code>.bplist</code>格式，不过有时候也可能是<code>.json</code>格式，实际上内容都一样，只是后缀不同。<br>
+                  （注意：有很多其他文件也是<code>.json</code>格式，并不是说<code>.json</code>就一定是歌曲列表）
+                </p>
+                <p><strong>你可以在这些地方找到.bplist格式歌曲列表：</strong></p>
+                <hr>
+                <h4>BeatSaver</h4>
+                <p>
+                  歌曲下载站现已支持分享歌曲列表，里面有非常多的由玩家分享的歌曲列表。
+                </p>
+                <a href="https://beatsaver.com/playlists" target="_blank" class="btn btn-primary">进入页面</a>
+                <hr>
+                <h4>BEASTSABER</h4>
+                <p>
+                  这个网站有不少国外大佬精心整理的歌曲列表，每个列表内的歌曲数量较少。
+                </p>
+                <a href="https://bsaber.com/category/official-playlists/" target="_blank" class="btn btn-primary">进入页面</a>
+                <hr>
+                <h4>BeatSaber游戏资源共享</h4>
+                <p>
+                  里面有很多我们整理的歌曲列表，不过我更推荐直接下载曲包而不是列表，按“<a href="#addsong_foldereditor">添加曲包为单独歌单</a>”添加。<br>
+                  PC平台可以<a href="#addsong_foldereditor">直接添加曲包文件夹为单独歌单</a>，用不着添加歌曲列表，网盘里的列表通常是准备给Quest平台用。
+                </p>
+                <a href="http://share.wgzeyu.vip/?Ly8lRTYlQUQlOEMlRTYlOUIlQjIlRTUlODglOTclRTglQTElQTgv" target="_blank" class="btn btn-primary">下载列表(主站)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">下载曲包(网盘)</a>（列表推荐从主站下载，在<code>歌曲列表</code>目录，不是<s><code>歌曲包</code></s>！）
+                <hr>
+                <h4>BS歌曲路径管理器 (Beat Saber Song Folder Manager)</h4>
+                <p>
+                  WGzeyu使用易语言编写的歌单工具，本来是用于PC端分类添加曲包，后来加入了导出歌单功能，<br>
+                  现在可以将歌曲包转换为歌曲列表，不过我更推荐点击保存列表，直接就能用，无需导出歌单添加。
+                </p>
+                <a href="https://github.com/wgzeyu/Beat-Saber-Song-Folder-Manager/releases/latest" target="_blank" class="btn btn-primary">GitHub下载(推荐)</a> <a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank" class="btn btn-info">备用下载(国内)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用下载(网盘)</a> （备用下载在<code>工具</code>目录内）
+                <hr>
+                <h4>BeatSpider</h4>
+                <p>WGzeyu为了整理曲包制作的专业谱面整理、下载软件，拥有非常多的功能来处理歌曲包、歌曲列表。</p>
+                <a href="https://github.com/WGzeyu/BeatSpider/releases/latest" target="_blank" class="btn btn-primary">GitHub下载(推荐)</a> <a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank" class="btn btn-info">备用下载(国内)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用下载(网盘)</a> （备用下载在<code>工具</code>目录内）
+                <hr>
+                <h4>Beatlist</h4>
+                <p>
+                  一个歌曲列表编辑工具，<s>虽然已经停止更新，不过依然可以使用。</s>现在有大佬接手更新了。
+                </p>
+                <a href="https://github.com/ranmd9a/beatlist/releases/latest" target="_blank" class="btn btn-primary">GitHub下载(推荐)</a> <a href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank" class="btn btn-info">备用下载(国内)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用下载(网盘)</a> （备用下载在<code>工具</code>目录内）
+                <hr>
+
+                <h3 id="addsong_playlist_oneclick">一键添加歌曲列表</h3>
+                <p><img src="img/oneclick-playlist.png" class="img-responsive img-thumbnail"></p>
+                <p>
+                  在<a href="#modinstall_assistant">ModAssistant</a>的<code>选项</code>界面中启用Playlist的一键添加后，重启浏览器，<br>
+                  从<a href="https://bsaber.com/category/playlists/" target="_blank">BEASTSABER</a>找到歌曲列表后点击<code>OneClick</code>图标即可一键添加歌曲列表到游戏中。
+                </p>
+                <p><img src="img/bsaber-playlist.png" class="img-responsive img-thumbnail"></p>
+                <p>
+                  <a href="#modinstall_assistant">ModAssistant</a>会在添加歌曲列表之后，自动下载列表中的歌曲文件。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 需要先<a href="#modinstall"><u>一键安装</u></a>或<a href="#modmanual" onclick="limg('oldmodinstallgif');"><u>手动安装</u></a> <code>PlaylistManager</code> 这个Mod，装好之后添加的歌曲列表才能生效。
+                  </p>
+                </div>
+
+                <h3 id="addsong_playlist_modassistant">自动下载歌曲列表</h3>
+                <p>
+                  打开<a href="#modinstall_assistant">ModAssistant</a>，切换至<code>选项</code>页面，点击<code>将歌曲列表添加到游戏并下载歌曲</code>或<code>将歌单下载进游戏</code>（取决于版本，翻译文本不同）。
+                </p>
+                <p><img src="img/modassistant_playlist.png" class="img-responsive img-thumbnail"></p>
+                <p>
+                  然后选择你的<code>.bplist</code>文件即可完成添加，<a href="#modinstall_assistant">ModAssistant</a>会添加歌曲列表并自动下载歌曲。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 需要先<a href="#modinstall"><u>一键安装</u></a>或<a href="#modmanual" onclick="limg('oldmodinstallgif');"><u>手动安装</u></a> <code>PlaylistManager</code> 这个Mod，装好之后添加的歌曲列表才能生效。
+                  </p>
+                </div>
+
+                <h3 id="addsong_playlist_ingame">手动添加歌曲列表</h3>
+                <p>
+                  将歌曲列表的<code>.bplist</code>文件，放入歌曲列表目录即可完成添加：<code>Beat Saber\Playlists</code>
+                </p>
+                <p><img src="img/path_list.png" class="img-responsive img-thumbnail"></p>
+                <p>
+                  如果你有歌曲列表对应的歌曲包，<a href="#addsong_zipsong">将歌曲添加至游戏</a>即可。
+                </p>
+                <p>
+                  没有对应的歌曲包也没关系，进入游戏，选择对应的歌单，先点击顶部的歌单标题后，再点击<code>DOWNLOAD</code>就可以在游戏中下载缺失的歌曲文件。<br>
+                  注：下方的<code>DELETE</code>是删除歌曲列表的按钮，点击后可以删除整个歌曲列表。
+                </p>
+                <p><img src="img/playlist_ingame.webp?v=2" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 需要先<a href="#modinstall"><u>一键安装</u></a>或<a href="#modmanual" onclick="limg('oldmodinstallgif');"><u>手动安装</u></a> <code>PlaylistManager</code> 这个Mod，装好之后添加的歌曲列表才能生效。
+                  </p>
+                </div>
+
+                <h3 id="addsong_custom-levels_3">游戏内选项位置</h3>
+                <p><img src="img/custom-levels-8.webp" alt="Beat Saber 自定义歌曲选项位置" class="img-responsive img-thumbnail"></p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果某一首歌曲的 <code>Play</code> 按钮为灰色点不了，通常是缺失Mod导致的，点击右上角的问号可查看详情。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果在添加歌曲过程中遇到问题，请<a href="https://bs.wgzeyu.com/pc-faq/#songp" target="_blank"><u>点我查看歌曲问题解答</u></a>，还是解决不了可在右上角加群提问。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <section id="changemodel" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">更换光剑、人物等模型<hr></h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h3 id="changemodel_installmod">添加模型功能</h3>
+                <p>
+                  很多玩家会把模型与Mod搞混，但实际上他俩是完全不同的东西。<br>
+                  模型是光剑/人物资源，但游戏并不支持读取你的资源；Mod是由代码组成的模块，为游戏添加了这些功能。
+                </p>
+                <p class="rainbow2"><b>按照</b><a href="#modinstall">一键安装Mod</a><b>或<a href="#modmanual" onclick="limg('oldmodinstallgif');">手动安装Mod</a>教程来安装对应的Mod，即可为游戏添加更换对应模型的功能。</b></p>
+                <p>
+                  自定义光剑：<code>Saber Factory</code>（光剑工坊）<br>
+                  自定义场景：<code>Custom Platforms</code><br>
+                  自定义人物：<code>Custom Avatars</code><br>
+                  自定义方块：<code>Custom Notes</code><br>
+                </p>
+                <p>
+                  比如你想添加自定义人物，那么<strong>你需要在安装人物Mod</strong>（<code>自定义人物|CustomAvatars</code>）<span style="white-space:nowrap;"><strong>以后</strong>，添加人物模型（</span><code>.avatar</code>格式）才可以进游戏选择人物，由于人物的特殊性，你还需要<span style="white-space:nowrap;">通过相机Mod（<code>相机v2|Camera2</code></span>）来设置第三人称视角，才能从电脑上看到这个人物。
+                </p>
+                <p>
+                  我经常见到有玩家把模型与Mod弄混，加完模型不装Mod，游戏没有更换模型的功能，也就找不到选项。<br>
+                  甚至，还有人明明使用的是人物模型却安装了场景Mod，还跑来找我说按教程做了没用......
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果ModAssistant(<a href="#modinstall"><u>一键安装</u></a>)里面没有对应的Mod，请尝试<a href="#modmanual" onclick="limg('oldmodinstallgif');"><u>手动安装</u></a>该Mod。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你不安装对应的Mod，游戏里绝对不会有更换模型的功能，也就没有对应的选项，<br>
+                    你需要先<a href="#modinstall"> <u>一键安装</u> </a>或<a href="#modmanual" onclick="limg('oldmodinstallgif');"> <u>手动安装</u> </a>安装对应的Mod，才能找到更换相应模型的选项。（加粗部分可点击）<br>
+                    <i class="fa fa-exclamation-triangle"></i> 注意！游戏最新更新的1.29.4版本（2023/05/09）由于升级了Unity版本并改为了OpenXR，导致无法兼容以前的所有模型，目前来看得让之前的模型作者重新导出模型才可以兼容新版游戏，还不确定有没有什么别的方法，现在的模型Mod均未更新至1.29.4以上版本，等Mod社区决定解决方法后我再更新相应的教程。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你现在就想换模型，可以先将游戏降级至1.29.1；如果你的游戏版本不高于1.29.1，可忽略本公告
+                  </p>
+                </div>
+
+                <h3 id="changemodel_modelsaber">ModelSaber</h3>
+                <p><img src="img/modelsaber.png" alt="ModelSaber" class="img-responsive img-thumbnail"></p>
+                <hr>
+                <h4>ModelSaber</h4>
+                <p>
+                  目前最大的PC平台BS模型资源下载网站，选择模型类型即可浏览与下载。<br>
+                  若源站下载过慢甚至无法下载，推荐尝试国内中转。
+                </p>
+                <a href="https://modelsaber.com/" target="_blank" class="btn btn-primary">进入源站(推荐)</a> <a href="http://modelsaber.wgzeyu.vip/" target="_blank" class="btn btn-info">国内中转</a>
+                <hr>
+
+                <h3 id="changemodel_oneclick">一键添加模型</h3>
+                <p><img src="img/oneclick-modelsaber.png" alt="ModelSaber启用一键添加" class="img-responsive img-thumbnail"></p>
+                <p>
+                  在<a href="#modinstall_assistant">ModAssistant</a>的<code>选项</code>界面中启用ModelSaber的一键添加后，重启浏览器，<br>
+                  从<a href="https://modelsaber.com/" target="_blank">ModelSaber</a>找到模型后点击<code>Install</code>即可一键添加模型到游戏中。
+                </p>
+                <p><img src="img/modelsaber-oneclick.png" alt="Modelsaber" class="img-responsive img-thumbnail"></p>
+                <p>点击后会弹出OneClick窗口，可以在里面看到执行状态。</p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果下载缓慢或下载失败，请尝试在ModAssistant界面左下方切换OneClick下载源。
+                  </p>
+                </div>
+
+                <h3 id="changemodel_file">手动添加模型</h3>
+                <p><img src="img/modelsaber-download.png" alt="ModelSaber" class="img-responsive img-thumbnail"></p>
+                <p>
+                  在<a href="https://modelsaber.com/" target="_blank">ModelSaber</a>中点击<code>Download</code>即可下载模型。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果下载缓慢或下载失败，请尝试更换为<a href="http://modelsaber.wgzeyu.vip/" target="_blank">国内中转</a>再下载，上方有链接。
+                  </p>
+                </div>
+                <p>
+                  随后，将下载到的模型文件放到对应的模型目录即可完成添加。<br>
+                  自定义光剑：<span style="white-space:nowrap;"><code>Beat Saber\CustomSabers</code></span>，格式：<code>.saber</code><br>
+                  自定义场景：<span style="white-space:nowrap;"><code>Beat Saber\CustomPlatforms</code></span>，格式：<code>.plat</code><br>
+                  自定义人物：<span style="white-space:nowrap;"><code>Beat Saber\CustomAvatars</code></span>，格式：<code>.avatar</code><br>
+                  自定义方块：<span style="white-space:nowrap;"><code>Beat Saber\CustomNotes</code></span>，格式：<code>.bloq</code><br>
+                  如果找不到目录可以自己创建一个，确保名称和路径完全相同即可。
+                </p>
+
+                <h3 id="changemodel_moremodel">游戏内下载模型</h3>
+
+                <p>使用<a href="#modinstall_assistant">ModAssistant</a>安装<code>模型下载器|ModelDownloader</code>之后，从游戏主界面左侧Mod选项中进入<code>MORE MODEL</code>即可下载模型。</p>
+                <p><img src="img/Tmoremodel.webp" class="img-responsive img-thumbnail"></p>
+                
+                <h3 id="changemodel_mods">切换模型选项位置</h3>
+                <p><img src="img/mods.new.new.jpg" alt="Beat Saber Mod选项位置" class="img-responsive img-thumbnail"></p>
+                <p>
+                  自定义光剑：<code>SABERFACTORY</code>（光剑工坊）<br>
+                  自定义场景：<code>CUSTOM PLATFORMS</code><br>
+                  自定义人物：<code>AVATARS</code><br>
+                  自定义方块：<code>CUSTOM NOTES</code><br>
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果在添加模型过程中遇到问题，请<a href="https://bs.wgzeyu.com/pc-faq/#modusep" target="_blank"><u>点我查看模型问题解答</u></a>，还是解决不了可在右上角加群提问。<br>
+                    你需要先<a href="#modinstall"> <u>一键安装</u> </a>或<a href="#modmanual" onclick="limg('oldmodinstallgif');"> <u>手动安装</u> </a>安装对应的Mod，才能找到更换相应模型的选项。（加粗部分可点击）<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果ModAssistant(<a href="#modinstall"><u>一键安装</u></a>)里面没有对应的Mod，请尝试<a href="#modmanual" onclick="limg('oldmodinstallgif');"><u>手动安装</u></a>该Mod。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <section id="modmanual" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">手动安装Mod<hr></h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+
+                <p>
+                  通常我们还是建议使用<a href="#modinstall_assistant">ModAssistant</a>来安装Mod。<br>
+                  只不过，一些时候，如果Mod进行了大改，又或者是一个全新推出的Mod，一段时间内很可能只会以测试版发布，由于不够稳定，所以不能上架<a href="#modinstall_assistant">ModAssistant</a>。<br>
+                  而这个时候，就需要手动下载并安装测试版Mod。其实，操作起来并不复杂。
+                </p>
+
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 测试版Mod可能会存在BUG，导致游戏出错或降低性能，如果遇到奇怪问题请先尝试移除测试版Mod。
+                  </p>
+                </div>
+
+                <h3 id="modmanual_download">下载Mod</h3>
+                <hr>
+                <h4>BSMG Discord</h4>
+                <p>
+                  国际社区的官方群组，作者首选的发布地址，可以在其中的<code>#pc-mods</code>分类下载测试版Mod，英文，需科学上网。<br>
+                  如果没梯子，请尝试通过其他地址下载，例如下方的BS资源主站或资源网盘
+                </p>
+                <a href="https://discord.gg/beatsabermods" target="_blank" class="btn btn-primary">进入频道 (需梯子)</a>（同时提供了PC与一体机平台的Mod，不要选错分类！）
+                <hr>
+                <h4>BeatSaber游戏资源共享</h4>
+                <p>
+                  我会不定期将常用测试版Mod搬运上去，从各个渠道收集，<b class="rainbow2">其中包含一些未在BSMG中发布的Mod</b>。<br>
+                  进入<code>Mod相关文件</code>文件夹即可下载测试版Mod，游戏菜单界面的地板脚印内可看到版本。
+                </p>
+                <a href="http://share.wgzeyu.vip/?Ly9Nb2QlRTclOUIlQjglRTUlODUlQjMlRTYlOTYlODclRTQlQkIlQjYv" target="_blank" class="btn btn-primary">进入主站 (推荐)</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">进入网盘</a><span class="rainbow2">（同时提供了PC与一体机平台的Mod，不要选错平台！）</span>
+                <hr>
+
+                <h3 id="modmanual_install">安装Mod</h3>
+                <p><strong>首先，使用</strong><b><a href="#modinstall_assistant">ModAssistant</a></b><strong>点击</strong><b><code>安装或更新</code></b><strong>，一键装上它默认勾选的核心Mod</strong>，其他Mod均依赖这些Mod才能运行。（并不是使用ModAssistant安装你下载的Mod，而是直接安装它默认勾选的那些，先把基础打上）</p>
+                <div class="intro2 clearfix rainbownote">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你不打基础，手动安装的Mod<b>一定会无法运行</b>，所有Mod都依赖它默认勾选的那些核心Mod！<br>
+                    <i class="fa fa-exclamation-triangle"></i> 只有在安装的基础Mod正确生效以后，手动安装的Mod才能正常运行，<a href="#modinstall_panduan">点我查看如何检查是否生效</a>。
+                  </p>
+                </div>
+                <p>如果你下载到的Mod是一个压缩包，请先将其解压至单独文件夹，并进入解压出的文件夹。</p>
+                <p>如果你的游戏还在运行，请先退出游戏。</p>
+                <p>
+                  如果下载到的/解压出来的只有<code>.dll</code>文件，<br>
+                  将其放置到：<code>Beat Saber\Plugins</code>，也就是游戏目录下的Plugins文件夹中。
+                </p>
+                <p>
+                  如果下载到的/解压出来的是多个文件夹，或者是有与游戏中名称相同的文件夹，全选之后<br>
+                  将其放置到：<code>Beat Saber</code>，也就是游戏根目录中。<br>
+                  如果出现替换提示请选择替换，没出现也很正常。
+                </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 请仔细核对文件路径不要放错，放错位置也将导致Mod<b>一定会无法运行</b>。<br>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你打开了 <code>Beat Saber\Beat Saber_Data</code> 或者它的子目录，那你就进错文件夹了！
+                  </p>
+                </div>
+                <p>至此安装完成。如果安装的Mod未生效，请检查文件放置路径以及版本是否正确，依赖Mod是否已安装。</p>
+                <p><strong>如果仍然不会安装，请</strong><b><a href="#chongzaimodgif" onclick="limg('oldmodinstallgif');">点我查看动图</a></b><strong>。</strong></p>
+                <video id="oldmodinstallgif" muted data-src="../speedlimit/mod_new.mp4" class="img-responsive img-thumbnail" autoplay="autoplay" loop="loop">
+                  你的浏览器不支持播放当前视频
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <section id="otherguine" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">其他平台教程<hr></h2>
+              </div>
+            </div>
+            <h3><a href="#tiaozhuanoq" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide/';"><b>点我进入</b>Quest一体机教程</a></h3>
+            <div class="row">
+              <div class="col-md-12">
+                <p>当前页面仅介绍Steam等PC平台的操作，如果你在使用Quest一体机平台，请<a href="#tiaozhuanoq" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide/';"><b>点我进入</b>Quest一体机教程</a>。</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">关于<hr></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 此页仅介绍新手基础操作，遇到问题请<a href="https://bs.wgzeyu.com/pc-faq/" target="_blank"><u>点我查看问题解答</u></a>，解决不了可在右上角加群提问。
+                  </p>
+                </div>
+                <p>WGzeyu 版权所有 教程内容采用CC BY-NC-SA进行授权 页面样式模板<a href="LICENSE" target="_blank">MIT LICENSE</a></p>
+                <p>允许在醒目注明原作者及原链接并保持内容同步更新的前提下完整转载，如果做不到，请直接分享原链接。</p>
+                <p>感谢MicroBlock为该页面提供的一些前端制作</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--i/bodyi-->
+
+  <script src="../assets/guide/js/jquery.min.js"></script>
+  <script src="../assets/guide/js/bootstrap.min.js"></script>
+  <script src="../assets/guide/js/retina.js"></script>
+  <script src="../assets/guide/js/jquery.fitvids.js"></script>
+  <script src="../assets/guide/js/wow.js"></script>
+  <script src="../assets/guide/js/jquery.prettyPhoto.js"></script>
+  <script src="../assets/guide/js/custom.js"></script>
+  <script src="../assets/guide/js/main.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shCore.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shBrushXml.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shBrushCss.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+  <script>
+    window.onload = function() {
+      var link = $("<link />");
+      link.attr("href", "../assets/guide/fonts/font-awesome-4.3.0/css/font-awesome.min.css");
+      link.attr("rel", "stylesheet");
+      link.attr("type", "text/css");
+      link.appendTo($("head"));
+      link.load(function () {
+        console.info("CSS延迟加载");
+      });
+    };
+    function limg(imgid){
+      document.getElementById(imgid).src = document.getElementById(imgid).dataset.src;
+    };
+    function cimg(imgid, imgurl){
+      document.getElementById(imgid).src = imgurl;
+    };
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const lazyImage = entry.target;
+                    console.log(lazyImage.src.substr(lazyImage.src.length - lazyImage.dataset.src.length,lazyImage.src.length), lazyImage.dataset.src);
+                    if (lazyImage.src.substr(lazyImage.src.length - lazyImage.dataset.src.length,lazyImage.src.length) != lazyImage.dataset.src)
+                    {
+                      if (lazyImage.loaded != "yes")
+                      {
+                        console.log("lazy loading ", lazyImage);
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.loaded = "yes";
+                      }
+                    }
+                }
+            })
+        });
+        const arr = document.querySelectorAll('img.lzy_img, video.lzy_img');
+        arr.forEach((v) => {
+            imageObserver.observe(v);
+        })
+    });
+  </script>
+  <script>/*感谢MicroBlock制作的跳转代码*/
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            if (window == window.top) {
+                document.location.href = `https://bs.wgzeyu.com/${/bs\.wgzeyu\.com\/(\S+)\/index.php/.exec(document.location.href)[1]}${document.location.hash}`
+            } else {
+                $(`a[href=${window.parent.document.location.hash}]`)[0].click()
+            }
+        }, 100)
+    })
+  </script>
+
+
+</body>
+</html>

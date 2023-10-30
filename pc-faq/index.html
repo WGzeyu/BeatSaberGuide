@@ -1,0 +1,2014 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link id="codyframe" rel="stylesheet" href="../assets/codyhouse/css/style.css?v=3">
+  <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+  </script>
+  <title>BeatSaber 问题解答 - PC平台</title>
+  <link rel="alternate icon" type="image/png" href="../favicon.webp">
+  <meta data-vue-meta="true" itemprop="keywords" name="keywords" content="BeatSaber, Beat Saber, 节奏光剑, 节奏空间, Mod, 自定义歌曲, 添加歌曲, 歌曲, 自制谱, 中文, 模型, 光剑, 角色, 人物, 场景, 歌单, 曲包, 报错, 格式, 转换, 联机"/>
+  <meta name="description" content="BeatSaber节奏光剑的详细教程与问题解答，包含了从Mod安装、使用到自定义歌曲、模型、曲包、游戏翻译、联机等等各种内容，持续更新中…">
+  <link rel="stylesheet" href="assets/css/style.css?v=g">
+  <style>
+	.tgf { /*链接锚定偏移*/
+		position: relative;
+	    top: -75px;
+	    display: block;
+	    height: 0;
+	    overflow: hidden;
+	}
+	.tgfl { /*链接锚定偏移*/
+		position: relative;
+	    top: -70px;
+	    display: block;
+	    height: 0;
+	    overflow: hidden;
+	}
+	.hzw { /*导航栏占位*/
+		height:70px;
+	} 
+	.nav{ /*固定导航栏*/
+	    position:fixed;
+	    top:0;
+	    left:0;
+	    width:100%;
+	    height:70px;
+	    z-index:8;
+	}
+	.beian{ 
+	    text-align:center;
+	    position:relative;
+	    top:-26px;
+	    font-size:.75em;
+	    color:#A2A2A2;
+	}
+	.beianlink{ 
+	    text-decoration:none;
+	    color:#A2A2A2;
+	}
+	@media only screen and (max-width: 1023px) {
+		.nav{
+		    height:50px;
+		}
+		.hzw{
+			height:50px;
+		} 
+		.beian{ 
+		    top:-10px;
+		}
+	}
+@keyframes rainbownote_keyframe{
+    0%{
+        background-color:hsl(349, 75%, 51%);
+    }
+    33%{
+        background-color:hsl(94, 48%, 42%);
+    }
+    67%{
+        background-color:hsl(220, 90%, 56%);
+    }
+    100%{
+        background-color:hsl(349, 75%, 51%);
+    }
+}
+.rainbowbut {
+    animation-name: rainbownote_keyframe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+  </style>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125410658-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-125410658-2');
+	</script>
+</head>
+<body onload="pageonload();">
+<div style="background:#FFF" class="nav">
+
+	<header class="f-header position-relative js-f-header">
+	  <div class="f-header__mobile-content container max-width-lg">
+	    <a href="https://space.bilibili.com/557131" target="_blank" class="f-header__logo">
+	      <img width="100%" src="assets/avatar/wgzeyu.webp">
+	    </a>
+	    <button class="reset anim-menu-btn js-anim-menu-btn js-tab-focus f-header__nav-control" aria-label="Toggle menu">
+	      <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+	    </button>
+	  </div>
+	  <div class="f-header__nav" role="navigation">
+	    <div class="f-header__nav-grid container max-width-lg">
+	      <div class="f-header__nav-logo-wrapper margin-right-lg@md">
+	        <a href="https://space.bilibili.com/557131" target="_blank" class="f-header__logo">
+	          <img width="100%" src="assets/avatar/wgzeyu.webp">
+	        </a>
+	      </div>
+	      <ul class="f-header__list">
+            <li class="f-header__item">
+              <a href="https://bs.wgzeyu.com/" class="f-header__link">
+                <span>BS基础教程与问题解答</span>
+                <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+              </a>
+              <ul class="f-header__dropdown">
+                <li><a href="https://bs.wgzeyu.com/pc-guide/" class="f-header__dropdown-link">PC平台 - BS新手教程</a></li>
+                <li><a href="https://bs.wgzeyu.com/pc-faq/" class="f-header__dropdown-link" aria-current="page">PC平台 - BS问题解答</a></li>
+                <li><a href="https://bs.wgzeyu.com/oq-guide/" class="f-header__dropdown-link">Quest平台-BS新手教程</a></li>
+                <li><a href="https://bs.wgzeyu.com/buy/" class="f-header__dropdown-link">Beat Saber 购买教程</a></li>
+              </ul>
+            </li>
+            <li class="f-header__item">
+              <a href="https://bs.wgzeyu.com/drive/" class="f-header__link">
+                <span>游戏资源共享</span>
+                <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+              </a>
+              <ul class="f-header__dropdown">
+                <li><a href="http://share.wgzeyu.vip/" class="f-header__dropdown-link">主站 | 推荐用于小文件</a></li>
+                <li><a href="https://bs.wgzeyu.com/drive/" class="f-header__dropdown-link">网盘 | 推荐用于大文件</a></li>
+                <li><a href="https://bs.wgzeyu.com/songs/" class="f-header__dropdown-link">同步 | 曲包文件夹同步</a></li>
+              </ul>
+            </li>
+	        <li class="f-header__item"><a href="https://viounti.wgzeyu.vip/" class="f-header__link">打分指南</a></li>
+	        <li class="f-header__item">
+	          <a href="#0" class="f-header__link">
+	            <span>相关网站</span>
+	            <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+	          </a>
+              <ul class="f-header__dropdown">
+                <li><a href="https://beatsaver.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">歌曲 | BeatSaver</a></li>
+                <li><a href="https://modelsaber.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">模型 | ModelSaber</a></li>
+                <li><a href="https://scoresaber.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">排名 | ScoreSaber</a></li>
+                <li><a href="https://www.beatleader.xyz/" class="f-header__dropdown-link" target="_blank" rel="nofollow">排名 | BeatLeader</a></li>
+              </ul>
+	        </li>
+	      </ul>
+	      <ul class="f-header__list margin-left-auto@md">
+	      	<li class="f-header__item"><a href="#0" class="f-header__btn btn btn--accent" aria-controls="dashang-window" onclick="limg('ds-img');">捐助</a></li>
+	        <li class="f-header__item"><a href="#0" class="f-header__btn btn btn--primary" aria-controls="qq-group">社区Q群</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</header>
+
+</div>
+<div class="hzw"></div>
+
+<header class="cd-header flex flex--column flex--center">
+  <div class="text-component text--center" id="cd-header">
+  	<h1><span style="white-space:nowrap;">Beat Saber</span> <span style="white-space:nowrap;">问题解答</span> <span style="white-space:nowrap;">- PC平台</span></h1>
+  </div>
+</header>
+<p id="kuandu" class="kuandu" style="text-align:center;background-color:#F37B1D;color:white;display:none;"></p>
+<section class="cd-faq js-cd-faq container container--md margin-top--lg margin-bottom--lg">
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" name="ksdh" id="basic">基础教程</a></li> <!--链接在底部js里设置-->
+		<li><a class="cd-faq__category truncate" name="ksdh" id="mod">Mod安装</a></li>
+		<li><a class="cd-faq__category truncate" name="ksdh" id="song">自定义歌曲</a></li>
+		<li><a class="cd-faq__category truncate" name="ksdh" id="moduse">模型 | 打分 | 性能</a></li>
+		<li><a class="cd-faq__category truncate" name="ksdh" id="other">手柄 | 其他</a></li>
+	</ul>
+	<div class="cd-faq__items">
+		<div class="tgfl" id="basicp"></div>
+		<ul id="basicm" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>基础教程</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger text-bg-fx text-bg-fx--scale-x" href="#0" onclick="window.open('https://bs.wgzeyu.com/pc-guide/#modinstall');"><span>Mod 基础教程已全部移动至【新手教程】页面中，点我进入</span></a>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger text-bg-fx text-bg-fx--scale-x" href="#0" onclick="window.open('https://bs.wgzeyu.com/pc-guide/#addsong');"><span>歌曲 基础教程已全部移动至【新手教程】页面中，点我进入</span></a>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger text-bg-fx text-bg-fx--scale-x" href="#0" onclick="window.open('https://bs.wgzeyu.com/pc-guide/#changemodel');"><span>模型 基础教程已全部移动至【新手教程】页面中，点我进入</span></a>
+			</li>
+		</ul>
+		<div class="tgfl" id="modp"></div>
+		<ul id="modm" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Mod安装</h2></li>
+			<div class="tgf" id="network"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么加载下载Mod缓慢甚至报错？ModAssistant在加载/下载时报错怎么办？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+					  通常10秒就能装完全部常用Mod。但是，服务器在国外，中国国际线路经常拥塞，慢到下不动也很正常。
+					</p>
+					<p>
+					  推荐尝试以下方案解决Mod下载问题：<br>
+					  1. 下载<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">增强版ModAssistant</a>，<strong>打开后在左下方将Mod下载源切换为国内源</strong>。（不建议使用其他源）
+					</p>
+					<p>
+					  <div id="beatmodscf1" style="color:hsl(210, 14%, 30%);"></div>
+					</p>
+					<p>
+					  <div id="beatmodscf2" style="color:hsl(210, 14%, 30%);"></div>
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="modbushengxiao"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么我装的Mod不生效？装不上Mod怎么办？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					<p>
+					  在Mod安装完毕，但游戏中找不到Mod时，才可按本篇教程操作。<br>
+					  如果你的<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>压根就不给装Mod，请看“<a class="text-bg-fx text-bg-fx--scale-y" href="#network">为什么加载下载Mod缓慢甚至报错？</a>”
+					</p>
+					<p>
+					  如果你在2022年3月以前安装的Mod能生效，只有在这之后才无法生效 (1.20以上)，<a class="text-bg-fx text-bg-fx--scale-y" href="#mod20wuxiao">请先查看上一条解答</a>。
+					</p>
+	       		   	<p>
+	      		      <strong>安装Mod之前需要确保以下几项：</strong><br>
+	      		      1. 确保游戏安装路径中不存在任何中文或特殊字符，<strong>否则将导致绝对装不上Mod</strong>（不是盘符 <span style="white-space:nowrap;">，你需要确保<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a></span>的“选项”界面中显示的游戏安装路径的整个框中不得存在任何中文字符）；<br>
+	      		      2. 确保<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>左下角选择的游戏版本，以及设置的游戏目录与你的游戏相同；<br>
+					  3. 安装Mod前至少要启动过一次安装/更新后的游戏，退出后才能安装Mod，显示安装完成再启动游戏；<br>
+					  4. <a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>推荐使用增强版的国内或国际源，不推荐使用增强版的包子源与原版。
+					</p>
+	       		   	<p>
+	      		      <strong>如果Mod就是不生效，请尝试以下解决方法：</strong><br>
+	      		      1. 进入游戏安装目录，右键以管理员身份运行IPA(.exe)。<br>
+					</p>
+	       		   	<p>
+	      		      <strong>如果Mod仍然没有生效，请尝试以下解决方法：</strong><br>
+	      		      1. 按照本网页中的“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来足够彻底地重装一次游戏。<br>
+					</p>
+	       		   	<p>
+	      		      卸载重装很可能解决不了问题，因为不够彻底，请按教程给出的重装步骤来才做，这样才能保证解决问题。<br>
+	      		      不要惧怕重装，教程给出的是最快、最彻底的备份重装并恢复所有数据的方案，不会损失任何数据。
+					</p>
+					<p>如果仍然遇到问题装不上Mod，请在上方导航栏中找到群号，<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群提问</a>。</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="cleanreinstall"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>如何<strong>彻底重装</strong>游戏并恢复数据？（<strong>最快且最彻底的备份重装方案</strong>）</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					<p>
+					  只有在Mod安装完成之后出现问题，或者是游戏自身的问题，才能按照这篇教程操作。<br>
+					  如果你的ModAssistant报错，或者是网页报错，重装游戏是解决不了的！
+					</p>
+					<p>
+					  如果你安装了360之类的第三方杀软，建议在重装前将其更换为系统自带杀软（Windows Defender），<br>
+					  以下是最快且最彻底的重装游戏并恢复全部数据方案：
+					</p>
+					<p>
+					  1. 退出正在运行的ModAssistant（如未打开请忽略）；<br>
+					  2. 找到游戏目录，进入安装路径的上一级文件夹，将游戏安装文件夹的名字改掉，随便改，有变化就行；<br>
+					  3. 在Steam中找到Beat Saber，右键、属性、本地文件、验证游戏完整性，此时将会重新下载安装；<br>
+					  4. 等待安装完成后，先运行一次游戏然后再退出游戏；<br>
+					  5. 打开<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>安装Mod（请使用增强版的国内或国际源，不推荐使用增强版的包子源与原版）；<br>
+					  6. 启动游戏看看，如果仍然有问题，试试在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>的选项界面中找到游戏存档，备份后删除；<br>
+					  7. 如果一切正常，退出游戏，接下来开始恢复数据：<br>
+					  8. 从原来更名文件夹中删除该文件："Beat Saber<strong>\</strong>UserData<strong>\</strong><b>Beat Saber IPA.json</b>"；<br>
+					  9. 将以下目录从原来更名文件夹中移动到现在的游戏目录<br>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beat Saber<strong> \ </strong>Beat Saber_Data<strong> \ </strong>CustomLevels &nbsp; &nbsp; (自定义歌曲)<br>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beat Saber<strong> \ </strong>CustomAvatars &nbsp; &nbsp; (人物模型)<br>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beat Saber<strong> \ </strong>CustomNotes &nbsp; &nbsp; (方块模型)<br>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beat Saber<strong> \ </strong>CustomPlatforms &nbsp; &nbsp; (场景模型)<br>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beat Saber<strong> \ </strong>CustomSabers &nbsp; &nbsp; (光剑模型)<br>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beat Saber<strong> \ </strong>UserData &nbsp; &nbsp; (Mod设置)
+					</p>
+					<p>
+					  （注：移动比复制快很多；千万不要将Beat Saber_Data整个移动回去，只能移动它里面的CustomLevels）
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="jiangjijiaochengtgf"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>如何降级到指定的游戏版本？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+				        <p>
+				         <strong> 【新降级方案】</strong>（限1.29.1版本，暂时有效）
+				        </p>
+				        <p>
+				          降级教程：<br>
+				          　0. 关闭ModAssistant<br>
+				          　1. 在Steam中找到Beat Saber<br>
+				          　2. 右键 → 属性 → 测试版<br>
+				          　3. 将「参与测试」右侧的「无」切换至「legacy1.29.1_unity_ver2019.4.28f1 - pre unity upgrade b……<br>
+				          　4. 等待下载完成，即可完成降级
+				        </p>
+				        <p>
+				          注：请不要填写测试代码，也不要点击「检查代码」。<br>
+				          理论来说，你无需再按传统方案的繁琐步骤来恢复数据，<br>
+				          如果以前给1.29.1打过Mod，切换测试分支后应该会恢复。<br>
+				          如果你没打过Mod，降级完成后即可按教程来安装Mod。<br>
+				          这不是测试版，只是利用该功能提供了引擎更新前的正式版
+				        </p>
+				        <hr>
+				        <p>
+				        <strong>  【传统降级方案】</strong>
+				        </p>
+				        <p>
+				          下载方法：<br>
+				          　1. <s><a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://bs.wgzeyu.com/drive/">点我进入网盘</a></s><br>
+				          　2. 选择任意一个网盘，点击【进入下载】<br>
+				          　3. 进入【游戏备份与懒人包】文件夹<br>
+				          　4. 找到1.29.1的原版备份<br>
+				          　5. 对着找到的文件右键，点击下载<br>
+				        </p>
+				        <p>
+				          降级教程：<br>
+				          　0. 确保已经通过Steam更新了游戏<br>
+				          　1. 对着下载的原版备份右键<br>
+				          　2. 点击解压至单独文件夹<br>
+				          　3. 通过Steam打开游戏目录<br>
+				          　4. 点击游戏目录的上一级目录<br>
+				          　5. 更改游戏目录文件夹名称，随便改<br>
+				          　6. 将原版备份解压出的文件夹移动过来<br>
+				          　7. 将原版备份文件夹名称重命名为Beat Saber<br>
+				        </p>
+				        <p>
+				          恢复数据教程：<br>
+				          　1. 打开降级教程第⑤步改名的游戏目录<br>
+				          　2. 删除UserData文件夹内的Beat Saber IPA<br>
+				          　3. 复制以下文件夹<br>
+				          　　UserData（Mod设置）<br>
+				          　　CustomSabers（光剑模型）<br>
+				          　　CustomPlatforms（场景模型）<br>
+				          　　CustomAvatars（人物模型）<br>
+				          　　CustomNotes（方块模型）<br>
+				          　4. 进入新的游戏目录<br>
+				          　5. 粘贴复制的那些文件夹<br>
+				          　6. 在弹出的提示中，选择【替换】<br>
+				          　7. 打开降级教程第⑤步改名的游戏目录<br>
+				          　8. 进入Beat Saber_Data文件夹<br>
+				          　9. 剪切CustomLevels文件夹<br>
+				          　10. 进入新的游戏目录<br>
+				          　11. 进入Beat Saber_Data文件夹<br>
+				          　12. 粘贴剪切的那个文件夹<br>
+				          　13. 在弹出的提示中，选择【替换】<br>
+				        </p>
+				        <p>
+				          降级后安装Mod教程：<br>
+				          　0. 确保降级后至少打开过一次游戏<br>
+				          　1. 退出游戏与降级以前打开的ModAssistant<br>
+				          　2. 按正常流程打开ModAssistant就可以安装Mod了<br>
+				        </p>
+				        <p>
+				          （其实这一套步骤做下来，就是把游戏文件整个更换为旧版备份，不包含任何残留的Mod或游戏文件，只恢复以前的设置与资源文件）
+				        </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>装上Mod打开游戏出现 <strong>Pico串流断开</strong> 与 游戏卡死 或 SteamVR崩溃 是怎么回事？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+						以前23年6月出过该问题，经Pico工程师排查是串流与Mod抢占GPU资源造成，早已推送更新进行了修复。<br>
+						但是，后来又逐渐有用户反馈出现类似的问题，最近10月份出现该问题的Pico用户也是越来越多。
+	       		   	</p>
+	       		   	<p>
+						<strong>SteamVR崩溃后，需点击“管理加载项”、取消屏蔽所有加载项后，才能恢复使用串流。</strong>
+	       		   	</p>
+	       		   	<p>
+						2023/10/16更新：<strong>有Pico用户报告称按此步骤操作可以解决该问题</strong><br>
+						1. 启动并连接Pico串流，让Pico串流助手启动SteamVR<br>
+						2. Pico串流助手中点击左上角的“返回”，让其断开连接，但不要退出SteamVR<br>
+						3. 启动Beat Saber，等待游戏载入完成<br>
+						4. Pico串流助手重新连接串流，即可正常进入游戏
+	       		   	</p>
+	       		   	<p>
+						2023/10/16更新：<strong>另一位Pico用户报告了一份不同的解决方法</strong><br>
+						1. 启动并连接Pico串流，让Pico串流助手启动SteamVR<br>
+						2. 点按头显电源键，让其进入息屏状态，并确认SteamVR中头显图标处于灰色待机状态<br>
+						3. 启动Beat Saber，等待游戏载入完成<br>
+						4. 点按头显电源键、点亮并戴上头显，即可正常进入游戏
+	       		   	</p>
+	       		   	<p>
+						2023/10/01更新：有用户报告清除Pico串流助手的应用数据后暂时解决了该问题。
+	       		   	</p>
+	       		   	<p>如果没有解决，可以试试按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来彻底重装游戏。<br>
+	       		   	<p>
+						如果仍然没有解决该问题，你可以试试切换游戏版本，将【最新版 / 1.29.1】这两个版本各试一遍，<br>如需降级至1.29.1，你可以<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">点我打开降级教程</a>，或者也可以<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">点我打开降级教程</a>。
+					</p>
+	       		   	<p>
+						如果仍然没有解决该问题，也可以咨询VR设备厂商客服，<br>或者暂时不要安装Mod，目前看来很可能是Pico串流与Mod之间产生的冲突造成的问题。
+	       		   	</p>
+					<p>
+						注：如果你遇到的不是断连或卡死，而是在降级后Pico手柄扳机键不能点，<a class="text-bg-fx text-bg-fx--scale-x" href="https://bbs.picoxr.com/post/7265210266523975739" target="_blank">请点我打开手柄问题解决方法</a>
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>一打开游戏就卡黑屏、卡Logo进不去，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	  <p>首先需要注意，Mod需要匹配游戏版本，如果你安装了版本不匹配的Mod，请卸载掉对应不匹配的Mod。</p>
+	       		   	<p>
+						如果你的游戏是最新版，请先尝试降级至1.29.1，你可以<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">点我打开降级教程</a>，或者也可以<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">点我打开降级教程</a>。
+					</p>
+					  <p>如果你装了SmartSongSuggest这个Mod，打开游戏就黑屏未响应，试试将其卸掉。</p>
+	       		   	  <p>请确保不要直接在文件夹中双击exe启动游戏，请通过Steam或Steam创建的快捷方式来启动游戏。</p>
+	       		   	  <p>如果仍然没有解决这个问题，请按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”来彻底重装游戏。<br>（注意：卸载重装可能解决不了，按教程给出步骤重装才足够彻底，请务必将游戏安装至纯英文路径）</p>
+	      		      <p>如果你的游戏目录中自动出现了“游侠热门单机游戏”的快捷方式，可能是系统中毒导致的，被病毒修改过的文件与Mod不兼容从而无法启动，如果遇到该情况建议重装系统，不要运行以前的任何exe可执行文件。</p>
+	      		      <p>注：本条解答无法解决因VR端软件问题或者SteamVR问题而导致的黑屏现象。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>装完Mod以后一打开游戏就报错、未响应或者打不开，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	  <p>首先需要注意，Mod需要匹配游戏版本，如果你安装了版本不匹配的Mod，请卸载掉对应不匹配的Mod。</p>
+	       		   	  <p>如果你的游戏是最新版，可以试试降级至1.29.1，你可以<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">点我打开降级教程</a>，或者也可以<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">点我打开降级教程</a>。</p>
+	       		   	  <p>请首先检查BeatSaber安装路径，如果安装路径中存在中文，请更换到英文路径重新安装BeatSaber。</p>
+	       		   	  <p>如果你装了SmartSongSuggest这个Mod，打开游戏就黑屏未响应，请先将其卸掉试试。</p>
+	       		   	  <p>请确保不要直接在文件夹中双击exe启动游戏，请通过Steam或Steam创建的快捷方式来启动游戏。</p>
+	       		   	  <p>如果重新以正常方式启动游戏后仍然报错，请按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”来彻底重装游戏。<br>（注意：请务必将游戏安装至纯英文路径，首次安装时最少化Mod数量，只装默认勾选试试能不能用）</p>
+	      		      <p>如果你的游戏目录中自动出现了“游侠热门单机游戏”的快捷方式，可能是系统中毒导致的，被病毒修改过的文件与Mod不兼容从而无法启动，如果遇到该情况建议重装系统，不要运行以前的任何exe可执行文件。</p>
+	      		      <p>注：本条解答无法解决因VR断开连接或拔掉VR而造成的游戏画面静止(不跟着头动)。</p>
+	   		       </div>
+				</div>
+			</li>
+			<!--li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏更新到1.12.2以上版本之后安装Mod不生效怎么办？BSIPA更新不了怎么办？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      新版游戏改动巨大，Mod组件改动也很大，很可能是新版Mod组件与游戏目录中残留的旧版产生了冲突，<br>
+	      		      可以直接按照下方“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤重装BS来解决。
+					</p>
+	       		   	<p>
+	      		      请按照教程步骤来重装，这是最彻底且最快的备份重装并恢复数据的方法，Steam卸载重装可能不彻底。
+					</p>
+	   		       </div>
+				</div>
+			</li-->
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>从旧版更新到1.16以上之后，装上Mod、点击Continue(继续)游戏就黑屏，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      请尝试按照下方“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤重装BS来解决。<br>请按教程提供的方案来重装，卸载重装删的不干净。
+					</p>
+	       		   	<p>
+	      		      请尝试在按教程方案彻底重装以后再重新安装Mod，目前遇到的案例我觉得有可能是游戏目录存在版本不匹配的Mod导致的。
+					</p>
+					<p>如果无法解决，请在上方导航栏中找到群号，<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群提问</a>。</p>
+					<p>如果你还在用win7系统，请先升级到win10，目前我见过的所有win7用户，100%都不兼容mod，不用折腾游戏了，先升级系统吧，下面都专门有过win7装mod黑屏的解答，你却还找到这里，说明没仔细看。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏更新到1.20.0及以上版本之后更新BSIPA总是变回原来的旧版怎么办？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					<p>
+						1. 使用ModAssistant卸载BSIPA（ModAssistant的“选项”界面中有这个按钮）<br>
+						2. Steam验证游戏文件<br>
+						3. 使用ModAssistant安装Mod（推荐使用增强版的国内或国际源，不推荐使用增强版的包子源与原版）<br>
+						4. 启动游戏，然后退出游戏<br>
+						5. 再次使用ModAssistant安装Mod（推荐使用增强版的国内或国际源，不推荐使用增强版的包子源与原版）<br>
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="mod20wuxiao"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏更新到1.20.0及以上版本之后再安装Mod就无法生效要怎么办？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					<p>
+						1. 使用ModAssistant卸载BSIPA（ModAssistant的“选项”界面中有这个按钮）<br>
+						2. Steam验证游戏文件<br>
+						3. 使用ModAssistant安装Mod（推荐使用增强版的国内或国际源，不推荐使用增强版的包子源与原版）<br>
+						4. 启动游戏，然后退出游戏<br>
+						5. 再次使用ModAssistant安装Mod（推荐使用增强版的国内或国际源，不推荐使用增强版的包子源与原版）<br>
+					</p>
+					<p>
+						如果你的游戏仍然装不上Mod，请按“<a class="text-bg-fx text-bg-fx--scale-y" href="#modbushengxiao">为什么我装的Mod不生效？</a>”的方法来解决。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="fmod"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么有的Mod在ModAssistant找不到？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	说明Mod还没有更新到正式版。（不是说正版不支持，[正式版/测试版]与[正版/盗版]不是一个意思）
+	      		      </p>
+	      		      <p>
+	      		      	着急用的话可以先手动安装测试版Mod，常用mod一般会有人维护更新的，可以在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modmanual" target="_blank">【BS新手教程】</a>中找到手动安装Mod教程。
+	      		      </p>
+	      		      <p>
+	      		      	一些Mod更新没那么快，游戏更新也经常会出现新Mod，可以每隔一段时间打开安装器看看。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏刚刚更新完，Mod就消失了，怎么办？需要禁止更新吗？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>启动过一次新版游戏后，退出游戏使用<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>重新安装Mod即可。（推荐使用增强版的国内或国际源，不推荐使用增强版的包子源与原版）</p>
+	      		      <p>注：游戏刚刚更新的几小时内可能识别不到最新的游戏版本，此时建议等待一会再安装Mod。</p>
+	      		      <p>
+	      		        我们反对禁用更新。现在Mod开发者都在紧随游戏最新版，<br>
+	      		        虽然在游戏刚刚更新的几小时内，有可能没有Mod，但通常在一天内Mod就都会更新。<br>
+	      		        更何况，现在更新的<a class="text-bg-fx text-bg-fx--scale-y" href="#modvc">很多游戏版本，Mod直接完全兼容</a>，都不用等直接就有，重装Mod就行。
+	      		      </p>
+	       		      <p>
+	       		   	    如果部分Mod暂未更新正式版，可以按<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modmanual" target="_blank">【BS新手教程】</a>中的手动安装Mod教程来安装。
+	       		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="modvc"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" onclick="cimg('modaliases','https://alias.beatmods.com/aliases.json?v=' + Math.random());" href="#0"><span>哪些版本的游戏，Mod可以互相兼容？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      以下每行的游戏版本，Mod互相兼容，不同行之间不兼容。"游戏版本": ["Mod与上一版兼容的游戏版本"]
+					</p>
+	      		      <iframe id="modaliases" width="100%" height="550"></iframe>
+	       		   	<p>
+	      		      （手机需<a class="text-bg-fx text-bg-fx--underline" onclick="cimg('modaliases','https://alias.beatmods.com/aliases.json?v=' + Math.random());" href="#0">点击此处加载</a>，若加载失败，请<a class="text-bg-fx text-bg-fx--underline" onclick="cimg('modaliases','https://beatmods.wgzeyu.com/alias/aliases.json?v=' + Math.random());" href="#0">点击此处</a>切换为国内中转）
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Win7系统装完Mod打开游戏就黑屏，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	  <p>该问题是由于系统版本过低导致的。</p>
+	       		   	  <p>Win7现在已经和XP是一个地位了，请升级到Windows10。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>装完Mod以后，启动游戏点击CONTINUE就会黑屏，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	  <p>
+	       		   	  	如果你使用ModAssistant安装Mod之前，切换过ModAssistant的游戏版本，<br>
+	       		   	  	那说明是由于你安装了版本不匹配的Mod，把游戏搞坏了导致无法运行。<br>
+	       		   	  	安装版本匹配的Mod一般不会有问题，版本不匹配的Mod才会导致游戏运行不正常。
+	       		   	  </p>
+	      		      <p>请按照上方“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的方案，彻底重装游戏。</p>
+	      		      <p>如果你遇到的不是这个情况，请<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群提问</a>，可在顶部导航栏中找到群号。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么Beat Saber安装目录中找不到我刚刚装的Mod或songe-converter？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      安装Mod后运行一次游戏，才算完整安装，Mod相关文件才会出现在他该出现的位置。<br>
+					  在这之前，Mod相关文件会保存在Beat Saber\IPA\Pending
+					</p>
+	       		   	<p>
+	      		      另外，新版Mod已不再附带远古格式歌曲转换工具songe-converter，如有需要可进入<a class="text-bg-fx text-bg-fx--scale-x" href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank">BS游戏资源共享</a>中的工具目录下载。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant显示“BSIPA解压失败”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	目前我见到的该问题，全部都是由于安装Mod的过程遭到拦截导致的。<br>
+	      		      	我们一般推荐使用系统自带杀软（Windows Defender），一般不会有这种问题，查杀率也很高，<br>
+	      		      	而360这类第三方杀软经常无提示误拦截，所以出现这种情况也不奇怪。
+	      		      </p>
+	      		      <p>
+	      		      	如果更换杀软不能解决问题，可以尝试在右上角加群提问。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant左下角的版本切换中没有匹配的游戏版本？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	如果你在使用包子源（选项界面右上角），请切换为国际源或国内源，包子源有时会出问题。
+	      		      </p>
+	      		      <p>
+	      		      	如果游戏刚刚发布更新、过去还不到12小时，那就是Mod还不支持这个版本，稍微等等再重新打开ModAssistant。
+	      		      </p>
+	      		      <p>
+	      		      	如果你的情况到现在还没有解决，请在网页右上角<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群</a>反馈。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant打不开，文件名还变成了ModAssistant.old？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	说明软件正在运行自动更新，旧版将被更名为.old备份，正在下载新版。<br>
+	      		      	如果迟迟没有出现软件界面，很可能是由于网络问题导致更新下载失败，<br>
+	      		      	可<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">重新下载最新版ModAssistant</a>。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant打开后还没出现软件界面就崩溃、报错了？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>大概率是自动更新失败导致的，请先尝试<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">重新下载最新版ModAssistant</a>。</p>
+	      		      <p><strong>如果重新下载解决不了，请尝试将软件移动到不同文件路径（挪到不同的文件夹中），然后重新打开。</strong></p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="netframework472"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant无法在低于Windows 10 1803版本的系统中正常运行？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	（<strong>如果你是Windows10系统，请前往这里查看版本</strong>：设置 → 系统 → 关于 → Windows规格 → 版本号）
+	      		      </p>
+	      		      <p>
+	      		      	ModAssistant需要.NET Framework 4.7.2，缺失会导致无法联网，<br>
+	      		      	Windows 10 1803及以上版本的系统已自带.NET Framework 4.7.2或更高版本，<br>
+	      		      	Windows 7、8.1、10 (1607/1703/1709)可手动安装.NET Framework 4.7.2。
+	      		      </p>
+	      		      <p>
+	      		      	<strong>请将你的系统更新功能恢复为启用状态，它会自动更新到最新版Windows 10，这将会解决该问题。</strong><br>
+	      		      	如果更新失败，可尝试升级工具：<a class="text-bg-fx text-bg-fx--scale-x" href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank">https://www.microsoft.com/zh-cn/software-download/windows10</a>
+	      		      </p>
+	      		      <p>
+	      		      	如果你的系统无法更新，且你的系统是Windows 7、8.1、10 (1607/1703/1709)，<br>
+	      		      	则可以通过手动安装.NET Framework 4.7.2或更高版本来解决该问题。<br>
+	      		      	如果你的系统版本不在范围内（例如Windows 10 1511），则无法安装.NET Framework 4.7.2，<br>
+	      		      	建议备份好数据重装系统，直接安装最新版Windows 10或11以解决该问题。
+	      		      </p>
+	      		      <p>
+	      		      	由于过低版本的Windows 10几乎没人用（都自动更新到新版了），所以兼容性会有很严重的问题。
+	      		      </p>
+	      		      <p>
+	      		      	.NET Framework的兼容性可以查看下方网页：<br>
+	      		      	<a class="text-bg-fx text-bg-fx--scale-x" href="https://learn.microsoft.com/zh-cn/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472" target="_blank">https://learn.microsoft.com/zh-cn/dotnet/framework/migration-guide/versions-and-dependencies</a><br>
+	      		      	表格中的✔️代表内置，➕代表可手动安装。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="banbenfailall"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant无法联网、所有下载源都报错“版本列表下载失败”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	只有在所有下载源都报错时才可查看本条解答，<br>
+	      		      	如果你还没尝试切换下载源，请先查看下方的“<a class="text-bg-fx text-bg-fx--scale-y" href="#banbenfail1">为什么ModAssistant报错“版本列表下载失败”？</a>”。
+	      		      </p>
+	      		      <p>
+	      		      	ModAssistant需要.NET Framework 4.7.2，缺失会导致无法联网，请先检查你的系统版本。
+	      		      </p>
+	      		      <p>
+	      		      	（<strong>如果你是Windows10系统，请先前往这里查看版本</strong>：设置 → 系统 → 关于 → Windows规格 → 版本号）
+	      		      </p>
+	      		      <p>
+	      		      	如果你的系统版本不低于Windows 10 1803，则可以排除.NET Framework版本过低这一原因，<br>可能是网络原因导致的。
+	      		      </p>
+	      		      <p>
+	      		      	如果你的系统版本低于Windows 10 1803，则是由于.NET Framework版本过低导致的。<br>
+	      		      	请将你的系统更新功能恢复为启用状态，它会自动更新到最新版Windows 10，这将会解决该问题。<br>
+	      		      	详情请查看这条解答：<a class="text-bg-fx text-bg-fx--scale-y" href="#netframework472">为什么ModAssistant无法在低于Windows 10 1803版本的系统中正常运行？</a>
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="banbenfail1"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“版本列表下载失败”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      显示这个提示是因为你在点击同意的时候，软件还没有获取到游戏版本。<br>
+	      		      通常来说，只会有两种原因：<br>
+	      		      1. 你没看完就点了同意，再等几秒看完了再点同意，或者重新打开等10秒再点同意；<br>
+	      		      2. 网络太差加载不出版本列表，按上面“<a class="text-bg-fx text-bg-fx--scale-y" href="#network">为什么加载下载Mod缓慢甚至报错？</a>”的方法切换下载源解决。
+	      		    </p>
+	       		   	<p>
+	      		      但是，如果你已经试过切换下载源、所有下载源都报错，请看上方这条解答：<br>
+	      		      “<a class="text-bg-fx text-bg-fx--scale-y" href="#banbenfailall">为什么ModAssistant无法联网、所有下载源都报错“版本列表下载失败”？</a>”
+	      		    </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“An……类型初始值设定项引发异常……配置系统未能初始化”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	       		   		可能是ModAssistant的设置文件出现了异常，<br>请尝试将ModAssistant挪动到不同的文件路径（挪动到不同的文件夹），然后再重新打开软件。
+					</p>
+	       		   	<p>
+	       		   		ModAssistant的设置文件会跟随其所在的文件路径保存，换个文件路径（文件夹）就会将ModAssistant恢复默认设置。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“无法获取游戏版本………System.IO………未能找到文件”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>大概率是游戏文件损坏导致的该报错。<br>（可能是由于降级后更新（覆盖了版本错误的增量包）或降级操作错误导致文件损坏）</p>
+	       		   	<p>
+	      		      如果你<strong>正打算降级</strong>游戏，请尝试以下解决方法：<br>
+	      		      1. 按照本网页中的“<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">如何降级到指定的游戏版本？</a>”的步骤来重新对游戏做一次降级。<br>
+					</p>
+	       		   	<p>
+	      		      如果你<strong>不打算降级</strong>游戏，请尝试以下解决方法：<br>
+	      		      1. 按照本网页中的“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来足够彻底地重装一次游戏。<br>
+					</p>
+	       		   	<p>
+	      		      如果这没有解决问题，请在右上角<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群</a>，反馈给WGzeyu。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“刚刚发生了一个未处理的异常………系统找不到指定的文件”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>如果在打开后报错，很大概率是自动更新失败导致的，请<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">重新下载最新版ModAssistant</a>。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“刚刚发生了一个未处理的异常………已取消一个任务”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>极大概率是你的网络问题导致的，前面“<a class="text-bg-fx text-bg-fx--scale-y" href="#network">为什么加载下载Mod缓慢甚至报错？</a>”的解答中有解决方法。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“An...对路径...ModAssistant.old.exe的访问被拒绝”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	说明你打开了远古版本ModAssistant自动更新前创建的旧版备份。
+	      		      </p>
+	      		      <p>
+	      		      	.old结尾的是在自动更新前创建的旧版备份，如果只有.old说明是由于网络原因，自动更新下载失败。<br>
+	      		      	旧版有个小问题是，旧版备份打开也会尝试更新，然后依然会尝试创建旧版备份，于是已在运行的旧版备份尝试再创建一个旧版备份，无法写入，就报错了。
+	      		      </p>
+	      		      <p>
+	      		      	请<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">重新下载最新版ModAssistant</a>。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“此实现不是Windows平台FIPS验证的加密算法的一部分”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	这是操作系统导致的问题，可以尝试谷歌搜索“ 此实现不是Windows平台FIPS验证的加密算法的一部分 ”来寻找解决方案，或者也可以尝试下方链接中提供的解决方案。
+	      		      </p>
+	      		      <p>
+	      		      	<a class="text-bg-fx text-bg-fx--scale-x" href="https://www.cnblogs.com/bsjbk/p/11316670.html" target="_blank">https://www.cnblogs.com/bsjbk/p/11316670.html</a><br>
+	      		      	<a class="text-bg-fx text-bg-fx--scale-x" href="https://blog.csdn.net/song_jiang_long/article/details/54172711" target="_blank">https://blog.csdn.net/song_jiang_long/article/details/54172711</a><br>
+	      		      	<a class="text-bg-fx text-bg-fx--scale-x" href="https://freesilo.com/?p=617" target="_blank">https://freesilo.com/?p=617</a>
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModAssistant报错“Multibyte DLL 尚未支持此游戏版本”？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	可能是你给其他游戏安装的Mod或者汉化什么的东西产生了冲突导致的。<br>
+						以前见到过有人遇到这种问题，把报错的东西（其他游戏的Mod）删掉以后就能用了。
+	      		      </p>
+	       		   	  <p>
+	      		        如果这没有解决问题，请在网页右上角<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群</a>，然后带上截图提问（并说明一下你尝试过哪些操作）。
+					  </p>
+	   		       </div>
+				</div>
+			</li>
+		</ul>
+		<div class="tgfl" id="songp"></div>
+		<ul id="songm" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>自定义歌曲</h2></li>
+			<div class="tgf" id="saverdownload"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么歌曲下载缓慢或者下载失败？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+					  由于中国连接其他国家的国际带宽不够，经常发生拥塞，所以有时候会因为网络不好导致下不动。
+					</p>
+					<p>
+					  可以尝试按以下方法解决网页版BeatSaver手动下载歌曲问题：<br>
+					  1. 使用BeatSaver国内中转：<a class="text-bg-fx text-bg-fx--scale-x" href="http://beatsaver.wgzeyu.vip/" target="_blank">http://beatsaver.wgzeyu.vip/</a><br>
+					  2. 或者在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/drive/" target="_blank">BS游戏资源共享</a>内下载歌曲、曲包；
+					</p>
+					<p>
+					  可以尝试按以下方法解决OneClick一键下载歌曲问题：<br>
+					  1. 将注册OneClick的ModAssistant更新至最新版（或者使用新版重新勾选OneClick来重新注册）；<br>
+					  2. 在ModAssistant界面左下角将OneClick下载源切换为国内源。
+					</p>
+					<p>
+					  可以尝试按以下方法解决游戏内BETTER SONG SEARCH下载问题：<br>
+					  1. 打开 Better Song Search<br>
+					  2. 点击 MORE▼<br>
+					  3. 点击 BETTERSONGSEARCH SETTINGS<br>
+					  4. 找到 Use Chinese BeatSaver Mirror，打开开关<br>
+					  5. 点击 OK, ENABLE<br>
+					  （操作后将切换为通过WGzeyu提供的国内中转来下载歌曲）
+					</p>
+					<p>
+					  可以尝试按以下方法解决游戏内MORE SONGS下载问题：<br>
+					  按照<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modmanual" target="_blank">【BS新手教程】</a>中的手动安装Mod教程来安装上国内中转下歌Mod。<br>
+					  （注意：国内版安装完成后再使用ModAssistant安装Mod将覆盖为原版，可重新手动安装覆盖回去解决）
+					</p>
+					<p>
+					  可以尝试以下任意方案解决网络问题：<br>
+					  1. 更换不同运营商的网络（可尝试手机热点）；<br>
+					  2. 使用科学上网，并确保路由模式及代理模式设置正确（否则不会经过科学上网）；<br>
+					  3. 过段时间再试，避开高峰期。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么Play按钮是蓝色的点了没反应？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      请尝试按上方 “<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来足够彻底地重装Beat Saber。<br>
+	      		      很可能是Mod装坏了导致的无法正常加载歌曲，例如安装了版本不匹配的Mod。<br>
+	      		      游戏本身虽已支持自定义歌曲，但在安装Mod后仍会修改歌曲加载方式，Mod出错可能会导致加载不正常。
+					</p>
+	       		   	<p>
+	      		      卸载重装很可能解决不了问题，因为不够彻底，请按教程给出的重装步骤来才做，这样才能保证解决问题。<br>
+	      		      不要惧怕重装，教程给出的是最快、最彻底的备份重装并恢复所有数据的方案，不会损失任何数据。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么Play按钮是灰色的不能点？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      通常是缺少某个Mod导致的，点击右上角的“ ？”按钮可以查看具体原因。<br>
+	      		      （如果缺失的是Chroma，除了可能没安装Chroma，还可能是安装了Chroma但是在Chroma的设置中禁用了Chroma，Chroma的设置可以从选歌界面左侧面板顶部的Mod栏中进入，几乎全是用来禁用功能的选项，建议全部都不要勾选，默认设置就是都没有勾选）
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么部分歌曲一直在转圈加载？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      请先<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall" target="_blank">一键安装基础Mod</a>（就是默认勾选Mod），有些歌曲用到了特殊效果需要Mod才能读取。<br>
+	      		      如果你想知道如何判断基础Mod是否生效，请<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_panduan" target="_blank">点我查看新手教程</a>。
+					</p>
+	       		   	<p>
+	      		      对于使用了特殊效果的歌曲，如果连最基础的Mod都没有安装，就是会一直转圈加载无法读取的，装完最基础的Mod以后，如果还缺失Mod，至少可以在右上角问号按钮显示具体缺失哪个Mod，不会一直转圈。
+					</p>
+	       		   	<p>
+	      		      如果你的游戏版本低于1.20.0，也可能是游戏版本过低导致的，部分歌曲用到了新格式的新音符类型，将导致游戏版本低于1.20.0则无法读取。歌曲格式在1.20.0以后没有发生改变，1.20.0与1.31.0的歌曲格式是相同的
+					</p>
+	       		   	<p>
+	      		      注：如果你完全没装Mod，疑惑为什么有的版本能加载有的版本不能，我只想说：你™装一下Mod能死吗？不同版本之间解析有差别很正常啊，有的版本遇到未知内容解析不了，有的版本硬把他读出来但解析错误，这有啥问题？你就那么愿意玩解析错误？没了Mod去玩Mod歌曲，好点的情况只是效果出不来，歌曲还能正常玩，差一点的情况就是在错误的地方额外增加一些音符或墙壁等物体导致不能玩，或者可能有其他问题。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么所有歌曲一直在转圈加载？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      首先确认一下是不是正在加载歌曲，歌曲加载中的时候顶部会有行彩字，如果不是：
+					</p>
+	       		   	<p>
+	      		      请尝试进入游戏目录，<strong>备份后</strong>删除游戏目录下的UserData文件夹。<br>
+	      		      （该文件夹存储的是Mod的设置信息，删除后会将Mod恢复为默认设置，所有Mod都需要重新设置、<br>
+	      		      　<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#addsong_foldereditor_path" target="_blank">通过BSSFM添加的曲包文件夹</a>需要重新拖入添加；如果删除后没有解决问题，可将该文件夹恢复回去）
+					</p>
+	       		   	<p>
+	      		      如果没有解决，说明是Mod装出了问题导致的，例如给游戏安装了版本不匹配的Mod，<br>
+	      		      可以先尝试卸载版本不匹配的Mod、重新安装版本匹配的Mod。
+					</p>
+	       		   	<p>
+	      		      <strong>如果仍然没有解决</strong>，又或者你不知道哪些是版本不匹配的Mod，<strong>请按</strong>“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”<br>
+	      		      的步骤来重装游戏，这个是<strong>最快</strong>并且<strong>最彻底的</strong>备份重装并恢复数据的方案。<br><strong>如果你不按教程来重装，而是直接卸载重装，那么大概率解决不了这个问题，因为不够彻底。</strong>
+					</p>
+	       		   	<p>
+	      		      按教程方案来重装游戏不会损失任何数据，且足够彻底、几乎能解决一切问题，也用不了多少时间。<br>
+	      		      不要惧怕重装！不要惧怕重装！不要惧怕重装！不要惧怕重装！不要惧怕重装！不要惧怕重装！<br>
+	      		      按教程方案来重装游戏不会损失任何数据，且足够彻底、几乎能解决一切问题，也用不了多少时间。<br>
+	      		      除非你不完整按照教程操作（例如重装以后不装Mod或不恢复数据）才会造成数据等内容缺失！
+					</p>
+	       		   	<p>
+	      		      如果你在试过上方所有步骤后依然没有解决问题，请在网页右上角<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群</a>，<br>然后带上截图提问（并说明一下你尝试过哪些操作）。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>如何导出收藏歌曲？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+					  使用我制作的歌曲路径管理器（可在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#addsong_foldereditor_path" target="_blank">【BS新手教程】</a>中的“添加歌曲（合集曲包）”中找到），点击导出收藏即可。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>歌曲列表中的名称错位了怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+					  如果你的游戏是1.28.0、已经安装了【社区翻译SiraLocalizer】，那么请尝试重新从网盘下最新版的【社区翻译SiraLocalizer】覆盖安装；<br>旧版本的社区翻译装在1.28.0版本的游戏中就会导致该问题，最新修复后的社区翻译现在已经上传至网盘中。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>点击OneClick没有反应怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	       		   		可能是你还没有使用ModAssistant注册OneClick，或者以前注册的OneClick由于ModAssistant挪位置/改文件名/改文件夹名导致已失效导致的。
+					</p>
+	       		   	<p>
+	       		   		重新注册OneClick即可解决（取消勾选后，重新勾选回来）。<br>
+						具体操作请查看：<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#addsong_oneclick" target="_blank">【BS新手教程】</a>
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="geshiqufen"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么歌曲格式有不同版本？如何区分？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      在Beat Saber刚刚发布测试版的时候，官方还不支持自定义歌曲，此时有玩家制作了Mod来实现自定义歌曲并定义了歌曲格式，<strong>这就是远古版本的歌曲格式，谱面文件为 <code>.json</code> 后缀</strong>。
+					</p>
+	       		   	<p>
+	      		      后来没多久，游戏官方就发布了支持自定义歌曲的更新并由官方定义了一个不一样的自定义歌曲格式，<br><strong>这就是现在使用的歌曲格式，谱面文件为 <code>.dat</code> 后缀</strong>。<br>在官方定义了歌曲格式以后，即使是通过Mod来加载歌曲也都使用官方格式，<strong>远古格式早已被弃用</strong>。
+					</p>
+	       		   	<p>
+	      		      在游戏更新至1.20.0版本之后增加了新的音符类型，格式依然为 <code>.dat</code> ，<br>含有新音符类型的谱面无法被老版本游戏读取。
+					</p>
+	       		   	<p>
+	      		      请不要通过音频文件来识别歌曲格式，游戏支持读取ogg格式音频文件，但游戏才不管文件名和后缀名，只会照着info中记录的文件名去读文件，而一些歌曲网站为了一定程度上的规避版权问题，将音频文件改了后缀名来防止你双击播放，这才导致音频文件存在不同的“格式”（只是后缀名不一样，格式是一样的）。<br>如果你愿意，音频文件后缀名可以改成任意名称，只要连info中的信息也一起改掉就行。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="songzhuanhuan"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0" onclick="limg('songe-converter');"><span>如何转换自定义歌曲格式？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      旧版转新版：
+	      		    </p>
+	      		    <p>
+					  <s>安装基础Mod之后</s>，按照以下动图操作即可完成转换（手机请<a class="text-bg-fx text-bg-fx--underline" onclick="limg('songe-converter');" href="#0">点击此处加载图片</a>）：
+					</p>
+					  <video muted id="songe-converter" data-src="assets/video/songe-converter.mp4" width='100%' autoplay="autoplay" loop="loop">
+					  	你的浏览器不支持播放当前视频
+					  </video>
+	      		    <p>
+					  新版的基础Mod已不再自带转换工具songe-converter.exe，请从<a class="text-bg-fx text-bg-fx--scale-x" href="http://share.wgzeyu.vip/?Ly8lRTUlQjclQTUlRTUlODUlQjclRUYlQkMlODglRTUlQTYlODJNb2QlRTUlQUUlODklRTglQTMlODUlRTUlOTklQTglRTMlODAlODElRTglQjAlQjElRTklOUQlQTIlRTclQkMlOTYlRTglQkUlOTElRTUlOTklQTglRTclQUQlODlCUyVFNyU5QiVCOCVFNSU4NSVCMyVFOCVCRCVBRiVFNCVCQiVCNiVFRiVCQyU4OS8=" target="_blank">BS游戏资源共享</a>的工具目录中下载。
+					</p>
+	      		    <p>
+					  由于这些歌曲实在太过远古，基本是游戏刚刚发布测试版时最初的歌曲，很多谱面的方块排布都不够合理，数量也不多，所以Mod社区那边决定在最新版里已不再提供转换工具，就像是现在的电脑已经没有光驱一样，我个人也不是很推荐使用，不过如果你想使用，还是可以从我们网盘下载转换工具。
+					</p>
+					<p>
+					  新版转旧版：
+					</p>
+					<p>
+					  我不打算为远古旧版提供该教程。
+					</p>
+					<p>
+					  如果你有正当理由不是为盗版添加歌曲，可以<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群</a>@WGzeyu(785777793)，我有办法转换。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么游戏中找不到我添加的自定义歌曲？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      1. 必须是<a class="text-bg-fx text-bg-fx--scale-y" href="#geshiqufen">新版格式</a>；<br>
+					  2. 只支持放置到<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#addsong_zipsong" target="_blank">指定路径</a>；<br>
+					  3. Mod不支持歌曲分类放置子文件夹（如有需要可以<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#addsong_foldereditor" target="_blank">【BS新手教程】</a>手动添加歌曲分类</a>）；<br>
+					  4. 歌曲解压为文件夹后放置歌曲文件夹进去（不要直接放文件或压缩包）；<br>
+					  5. 确保没有打开Mod提供的筛选功能(最下方一栏)来过滤掉你添加的歌曲。
+					</p>
+					<p>
+					  确保符合以上几条之后，添加了歌曲之后再启动游戏，<br>
+					  才能在游戏曲包类别中的CustomLevel（自定义歌曲）分类中找到自定义歌曲。<br>
+					  *如果装了版本不匹配的Mod，可能会与游戏不兼容从而导致无法读取歌曲。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么Play按钮消失了？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      这个是由于你连不上ScoreSaber排行榜导致的。
+					</p>
+	       		   	<p>
+	      		      首先，必须确保你的游戏是正版，版本不能太低，低到一定程度会被ScoreSaber禁止使用排行榜。
+					</p>
+	       		   	<p>
+	      		      如果仍然连不上，可能是由于网络不好导致的，ScoreSaber使用的是国外服务器。
+					</p>
+	       		   	 <p>
+	       		   	  	<div id="scoresaberacf1" style="color:hsl(210, 14%, 30%);"></div>
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	<div id="scoresaberacf2" style="color:hsl(210, 14%, 30%);"></div>
+	       		   	 </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>能直接添加我喜欢的.mp3歌曲进去吗？如何自动生成谱面？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      BeatSaber支持的自定义歌曲，不光是要有音乐，还要在里面定义每个方块摆哪。<br>
+	      		      只有音乐，没有方块要怎么玩？所以游戏不支持添加纯音乐文件，要有人作谱才行。
+					</p>
+	       		   	<p>
+	      		      所以，需要到<a class="text-bg-fx text-bg-fx--scale-x" href="https://beatsaver.com/" target="_blank" rel="nofollow">BeatSaver</a>下载包含谱面的自定义歌曲才能添加到游戏中。<br>
+	      		      如果没有人为你喜欢的歌曲做过谱，可以尝试<a class="text-bg-fx text-bg-fx--scale-x" href="https://bsmg.wiki/mapping/" target="_blank" rel="nofollow">自己作谱</a>，可<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群学习作谱</a>或委托群友作谱。
+					</p>
+	       		   	<p>
+	      		      如果不想作谱也不愿意委托，可以试试自动生成：<a class="text-bg-fx text-bg-fx--scale-x" href="https://beatsage.com/" target="_blank" rel="nofollow">https://beatsage.com/</a><br>
+	      		      不过自动生成的谱面效果会差很多，一般不推荐使用，不好玩。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么BeatSaver打不开，全屏黑灰色？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      BeatSaver暂时不支持Edge和IE浏览器，可尝试更换为使用Chromium内核的浏览器，如Chrome。
+					</p>
+	       		   	<p>
+					  目前大多数浏览器都在使用Chromium内核，很多双核浏览器也是将Chromium作为极速内核默认使用。<br>
+					  （而那些双核浏览器的兼容内核通常是IE，也就是说不兼容兼容模式，兼容极速模式）
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么BeatSaver网页顶端找不到选项？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      请把网页拉宽一些。因为页面太窄，也就显示成了手机版页面。<br>
+					  BeatSaver和这个解答页的手机版都不太好用。如果可以，别把浏览器调太窄。<br>
+					  （手机版页面的导航栏菜单可以点击右上角按钮打开）
+					</p>
+	       		   	<p>
+	      		      如果不打算调整宽度，请点击网页右上角的“三”
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么谱面浏览加载缓慢？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      由于zip不支持边下载边解压边播放，所以试听是整首歌下载完成之后，才会开始播放。<br>
+	      		      而至于为啥下载缓慢，可以看前面的这条解答：<a class="text-bg-fx text-bg-fx--scale-y" href="#saverdownload">为什么下歌没反应或报错、下不动？</a>
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>使用歌曲理解管理器(BSSFM)添加的曲包文件夹<strong>只能看见前几个</strong>是怎么回事？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	       		   		<strong>请先检查你有没有安装SongBrowser与SongDataCore这俩Mod</strong>。
+					</p>
+	       		   	<p>
+	       		   		这是老的歌曲排序Mod，目前不是很推荐安装，推荐安装的是新排序Mod（BetterSongList），<br>新排序Mod已经在增强版ModAssistant中默认勾选，如果新老都装，则老的不生效。
+					</p>
+	       		   	<p>
+	       		   		目前我猜测是老的排序Mod出了什么问题，阻止了歌曲继续加载，导致的该问题，<br>你可以在ModAssistant中卸载这俩Mod，也可以打开Plugins文件夹删除这俩Mod的文件（注意别删错）
+					</p>
+	       		   	<p>
+	       		   		<strong>如果排除了老排序Mod的问题还是解决不了，请确保你添加的歌曲文件夹无误，<br>如果文件夹改名或挪动位置则需要重新拖入添加。</strong>
+					</p>
+	       		   	<p>
+	       		   		如果仍然解决不了，可以在右上角加群反馈。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+		</ul>
+		<div class="tgfl" id="modusep"></div>
+		<ul id="modusem" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>模型 | 打分 | 性能</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么ModelSaber加载/下载及其缓慢甚至打不开？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      有很多作者不懂压缩格式，使用比同画质H264体积大数十倍的GIF做浏览图，很多浏览图比模型本身都大，<br>
+	      		      然而，大多数用户的国际网速够快，网站也不怕费流量，所以也就没多少人在意浏览图过大。<br>
+	      		      只是，中国国际线路经常拥塞，服务器也没在中国，所以。。。
+	      		    </p>
+					<p>
+					  如果你使用MoreModel在游戏内下歌，可尝试换为国内中转版插件：<br>
+					  按照<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modmanual" target="_blank">【BS新手教程】</a>中的手动安装Mod教程操作即可。<br>
+					  （注意：国内版安装完成后再使用ModAssistant安装Mod将覆盖为原版，可重新手动安装覆盖回去解决）
+					</p>
+					<p>
+					  推荐尝试以下方案解决模型下载问题：<br>
+					  1. 使用ModelSaber国内中转：<a class="text-bg-fx text-bg-fx--scale-x" href="http://modelsaber.wgzeyu.vip/" target="_blank">http://modelsaber.wgzeyu.vip/</a><br>
+					  （如果使用OneClick一键添加则需要在ModAssistant左下角设置一下OneClick下载源）
+					</p>
+	       		   	<p>
+	      		      <div id="modelsabercf1" style="color:hsl(210, 14%, 30%);"></div>
+	      		    </p>
+	       		   	<p>
+	      		      <div id="modelsabercf2" style="color:hsl(210, 14%, 30%);"></div>
+	      		    </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么方块和光剑都消失了？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      如果你是最新版BS，请在左侧选项面板关闭“Zen Mode”。
+					</p>
+	       		   	<p>
+	      		      如果你是1.13.2及以前的版本，在游戏选择歌曲的菜单中，左侧面板可在上方切换 Mods → Chroma 进入设置，取消勾选灯光秀Lightshow Mode，即可正常游玩。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么方块变透明或方向没了、部分模型消失？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      如果你在左侧打开了修改项，请先关闭所有修改项再重试。
+					</p>
+	       		   	<p>
+	      		      如果你确认没有打开修改项，那么有可能是由于分辨率或抗锯齿设的太高导致的，GeForce Experience有时候会擅自修改这些设置导致出现这种情况，请尝试更改或降低画质。<br>
+	      		      （实际被设置的数值可能非常高，但游戏设置有个显示最大值限制，即使实际以远超限制的分辨率在渲染，依然只会显示限制的最大值，所以不一定非得降多少，可能更改一下就好了）
+					</p>
+	       		   	<p>
+	      		      如果没有解决，请尝试在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>的“选项”页面中找到“游戏存档”，备份后删除游戏存档再启动游戏。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏内无法按照PP排序，也没有显示歌曲难度星级，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	 <p>
+	       		   	  	【这条解答可能过期，记得应该是以前SongBrowser时期的解答】
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	PP排序前需下载2MB的歌曲信息列表，通常半秒钟就能下完。但服务器在国外，中国国际线路经常拥塞，<br>
+	       		   	  	慢到下不动也很正常。<br>
+	       		   	  	无法排序大概率还是因为列表没下下来，小概率是缓存问题。
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	<div id="songdatacore1" style="color:hsl(210, 14%, 30%);"></div>
+	       		   	  	4. 打开游戏后多等会再使用PP排序。
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	也可以尝试使用以下方案清空缓存：<br>
+	       		   	  	1. 打开Beat Saber\Logs\SongDataCore\_latest.log；<br>
+	       		   	  	2. 找到[WebRequestCaching] WebCachePath :后面的路径；<br>
+	       		   	  	3. 打开刚才找到的路径；<br>
+	       		   	  	4. 删除缓存文件。<br>
+	       		   	  	（如果懂些英语，可以在这个日志中确认是否为网络问题）
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	<div id="songdatacore2" style="color:hsl(210, 14%, 30%);"></div>
+	       		   	 </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ScoreSaber无法加载或者无法上传分数或者Play按钮消失要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	 <p>
+	       		   	  	如果在结算页面中，红字显示Score submission disabled by xxxxxx，那么xxxxxx就是不能传分的原因；<br>
+	       		   	  	如果没有显示该文字，那么就是由于你连不上ScoreSaber排行榜导致的。
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	首先，请先确保Beat Saber是最新版本，版本旧到一定程度会被禁止使用排行榜；<br>
+	       		   	  	如果是最新版仍然出现该情况，很可能是网络问题导致的。
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	<div id="scoresaberbcf1" style="color:hsl(210, 14%, 30%);"></div>
+	       		   	 </p>
+	       		   	 <p>
+	       		   	  	<div id="scoresaberbcf2" style="color:hsl(210, 14%, 30%);"></div>
+	       		   	 </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>为什么1.19.1版的游戏不能上传分数？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	 <p>
+	       		   	  	由于该版本的游戏存在计分BUG，统计的成绩存在问题，被ScoreSaber禁止传分了。
+	       		   	 </p>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>更改SteamID或头像后，为什么ScoreSaber中没有更新？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	 <p>
+
+	       		   	  	进入ScoreSaber网站，右上角搜索你的ID找到个人页面，点击头像旁边的刷新图标。
+	       		   	 </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0" onclick="limg('chuanliu');"><span>为什么不推荐使用无线或有线串流VR玩Beat Saber？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+		       		   	<p>
+		      		      从原理上来说，直连VR相当于你的显示器，而串流VR就相当于平板全屏播放直播画面来充当显示器，<br>
+		      		      不管你是用Wi-Fi看直播，还是用有线、连网线看直播，直播他就是直播，和直连显示的设备比不了。
+						</p>
+		       		   	<p>
+		      		      串流会对画面进行有损编码和网络传输，而目前的编码与解码，带来的画面延迟高到以至于不适合音游，<br>
+		      		      目前异步扭曲只能补偿头显旋转，画面内容及内容的位置延迟并不能补偿，会让人误以为是手柄有延迟。
+						</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>如何以Oculus模式运行Steam版BeatSaber以尽可能降低延迟？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+		                  1. 在Steam找到BeatSaber，右键，<code>属性</code><br>
+		                  2. 在<code>启动选项</code>内填写：<code>-vrmode oculus</code><br>
+		                  3. 在Oculus的PC客户端中进入 <code>设置</code> → <code>通用</code><br>
+		                  4. 将OpenXR设为Oculus<br>
+	      		      </p>
+	      		      <p>
+	      		      	如果你是Quest2，请尽可能使用Oculus Link串流。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<div class="tgf" id="fpslow"></div>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏帧率异常低、非常卡顿，该怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	可以尝试以下操作：<br>
+	      		      	1. 游戏设置中修改VR分辨率倍数（不是显示器画面分辨率），随便改，有变化就行，然后保存；<br>
+	      		      	2. 在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>的“选项”页面中找到“游戏存档”，备份后删除游戏存档再启动游戏；<br>
+	      		      	　 注意！存档没有保存在游戏目录里！删掉游戏重装并不会重置存档！必须要按刚才的说明操作才有效！<br>
+	      		      	3. 在Win10设置 - 系统 - 显示 - 图形设置中关闭可变刷新率；<br>
+	      		      	4. 如果你在使用串流（USB或Wi-Fi）而不是直连（DP或HDMI），请尝试更换一种串流方式；<br>
+	      		      	5. 如果你在使用笔记本电脑，请检查Beat Saber是否运行在独显上；<br>
+	      		      	6. 如果你在使用N卡，请检查WHISPER MODE设置，这个设置可能会限制游戏帧率；<br>
+	      		      	7. Oculus设备可以尝试在Steam - Beat Saber - 设置启动选项，输入“-vrmode oculus”（不含引号）；<br>
+	      		      	8. 如果你使用的是串流（USB/WiFi）而不是直连（DP/HDMI），可尝试关闭Windows的游戏模式；<br>
+	      		      	9. 如果你在使用N卡的同时使用串流（USB/WiFi），而不是直连，可尝试关闭NVIDIA的即时回放。
+	      		      </p>
+	      		      <p>
+	      		      	如果你用的是Oculus设备并且仍未解决问题，可尝试使用Oculus TrayTool来关闭ASW。
+	      		      </p>
+	      		      <p>
+	      		      	如果仍然没有解决问题，请尝试按上方“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来重装BS。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏帧率比较低、不太流畅，哪些设置项可以减轻性能负担？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	进入游戏设置（Setting），选择画面（Graphics），<br>
+	      		      	将渲染分辨率倍数（Rendering Scale）降低至1.2或1.0，<br>
+	      		      	降低抗锯齿（Antialiasing(MSAA)）至2X或关闭，<br>
+	      		      	降低桌面视角分辨率（Non VR Resolution）<br>
+	      		      </p>
+	      		      <p>
+	      		      	进入SteamVR设置，选择通用，将渲染分辨率改为自定义，并将单眼分辨率设置为100%<br>
+	      		      </p>
+	      		      <p>
+	      		      	如果你使用的VR是通过串流来连接的，请在串流软件中将分辨率降至100%<br>
+	      		      </p>
+	      		      <p>
+	      		      	如果你在使用MSIAfterburner的性能监测，请尝试将其关闭，有可能会影响到性能。
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>游戏帧率不低但偶尔会卡一下，该怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>
+	      		      	首先，检查是否是画质调太高或者Mod装太多导致的，建议在SteamVR左上角菜单中打开性能图，如果平时游戏过程的渲染耗时远低于中间横线，才说明性能够用，可以尝试按以下方法解决。
+	      		      </p>
+	      		      <p>
+						Process Lasso可以减少Beat Saber游戏过程中的卡顿，具体使用方法：<br>
+						1. 进入<a class="text-bg-fx text-bg-fx--scale-x" href="https://bitsum.com/" target="_blank" rel="nofollow">Process Lasso官网</a>，点击Download下载并安装（所使用到的功能免费版都有，无需购买）<br>
+						2. 确保勾选启用以下功能：(左上角)主菜单 → 启用ProBalance<br>
+						3. 打开Beat Saber，对着所有BS和VR进程：右键 → 优先级(CPU Priority) → 总是 → 高<br>
+	      		      </p>
+	      		      <p>
+						如果你需要运行一些直播相关应用，建议降低直播相关进程的优先级，必要时可以绑定不同CPU核心使用（右键，CPU亲和力）
+	      		      </p>
+	   		       </div>
+				</div>
+			</li>
+		</ul>
+		<div class="tgfl" id="otherp"></div>
+		<ul id="otherm" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>其他</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>原版游戏不装Mod都打不开要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+						如果你的游戏是最新版，请先尝试降级至1.29.1，你可以<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">点我打开降级教程</a>，或者也可以<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">点我打开降级教程</a>。
+					</p>
+	       		   	<p>
+	      		      如果你的系统版本低于Windows 10（如Windows 7），请先升级你的Windows系统<br>（或者可以试试<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">将游戏降级</a>至1.29.1，也许能解决）。
+					</p>
+	       		   	<p>
+	      		      如果系统版本没问题也打不开，<br>试试按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来重装一次游戏，按教程重装才足够彻底。
+					</p>
+	       		   	<p>
+	      		      如果还是没有解决，请尝试清空该注册表：<br>计算机\HKEY_CURRENT_USER\SOFTWARE\Hyperbolic Magnetism\Beat Saber
+					</p>
+					<p>如果无法解决，请在上方导航栏中找到群号，<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群提问</a>。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>一打开游戏就卡黑屏、卡Logo进不去，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+						如果你的游戏是最新版，请先尝试降级至1.29.1，你可以<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">点我打开降级教程</a>，或者也可以<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">点我打开降级教程</a>。
+					</p>
+					  <p>如果你装了SmartSongSuggest这个Mod，打开游戏就黑屏未响应，试试将其卸掉。</p>
+	       		   	  <p>请确保不要直接在文件夹中双击exe启动游戏，请通过Steam或Steam创建的快捷方式来启动游戏。</p>
+	       		   	  <p>如果仍然没有解决这个问题，请按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”来彻底重装游戏。<br>（注意：卸载重装可能解决不了，按教程给出步骤重装才足够彻底，请务必将游戏安装至纯英文路径）</p>
+	      		      <p>如果你的游戏目录中自动出现了“游侠热门单机游戏”的快捷方式，可能是系统中毒导致的，被病毒修改过的文件与Mod不兼容从而无法启动，如果遇到该情况建议重装系统，不要运行以前的任何exe可执行文件。</p>
+	      		      <p>注：本条解答无法解决因VR端软件问题或者SteamVR问题而导致的黑屏现象。。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>打开游戏后<strong>扳机键不能点</strong>、或者有其他奇怪的<strong>手柄问题</strong>要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					<p>
+						Beat Saber在23年5月发布的1.29.4版本更新了Unity引擎并更改为了OpenXR，对底层带来了很大的更新。
+					</p>
+					<p>
+						有的设备对新版兼容性还不太好（也不知道是设备还是游戏问题），将游戏降级至1.29.1版本即可解决。
+					</p>
+					<p>
+						有的设备 (如Pico) 串流助手更新后只兼容新版游戏，要想兼容旧版，请查看对应的解决方法：<a class="text-bg-fx text-bg-fx--scale-x" href="https://bbs.picoxr.com/post/7265210266523975739" target="_blank">Pico串流助手</a>
+					</p>
+					<p>
+						如果你想要降级至1.29.1，你可以<a class="text-bg-fx text-bg-fx--underline" href="#steamjj" aria-controls="steamjiangji">点我打开降级教程</a>，或者也可以<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">点我打开降级教程</a>。
+					</p>
+					<p>
+						如果纯粹只是手柄角度不对，在游戏设置里调整手柄偏移也能调回来，只是目前新版游戏的Mod还不全，<br>所以不如降级解决，Mod还更丰富，还不会被自动更新导致Mod失效。
+					</p>
+					<p>
+						如果仍然没有解决，请按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”中的方法来彻底重装Beat Saber<br>
+						（请不要卸载重装，卸载重装不够彻底、可能解决不了问题）
+					</p>
+					<p>
+						如果纯粹只是扳机键不管用，你在很久以前装过Beat Saber的人物Mod，那么可以试试下面的老方法，<br>
+						如果不是扳机键问题，又或者没有在很久以前装过人物Mod，那么请无视下面的解决方法。
+					</p>
+	       		   	  <p>
+	       		   	  	如果你曾经安装过人物Mod、旧版完整版联机Mod或者网易旧版节奏空间，请按以下步骤操作：<br>
+	       		   	  	1. 进入Beat Saber安装目录；<br>
+	       		   	  	2. 删除以下文件：beatsaber.vrmanifest；<br>
+	       		   	  	3. <strong>如果曾经在其他的目录也安装过Beat Saber，进入这些目录，并删除上一步的文件</strong>；<br>
+	       		   	  	4. 重启SteamVR。<br>
+	       		   	  	<img style="" src="assets/img/img.webp" data-src="assets/img/continue.webp" class="lzy_img" id="continue" onclick="limg('continue');"><br>
+	       		   	  	（需要将这个文件从所有曾经装过BeatSaber的目录中彻底删干净，然后重启SteamVR）
+	       		   	  </p>
+	       		   	  <p>
+	       		   	  	这极有可能是旧版人物Mod导致的问题。<br>
+	       		   	  	完整版联机和网易版本身没有问题，但他们包含人物Mod，所以……
+	       		   	  </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>每次打开游戏都要选择地区（SELECT REGION）怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					<p>
+						可以通过修改游戏存档来解决。
+					</p>
+					<p>
+						首先，退出游戏，打开<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>，切换到“选项”页面，点击“打开游戏存档”，即可找到游戏存档<br>
+						建议先对修改前的游戏存档进行备份，以防出现失误丢失数据，将整个文件夹打包为压缩包即可完成备份；<br>
+						找到存档中的PlayerData.dat文件，双击打开，可以选择通过记事本或代码编辑器打开，<br>
+						按Ctrl+F键打开搜索窗口，输入"didSelectRegionVersion"然后点击“查找”，在存档中找到这段文本后，将后面的数字0改为1，然后保存，即可解决该问题。
+					</p>
+					<p>
+						注：<br>
+						修改前：e,"didSelectRegionVersion":0,"playerAgreements":{"<br>
+						修改后：e,"didSelectRegionVersion":1,"playerAgreements":{"<br>
+						除了那一个数字，其他的任何文本、符号都不要进行修改，改错格式将导致存档无法使用<br>
+						如果没搜到这段内容，请先滚动鼠标滚轮，查看存档最顶部的内容，然后将光标点击到存档最开头的位置，这时候在搜索窗口中将方向设置为“向下”，然后再点击“查找下一个”
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>切到方块不判定、直接Miss要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      请尝试按上方 “<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来足够彻底地重装Beat Saber。<br>
+	      		      极有可能是Mod装坏了导致的这种问题，例如安装了版本不匹配的Mod。<br>
+	      		      重装以后，在安装Mod前一定要检查版本是否匹配！先尽可能少装Mod，试试只安装ModAssistant默认勾选那些会不会有问题，如果没问题再继续装别的，等装到哪个Mod出了问题，就找到原因了。
+					</p>
+	       		   	<p>
+	      		      卸载重装很可能解决不了问题，因为不够彻底，请按教程给出的重装步骤来才做，这样才能保证解决问题。<br>
+	      		      不要惧怕重装，教程给出的是最快、最彻底的备份重装并恢复所有数据的方案，不会损失任何数据。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Mod选项在哪里？Mod装上之后在哪找？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      大多数Mod的设置，选项在游戏的主界面左边，<br>
+					  一些针对不同歌曲设置的Mod，选项在选择歌曲的左侧面板上方。
+					</p>
+	       		   	<p>
+					  少部分在游戏设置的旁边MOD SETTINGS<br>
+					  极少部分在游戏设置SETTINGS里面<br>
+					  某些Mod可能需要修改Beat Saber\UserData中的配置文件来手动修改设置。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>[相机v2|Camera2] 怎么用？如何设置第三人称视角？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      使用<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>安装该Mod之后，在游戏主菜单左侧的Mod选项中，可以找到“CAMERA2”选项，点击该选项即可进入Mod设置。
+	      		    </p>
+	       		   	<p>
+	      		      左侧面板为相机管理，可以新增 / 删除相机，也可以调整不同相机所在的层级；<br>
+	      		      中间面板为相机的各种各样的详细设置，比如类型（第一/第三人称），FOV，分辨率，或者是在某些场景隐藏等等；<br>
+	      		      在VR中使用手柄拖动相机模型即可移动第三人称视角位置、角度；<br>
+	      		      在PC端使用鼠标拖动游戏画面右下角可以调整画面大小，缩小画面后直接拖动画面即可移动相机。
+	      		    </p>
+	       		   	<p>
+	      		      也就是说，如果你需要设置第三人称，需要按以下步骤操作：<br>
+	      		      1. 安装Camera2这个Mod，并在游戏中进入Camera2的设置；<br>
+	      		      2. 将相机类型改为第三人称（或直接新建一个第三人称相机）；<br>
+	      		      3. VR中使用手柄拖动相机模型来移动相机位置；<br>
+	      		      4. PC端使用鼠标拖动画面右下角来调整大小、移动位置。
+	      		    </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>打开游戏后，游戏报错“Failed to initialize player”该怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>目前我猜测是游戏文件损坏导致的该报错。<br>（可能是由于降级后更新（覆盖了版本错误的增量包）或降级操作错误导致文件损坏）</p>
+	       		   	<p>
+	      		      如果你<strong>正打算降级</strong>游戏，请尝试以下解决方法：<br>
+	      		      1. 按照本网页中的“<a class="text-bg-fx text-bg-fx--scale-y" href="#jiangjijiaochengtgf">如何降级到指定的游戏版本？</a>”的步骤来重新对游戏做一次降级。<br>
+					</p>
+	       		   	<p>
+	      		      如果你<strong>不打算降级</strong>游戏，请尝试以下解决方法：<br>
+	      		      1. 按照本网页中的“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”的步骤来足够彻底地重装一次游戏。<br>
+					</p>
+	       		   	<p>
+	      		      如果这没有解决问题，请在右上角<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加群</a>，反馈给WGzeyu。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>选歌界面中出现光标/摇杆问题，自动下滑或无法滚动要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					  <p>
+					  	该问题不一定出在Beat Saber，请先检查是否连接了其他的输入设备，例如游戏手柄、方向盘、踏板等，<br>
+					  	如果有，请先尝试拔掉这些设备。
+					  </p>
+					  <p>
+					  	如果没有解决，可以再尝试重新安装SteamVR等VR工具，以及<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">彻底重装Beat Saber</a>。
+					  </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>SteamVR更新后启动Beat Saber没反应要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					  <p>
+					  	如果你是在Steam更新后，每次首次启动Beat Saber能运行，再次启动不能运行，请尝试先重启或退出SteamVR之后再启动Beat Saber，我也遇到了这个情况，似乎是新版SteamVR的BUG，或者是新版SteamVR与旧版的LIV之类插件不兼容。
+					  </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0" onclick="limg('laji360');"><span>游戏场景变灰、文字与一些环境内容消失了是怎么回事？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p><img width="100%" id="laji360" src="assets/img/img.webp" data-src="assets/img/laji360.webp" class="lzy_img" onclick="limg('laji360');"></p>
+	       		   	<p>
+	      		      如果游戏界面显示为上图这样，很可能是游戏文件被你安装的杀软删除了导致的，<br>
+	      		      请尝试退出杀软后在Steam中验证本地文件，<br>
+	      		      如果没有解决，请退出杀软后按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”中的方法来彻底重装BS。
+					</p>
+	       		   	<p>
+	      		      一般我们推荐使用系统自带的Windows Defender，通常不会有这些误删，<br>
+	      		      此问题是我在帮别人装Mod时发现的，那台电脑装有360。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0" onclick="limg('continue2');"><span>为什么击打方块时手柄没有震动效果？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	  <p>
+	       		   	  	如果你装过人物Mod、完整版联机Mod或网易版节奏空间，<br>
+	       		   	  	可以先删除BeatSaber安装目录的beatsaber.vrmanifest，再重启SteamVR来解决。别忘了重启SteamVR！<br>
+	       		   	  	<img style="" src="assets/img/img.webp" data-src="assets/img/continue.webp" class="lzy_img" id="continue2" onclick="limg('continue2');"><br>
+	       		   	  	（若装过网易版则删除网易版BS目录下的文件）
+	       		   	  </p>
+	       		   	  <p>
+	       		   	  	这极有可能是旧版人物Mod导致的问题。<br>
+	       		   	  	完整版联机和网易版本身没有问题，但他们带人物Mod，所以。。<br>
+	       		   	  	如果仍然没有解决，请按“<a class="text-bg-fx text-bg-fx--scale-y" href="#cleanreinstall">如何彻底重装游戏并恢复数据？</a>”中的方法来彻底重装BS。
+	       		   	  </p>
+	       		   	  <p>
+	       		   	  	如果你确定从没用过人物Mod，可以尝试在<a class="text-bg-fx text-bg-fx--scale-x" href="https://bs.wgzeyu.com/pc-guide/#modinstall_assistant" target="_blank">ModAssistant</a>的选项界面中找到游戏存档，备份后删除。
+	       		   	  </p>
+	       		   	  <p>
+	       		   	  	如果还是没有解决，可以尝试安装[震动调整|RumbleMod]并进入调整。
+	       		   	  </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>进入游戏首页就卡死、同时SteamVR弹出203错误，要怎么解决？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	      		      <p>可以尝试关闭Windows的“硬件加速GPU计划”。</p>
+	      		      <p>设置 → 显示 → 最下方高级设置中可以找到该选项。</p>
+	      		      <p>感谢群友闪闪提供该问题解决方法。</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>把人录进去是怎么做到的？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      用的是<a class="text-bg-fx text-bg-fx--scale-x" href="https://liv.tv/" target="_blank" rel="nofollow">LIV</a>+绿幕+摄像头，LIV可以在Steam中下载。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0" onclick="limg('nlink');"><span>本教程页中的内链怎么用？为什么部分链接点了没打开网页？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+					  <p>
+					  	例如这个链接：<a class="text-bg-fx text-bg-fx--scale-y" href="#modp">如何安装Mod？</a><br>
+					  	这是本页面中的内容锚点，内容已在本页中，点击链接后电脑版页面会滚动到对应位置。
+					  </p>
+					  <p>
+					  	如果网页剩余内容还够长，滚动后，可视区域的顶部内容即为链接的目标内容。
+					  </p>
+					  <img style="" src="assets/img/img.webp" data-src="assets/img/link.webp" class="lzy_img" width="100%" id="nlink" onclick="limg('nlink');">
+					  <p>
+					  	如果网页剩余内容不够长，则会直接滚动到底部，这时候内容会出现在可视区域中的某个位置。
+					  </p>
+	   		       </div>
+				</div>
+			</li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>本教程提供的部分地址或内容失效，该怎么反馈？</span></a>
+				<div class="cd-faq__content">
+	       		   <div class="text-component">
+	       		   	<p>
+	      		      请<a class="text-bg-fx text-bg-fx--underline" aria-controls="qq-group" href="#0">加入社区Q群</a>，私聊管理员WGzeyu(785777793)反馈。
+					</p>
+	   		       </div>
+				</div>
+			</li>
+			<!--faq-dashang-mobile-->
+		</ul>
+	</div>
+	<a href="#0" class="cd-faq__close-panel text--replace">Close</a>
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section>
+<p class="beian">
+	<span style="white-space:nowrap;">WGzeyu 版权所有 本教程采用 CC BY-NC-SA 进行授权<br>感谢MicroBlock为该页面提供的一些前端制作</span>
+</p>
+<div class="modal modal--animate-translate-up flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal" id="dashang-window">
+  <div class="modal__content width-100% max-width-xs bg radius-md shadow-md" role="alertdialog" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+    <header class="bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between">
+      <h4 class="text-truncate" id="modal-title-2">捐助教程作者</h4>
+      <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+        <svg class="icon" viewBox="0 0 20 20">
+          <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+            <line x1="3" y1="3" x2="17" y2="17" />
+            <line x1="17" y1="3" x2="3" y2="17" />
+          </g>
+        </svg>
+      </button>
+    </header>
+    <div class="padding-y-sm padding-x-md">
+      <div class="text-component">
+            <p>
+              <img width="100%" src="../assets/img/dashang.png?v=3">
+              根据规定，微信/支付宝对静态收款码的远程付款做了限制，如果付款失败请换为另一种，还是不行请在下方反馈给我。
+            </p>
+            <p id="modal-description-2">
+              <p>联系作者：<br><a target="_blank" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=785777793&site=qq&menu=yes">QQ 785777793</a>(若无回复请加好友),Discord WGzeyu#7287</p>
+            </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal--animate-translate-up flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal" id="qq-group">
+  <div class="modal__content width-100% max-width-xs bg radius-md shadow-md" role="alertdialog" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+    <header class="bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between">
+      <h4 class="text-truncate" id="modal-title-2">社区Q群</h4>
+      <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+        <svg class="icon" viewBox="0 0 20 20">
+          <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+            <line x1="3" y1="3" x2="17" y2="17" />
+            <line x1="17" y1="3" x2="3" y2="17" />
+          </g>
+        </svg>
+      </button>
+    </header>
+    <div class="padding-y-sm padding-x-md">
+      <div class="text-component">
+        <p id="modal-description-2">
+              <p>
+                BeatSaber中文社区③：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=KbI6vcbMS0WpICriZlV5tzKkJWTVzPiR&jump_from=webapi&authKey=aYsaqYyxsyvDy21CS0388DoEW6XvHa7vxqG5E1b0cfJAHBjFNbQHHbVVz42ZfgM2" rel="nofollow">820726281</a>（较冷清）
+              </p>
+              <p>
+                BeatSaber中文社区②：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=g7QnI5e6AucIAS2ArI7TlEObaOclbsK4&jump_from=webapi" rel="nofollow">810303476</a>（较活跃，推荐）
+              </p>
+              <p>
+                BeatSaber中文社区①：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=_HSm69z99NJPi47oynFmVlKH5YA4bOzS&jump_from=webapi" rel="nofollow">639959292</a>（较活跃）
+              </p>
+              <p>
+                BeatSabe<span style="letter-spacing:1.2px;">r的QQ频道</span>：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=NVA0h&businessType=9&from=246610&biz=ka" rel="nofollow">w9dyu18qa0</a>
+              </p>
+              <p>
+                BeatSaber谱面制作群：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=S0_SXiRiJhssWEVPcvCdxs8xZicA4sC5&jump_from=webapi" rel="nofollow">1101964663</a>
+              </p>
+              <p>
+                BeatSaber打分新手群：<a class="text-bg-fx text-bg-fx--scale-x" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=os9__FPk62jciovy1AStFuiXDLho-1sO&jump_from=webapi" rel="nofollow">941873202</a>
+              </p>
+              <p>
+                我们已配置自动审核，如果你的加群申请没有立即通过，很可能是遭到了腾讯风控被屏蔽，请尝试通过其他设备重新加群。
+              </p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="notice js-notice" id="oldbrowser">
+      <div class="container">
+        <div class="notice__banner max-width-xxxxs bg padding-sm radius-md shadow-md">
+          <div class="text-component text-sm margin-bottom-md" style="margin-bottom:1em;">
+            <h4>请升级或更换你的浏览器</h4>
+            <p>当前浏览器版本过低，<a style="text-decoration:none;" target="_blank" href="https://bs.wgzeyu.com/test/">不兼容新特性</a>，会导致一些地方不能正确加载、渲染。</p>
+          </div>
+          <ul class="grid gap-xs">
+            <li class="col-12">
+              <a class="btn btn--primary width-100%" target="_blank" href="https://google.cn/chrome/" rel="nofollow">下载新版Chrome浏览器</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="notice notice--v2 js-notice" id="mobile_style">
+  <div class="notice__banner bg padding-y-sm shadow-md">
+    <div class="container max-width-xl">
+      <div class="flex justify-between items-center@sm">
+        <p class="text-sm">
+          <span style="white-space:nowrap;">您当前的网页宽度过窄，所以已切换至手机版页面，</span>
+          <span style="white-space:nowrap;">您需要将当前窗口拉宽，才能正常加载电脑版页面，</span>
+          <span style="white-space:nowrap;">手机版页面及其难用，该页面专为电脑版页面设计。</span>
+        </p>
+        <button class="reset notice__close-btn margin-left-sm js-notice__hide-control">
+          <svg class="icon icon--xs" viewBox="0 0 16 16"><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--div class="notice bottom-md js-notice">
+      <div class="container max-width-lg">
+        <div class="notice__banner max-width-xxxxs bg padding-sm radius-md shadow-md">
+          <div class="text-component text-sm margin-bottom-md" style="margin-bottom:1em;">
+            <h4>最新版游戏的Mod还不全</h4>
+            <p>游戏最近才更新1.31.0，目前能适配最新版的Mod还比较少，所以目前推荐先降级至1.29.1，然后再按教程安装Mod</p>
+          </div>
+          <ul class="grid gap-xs">
+            <li class="col-6">
+              <button class="btn btn--primary width-100% rainbowbut" aria-controls="steamjiangji">降级教程</button>
+            </li>
+            <li class="col-6">
+              <button class="btn btn--subtle width-100% js-notice__hide-control">关闭提示</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div-->
+<div id="steamjiangji" class="modal modal--animate-translate-up flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xs max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+    <header class="bg-contrast-lower bg-opacity-50% padding-y-sm padding-x-md flex items-center justify-between">
+      <h1 id="modal-title-2" class="text-truncate text-md">降级教程</h1>
+      <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+        <svg class="icon icon--xs" viewBox="0 0 16 16">
+          <title>关闭提示</title>
+          <g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+            <line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line>
+            <line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line>
+          </g>
+        </svg>
+      </button>
+    </header>
+    <div class="padding-y-sm padding-x-md">
+      <div class="text-component">
+        <p>
+         <strong> 【新降级方案】</strong>（限1.29.1版本）
+        </p>
+        <p>
+          降级教程：<br>
+          　0. 关闭ModAssistant<br>
+          　1. 在Steam中找到Beat Saber<br>
+          　2. 右键 → 属性 → 测试版<br>
+          　3. 将「参与测试」右侧的「无」切换至「legacy1.29.1…<br>
+          　4. 等待下载完成，即可完成降级
+        </p>
+        <p>
+          注：请不要填写测试代码，也不要点击「检查代码」。<br>
+          理论来说，你无需再按传统方案的繁琐步骤来恢复数据，<br>
+          如果以前给1.29.1打过Mod，切换测试分支后应该会恢复。<br>
+          如果你没打过Mod，降级完成后即可按教程来安装Mod。<br>
+          这不是测试版，只是利用该功能提供了引擎更新前的正式版
+        </p>
+        <hr>
+        <p>
+        <strong>  【传统降级方案】</strong>
+        </p>
+        <p>
+          下载方法：<br>
+          　1. <a target="_blank" href="https://bs.wgzeyu.com/drive/"><s>点我进入网盘</s></a><br>
+          　2. 选择任意一个网盘，点击【进入下载】<br>
+          　3. 进入【游戏备份与懒人包】文件夹<br>
+          　4. 找到1.29.1的原版备份<br>
+          　5. 对着找到的文件右键，点击下载<br>
+        </p>
+        <p>
+          降级教程：<br>
+          　0. 确保已经通过Steam更新了游戏<br>
+          　1. 对着下载的原版备份右键<br>
+          　2. 点击解压至单独文件夹<br>
+          　3. 通过Steam打开游戏目录<br>
+          　4. 点击游戏目录的上一级目录<br>
+          　5. 更改游戏目录文件夹名称，随便改<br>
+          　6. 将原版备份解压出的文件夹移动过来<br>
+          　7. 将原版备份文件夹名称重命名为Beat Saber<br>
+        </p>
+        <p>
+          恢复数据教程：<br>
+          　1. 打开降级教程第⑤步改名的游戏目录<br>
+          　2. 删除UserData文件夹内的Beat Saber IPA<br>
+          　3. 复制以下文件夹<br>
+          　　UserData（Mod设置）<br>
+          　　CustomSabers（光剑模型）<br>
+          　　CustomPlatforms（场景模型）<br>
+          　　CustomAvatars（人物模型）<br>
+          　　CustomNotes（方块模型）<br>
+          　4. 进入新的游戏目录<br>
+          　5. 粘贴复制的那些文件夹<br>
+          　6. 在弹出的提示中，选择【替换】<br>
+          　7. 打开降级教程第⑤步改名的游戏目录<br>
+          　8. 进入Beat Saber_Data文件夹<br>
+          　9. 剪切CustomLevels文件夹<br>
+          　10. 进入新的游戏目录<br>
+          　11. 进入Beat Saber_Data文件夹<br>
+          　12. 粘贴剪切的那个文件夹<br>
+          　13. 在弹出的提示中，选择【替换】<br>
+        </p>
+        <p>
+          降级后安装Mod教程：<br>
+          　0. 确保降级后至少打开过一次游戏<br>
+          　1. 退出游戏与降级以前打开的ModAssistant<br>
+          　2. 按正常流程打开ModAssistant就可以安装Mod了<br>
+        </p>
+        <p>
+          （其实这一套步骤做下来，就是把游戏文件整个更换为旧版备份，不包含任何残留的Mod或游戏文件，只恢复以前的设置与资源文件）
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="../assets/codyhouse/js/scripts.min.js?v=3"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script>
+	function pageonload(){
+		cdaohang();
+		CloudFlareNet('beatmodscf');
+		CloudFlareNet('modelsabercf');
+		CloudFlareNet('songdatacore');
+		CloudFlareNet('scoresaberacf');
+		CloudFlareNet('scoresaberbcf');
+		/*//Endpageonload//*/
+  if (window.innerWidth < 1024) {
+    document.getElementById("mobile_style").style.display = "block";
+  } else {
+    document.getElementById("mobile_style").style.display = "none";
+  }
+	}
+
+	function cdaohang(){
+		cwhref("basic");
+		cwhref("mod");
+		cwhref("song");
+		cwhref("moduse");
+		cwhref("other");
+	}
+
+	window.onresize = cdaohang;
+
+	function cimg(imgid,imgurl){
+		document.getElementById(imgid).src = imgurl;
+	}
+
+    function limg(imgid){
+      document.getElementById(imgid).src = document.getElementById(imgid).dataset.src;
+    }
+
+	function CloudFlareNet(mbid){
+		document.getElementById(mbid + "1").innerHTML="可以尝试以下任意方案解决网络问题：<br>1. 更换不同运营商的网络（可尝试手机热点）；<br>2. 施魔法；<br>3. 过段时间再试，避开高峰期";
+	}
+
+	function cwhref(mbid,imode){
+		let intViewportWidth = window.innerWidth;
+		if(intViewportWidth < 1024)
+		{
+			document.getElementById(mbid).href = "#" + mbid + "m";
+		}
+		else
+		{
+			document.getElementById(mbid).href = "#" + mbid + "p";
+		}
+	}
+
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top}, 500);
+	        return false;
+	      }
+	    }
+	  });});
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const lazyImage = entry.target;
+                    console.log("lazy loading ", lazyImage);
+                    lazyImage.src = lazyImage.dataset.src;
+                }
+            })
+        });
+        const arr = document.querySelectorAll('img.lzy_img');
+        arr.forEach((v) => {
+            imageObserver.observe(v);
+        })
+    });
+</script>
+<script>
+$("a").click(function(){
+if(!$("#"+/#(\S+)/.exec(this.href)[1]).next()[0].classList.contains("cd-faq__item-visible")){
+let a=$("#"+/#(\S+)/.exec(this.href)[1]).next().children();
+    console.log("a",a[0]);
+a[0].click();
+}
+})
+</script>
+    <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window || !('IntersectionObserver' in window)) {
+          alert("您正在使用的浏览器版本过低，可能会导致网页加载不正常！\n\n\n推荐更换浏览器打开本网页：\n\n如果你开启了系统更新、正在使用Win10/11，\n请使用系统自带的Edge浏览器来打开本网页；\n\n其他情况下请安装Chrome浏览器：google.cn/chrome");
+      } else if (navigator.userAgent.includes("Edge") || getChromiumVersion() < 58) {
+          console.log('兼容性警告');
+      } else {
+          document.getElementById('oldbrowser').style.display = 'none';
+      }
+	  function getChromiumVersion() {
+	    try {
+	      if (window.chrome) {
+	        const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+	        const version = raw ? parseInt(raw[2], 10) : false;
+	        return version || 404;
+	      }
+	    } catch (error) {
+	      return 500;
+	    }
+	    return 501;
+	  }
+    </script>
+<script>
+window.addEventListener('resize', function () {
+	console.log(window.innerWidth);
+  if (window.innerWidth < 1024) {
+    document.getElementById("mobile_style").style.display = "block";
+  } else {
+    document.getElementById("mobile_style").style.display = "none";
+  }
+});
+</script>
+<!--OLD-DOMAIN-JUMP-->
+</body>
+</html>

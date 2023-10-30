@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BeatSaber 新手教程 - Quest平台</title>
+  <meta data-vue-meta="true" itemprop="keywords" name="keywords" content="BeatSaber, Beat Saber, 节奏光剑, 节奏空间, Mod, 自定义歌曲, 添加歌曲, 歌曲, 自制谱, 中文, 模型, 光剑, 角色, 人物, 场景, 歌单, 曲包"/>
+  <meta name="description" content="BeatSaber节奏光剑的新手指南，包含了从Mod安装到自定义歌曲、模型、曲包、游戏翻译等等各种新手教程，持续更新中…">
+  <link rel="alternate icon" type="image/png" href="../favicon.webp">
+  <meta name="robots" content="noindex">
+  <!--link rel="stylesheet" type="text/css" href="../assets/guide/fonts/font-awesome-4.3.0/css/font-awesome.min.css"-->
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/stroke.css">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/bootstrap.css?v=6">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/prettyPhoto.css">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/style.css?v=6">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/js/syntax-highlighter/styles/shCore.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../assets/guide/css/custom.css?v=2">
+  <!--[if lt IE 9]>
+    <script src="../assets/guide/js/html5shiv.min.js"></script>
+    <script src="../assets/guide/js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  code { word-break:break-all; }
+@keyframes rainbow_keyframe2{
+    0%{
+        color:red;
+    }
+    33%{
+        color:green;
+    }
+    67%{
+        color:blue;
+    }
+    100%{
+        color:red;
+    }
+}
+.rainbow2 {
+    color:red;
+    animation-name: rainbow_keyframe2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <div class="container">
+
+      <section id="top" class="section docs-heading">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="big-title text-center">
+              <h1><span style="white-space:nowrap;">Beat Saber</span> <span style="white-space:nowrap;">新手教程</span> <span style="white-space:nowrap;">- Quest平台</span></h1>
+              <p class="lead">本教程<b class="rainbow2">仅适用于一体机平台能Mod的最新版本正版BS</b>；<a href="#tiaozhuanpc" onclick="top.location.href='https://bs.wgzeyu.com/pc-guide/';"><b>其他设备点此</b>进入PC平台教程 →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+      </section>
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+            <ul class="nav">
+              <li><a href="#xuanzemod" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-bmbf/';">【点我进入光剑教程】</a>
+                <ul class="nav">
+                  <li><a href="#tiaozhuanqp" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-qp/';">QuestPatcher方案</a></li>
+                  <li><a href="#tiaozhuanbmbf" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-bmbf/';">BMBF方案</a></li>
+                </ul>
+              </li>
+              <li><a href="#tiaozhuanbmbf" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-bmbf/';">↑ 选择方案进入教程 ↑</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-9">
+
+          <section id="xuanzemod" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">选择Mod方案<hr></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>
+                  Quest平台现在有两种不同的Mod方式，一个是通过BMBF，另一个是通过QuestPatcher，<br>
+                  最终能安装的Mod数量、种类以及歌曲等等都没有区别，只是操作方式不同。<br>
+                  如果你还没有购买游戏，请<a href="#tiaozhuanbuy" onclick="top.location.href='https://bs.wgzeyu.com/buy/#bs_quest';">点我进入BeatSaber游戏购买教程</a>。
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="#tiaozhuanqp" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-qp/';"><img src="img/qp-569h.png" class="img-responsive img-thumbnail"></a>
+                <a href="#tiaozhuanqp" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-qp/';"><h4>QuestPatcher方案</h4></a>
+                <ul>
+                    <li><span class="rainbow2">无需科学上网，可直接通过国内服务器下载数据！</span></li>
+                    <li><strong>中文界面，傻瓜式一键操作</strong>，大部分操作在电脑上完成，</li>
+                    <li>也可以做到在一体机模式下安装Mod、下载歌曲等功能。</li>
+                </ul>
+                <a href="#tiaozhuanqp" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-qp/';" class="btn btn-primary">点我进入QuestPatcher教程</a> <a href="https://bs.wgzeyu.com/oq-guide-qp/" target="_blank" class="btn btn-info">在新页面中打开教程</a>
+              </div>
+              <div class="col-md-6">
+                <a href="#tiaozhuanbmbf" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-bmbf/';"><img src="img/bmbf-16.webp" class="img-responsive img-thumbnail"></a>
+                <a href="#tiaozhuanbmbf" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-bmbf/';"><h4>BMBF方案</h4></a>
+                <ul>
+                    <li><span class="rainbow2">需精通科学上网，不然用不了，弄不好还会拦截内网访问</span></li>
+                    <li><strong>英文界面，容易遇到网络问题</strong>，大部分操作在头显内完成</li>
+                    <li>有非常成熟的一体机模式下安装Mod、下载歌曲等功能。</li>
+                </ul>
+                <a href="#tiaozhuanbmbf" onclick="top.location.href='https://bs.wgzeyu.com/oq-guide-bmbf/';" class="btn btn-primary">点我进入BMBF教程</a> <a href="https://bs.wgzeyu.com/oq-guide-bmbf/" target="_blank" class="btn btn-info">在新页面中打开教程</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p> </p>
+                <div class="intro2 clearfix">
+                  <p>
+                    <i class="fa fa-exclamation-triangle"></i> 如果你已经打过补丁，请选择之前使用的方案，更换方案需要恢复原版APK从头来重新打补丁。
+                  </p>
+                </div>
+                <h3>请在上方选择你想要进入的教程类型！两种都是一体机光剑教程！</h3>
+                <h3>请在上方选择你想要进入的教程类型！两种都是一体机光剑教程！</h3>
+                <h3>请在上方选择你想要进入的教程类型！两种都是一体机光剑教程！</h3>
+              </div>
+            </div>
+          </section>
+
+
+          <section id="about" class="section">
+            <div class="row">
+              <div class="col-md-12 left-align">
+                <h2 class="dark-text">关于<hr></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>WGzeyu 版权所有 教程内容采用CC BY-NC-SA进行授权 页面样式模板<a href="LICENSE" target="_blank">MIT LICENSE</a></p>
+                <p>允许在醒目注明原作者及原链接并保持内容同步更新的前提下完整转载，如果做不到，请直接分享原链接。</p>
+                <p>感谢MicroBlock为该页面提供的一些前端制作</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--i/bodyi-->
+
+  <script src="../assets/guide/js/jquery.min.js"></script>
+  <script src="../assets/guide/js/bootstrap.min.js"></script>
+  <script src="../assets/guide/js/retina.js"></script>
+  <script src="../assets/guide/js/jquery.fitvids.js"></script>
+  <script src="../assets/guide/js/wow.js"></script>
+  <script src="../assets/guide/js/jquery.prettyPhoto.js"></script>
+  <script src="../assets/guide/js/custom.js"></script>
+  <script src="../assets/guide/js/main.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shCore.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shBrushXml.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shBrushCss.js"></script>
+  <script src="../assets/guide/js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+  <script>
+    window.onload = function() {
+      var link = $("<link />");
+      link.attr("href", "../assets/guide/fonts/font-awesome-4.3.0/css/font-awesome.min.css");
+      link.attr("rel", "stylesheet");
+      link.attr("type", "text/css");
+      link.appendTo($("head"));
+      link.load(function () {
+        console.info("CSS延迟加载");
+      });
+    };
+    function limg(imgid){
+      document.getElementById(imgid).src = document.getElementById(imgid).dataset.src;
+    };
+    function cimg(imgid, imgurl){
+      document.getElementById(imgid).src = imgurl;
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const lazyImage = entry.target;
+                    console.log(lazyImage.src.substr(lazyImage.src.length - lazyImage.dataset.src.length,lazyImage.src.length), lazyImage.dataset.src);
+                    if (lazyImage.src.substr(lazyImage.src.length - lazyImage.dataset.src.length,lazyImage.src.length) != lazyImage.dataset.src)
+                    {
+                      if (lazyImage.loaded != "yes")
+                      {
+                        console.log("lazy loading ", lazyImage);
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.loaded = "yes";
+                      }
+                    }
+                }
+            })
+        });
+        const arr = document.querySelectorAll('img.lzy_img, video.lzy_img');
+        arr.forEach((v) => {
+            imageObserver.observe(v);
+        })
+    });
+  </script>
+  <script>/*感谢MicroBlock制作的跳转代码*/
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            if (window == window.top) {
+                document.location.href = `https://bs.wgzeyu.com/${/bs\.wgzeyu\.com\/(\S+)\/index.php/.exec(document.location.href)[1]}${document.location.hash}`
+            } else {
+                $(`a[href=${window.parent.document.location.hash}]`)[0].click();
+                parent.document.location.hash = "";
+                delete localStorage["_hashStore"];
+            }
+        }, 100)
+    })
+  </script>
+</body>
+</html>
