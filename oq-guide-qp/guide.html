@@ -237,31 +237,22 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <p>
-                  <b>由于以下几种原因，目前需要先降级再安装Mod：</b><br>
-                   　·近期游戏更新了底层的Unity引擎，造成了一些问题，还可能不兼容旧的自定义模型<br>
-                   　·游戏热度降低，部分Mod作者可能已经疲于频繁的游戏更新，还没有适配新版游戏<br>
-                   　·<strong>最新版游戏还没有核心Mod，不能打Mod加歌曲，而1.28.0版本的Mod非常丰富</strong><br>
-                   　·1.28.0与最新版游戏之间差不多，除了Unity版本不同，没有什么明显的变化
-                </p>
-                <p>
-                  降级教程：<br>
-                  　0. <strong>必须确保</strong>你已经在头显内通过商店安装了Beat Saber<br>
-                  　1. <strong>必须</strong>用你买过游戏的账号登录Oculus(Meta)官网（<a target="_blank" href="https://secure.oculus.com/my/orders/">可点我登录官网</a>）<br>
-                  　2. <strong>必须</strong>进入订单页面，这样能自动把登录状态同步到旧地址（<a target="_blank" href="https://secure.oculus.com/my/orders/">点我直达订单页面</a>）<br>
-                  　3. <a target="_blank" href="https://securecdn.oculus.com/binaries/download/?id=8838143419592875">点我下载1.28.0版本游戏APK</a>（<a target="_blank" href="https://oculusdb.rui2015.me/id/2448060205267927?connected=versions">点我可选择其他版本下载</a>）<br>
-                  　4. 打开<a href="#install_qp">QuestPatcher</a>（以下简称QP）<br>
-                  　5. 点击QP界面左侧的 <code>工具&设置</code> (若没有找到请跳到⑥)<br>
-                  　6. <strong>点击 <code>更换游戏版本</code> 按钮</strong>（该功能的原理是使用指定的文件将游戏卸载重装）<br>
-                  　7. 点击 <code>继续</code>，选择你刚才下载的游戏APK，然后点击 <code>好的</code><br>
-                  　8. 等待完成后，即可按教程来打补丁装Mod
-                </p>
-                <div class="intro2 clearfix">
-                  <p>
-                    <i class="fa fa-exclamation-triangle"></i> 若APK下载失败，要么是没识别到账号要么是网络问题，若错误代码有404则一定没有识别到账号授权<br>
-                    <i class="fa fa-exclamation-triangle"></i> 如果你的Quest系统更新至≥v51版本后游戏出现问题，将QuestPatcher更新至最新版后，按照降级教程将游戏卸载重装一次、再使用最新版QuestPatcher重打补丁即可恢复正常。
-                  </p>
-                </div>
+                <b>由于以下几种原因，可能需要先降级再安装Mod：</b>
+                <ul style="list-style-type: disc;padding-left: 2em">
+                  <li><strong>最新版游戏还没有核心Mod，不能打Mod加歌曲，而旧版本的Mod非常丰富</strong></li>
+                  <li>游戏热度降低，部分Mod作者可能已经疲于频繁的游戏更新，还没有适配新版游戏</li>
+                </ul>
+                <b>降级教程：</b>
+                <ol>
+                  <li> <strong>必须确保</strong>你已经在头显内通过商店安装了Beat Saber</li>
+                  <li> <strong>必须确保</strong>Beat Saber还没有打过补丁（如果不确定或者已经打过补丁，卸载游戏然后重新安装游戏）</li>
+                  <li> 打开<a href="#install_qp">中国版 QuestPatcher</a>（以下简称QP）</li>
+                  <li> 点击 QP 界面左侧的 <code>工具&设置</code></li>
+                  <li> <strong>点击 <code>一键降级</code> 按钮</strong>（该功能的原理是使用差异文件降级游戏）</li>
+                  <li> 选择想要降级到的版本（如果不知道选哪个版本，选第一个）</li>
+                  <li> 点击 <code>一键降级</code></li>
+                  <li> 等待完成后，即可按教程来打补丁装Mod</li>
+                </ol>
               </div>
             </div>
           </section>
@@ -301,17 +292,17 @@
                 <p>请进入BS的应用数据目录：<code>\Android\data\com.beatgames.beatsaber\files</code></p>
                 <p>将其中的<code>AvatarData.dat</code>、<code>PlayerData.dat</code>与<code>settings.cfg</code>复制到电脑中保存即可完成备份。</p>
 
-                <h3 id="install_qp">下载QuestPatcher</h3>
+                <h3 id="install_qp">下载 QuestPatcher</h3>
                 <p>QuestPatcher是给游戏打补丁装Mod的工具，有了它才能安装第三方Mod、才能通过Mod给游戏添加诸如自定义歌曲等功能，它的功能类似于BMBF，只不过是一个PC软件，比BMBF更简单。</p>
                 <p><img src="img/qp-mod.png" class="img-responsive img-thumbnail"></p>
                 <hr>
-                <h4>QuestPatcher中国版（MicroBlock）</h4>
+                <h4>QuestPatcher 中国版</h4>
                 <p>
                   中文界面，目标游戏已绑定为BeatSaber，相比原版增强的功能由MicroBlock与SkyQe大佬制作，感谢他们的贡献
                 </p>
                 <a href="https://github.com/MicroCBer/QuestPatcher/releases/latest/download/QuestPatcher-windows-standalone.zip" target="_blank" class="btn btn-primary">GH一键下载</a> <a href="https://bs.wgzeyu.com/drive/" target="_blank" class="btn btn-info">备用网盘下载</a> <a href="https://github.com/MicroCBer/QuestPatcher/releases/latest" target="_blank" class="btn btn-info">GitHub下载(多系统)</a> <span style="white-space:nowrap;">（网盘下载需进入其中的<code>工具</code>目录）</span>
                 <hr>
-                <h4>QuestPatcher原版</h4>
+                <h4>QuestPatcher 原版</h4>
                 <p>英文界面，不支持一键安装核心Mod，需手动下载安装。</p>
                 <a href="https://github.com/Lauriethefish/QuestPatcher/releases/latest/download/QuestPatcher-windows-standalone.zip" target="_blank" class="btn btn-primary">GH一键下载</a> <a href="https://github.com/Lauriethefish/QuestPatcher/releases/latest" target="_blank" class="btn btn-info">GitHub下载(多系统)</a>
                 <hr>
