@@ -3,18 +3,18 @@ ResilioSync是一款基于P2P的文件同步软件，支持以只读方式分享
 
 P2P是直接由用户之间点对点传输，你的下载速度是由其他用户上传，你也会上传给其他的下载用户，不走服务器。   
    
-**如果你不想使用ResilioSync，请[点我进入网盘下载曲包](http://bs.wgzeyu.com/drive/)**。（在前两个网盘的`歌曲压缩包`文件夹）  
+**如果你不想使用ResilioSync，请[点我进入网盘下载曲包](https://bs.wgzeyu.com/drive/)**。（在前两个网盘的`歌曲压缩包`文件夹）  
 
 ## 操作步骤
 1. [点我进入官网下载Resilio-Sync](https://www.resilio.com/individuals/) 👉 打开下到的文件 👉 不要勾选`安装为服务` 👉 点击下一步即可安装  
 2. 打开ResilioSync 👉 同意协议 👉 点击右上方的【齿轮】图标 👉 将【默认文件夹】改为曲包下载目录（无需放入游戏目录！）
 3. 点击**下方表格内的曲包名称** 👉 点击【打开ResilioSync】 👉 点击【连接】（**不要更改保存位置！**如需更改保存位置，请返回第2步（上一步））
-4. **按照 [PC-BS教程](http://bs.wgzeyu.com/pc-guide/#addsong_foldereditor)/[Quest-BS教程](http://bs.wgzeyu.com/oq-guide/#addsong_addsongpack) 中的 【添加歌曲（合集曲包）】 来添加歌曲包，每个曲包将分类显示为单独歌单**
+4. **按照 [PC-BS教程](https://bs.wgzeyu.com/pc-guide/#addsong_foldereditor)/[Quest-BS教程](https://bs.wgzeyu.com/oq-guide/#addsong_addsongpack) 中的 【添加歌曲（合集曲包）】 来添加歌曲包，每个曲包将分类显示为单独歌单**
 
 ## 注意事项
 - 请确保你的系统时间/日期设置正确，时间不准将无法正常使用ResilioSync。
 - 如果卡在`等待批准`（请反馈给我们），或者由于其他原因无法一键下载，请点击左上方`+`号 → `输入密钥或链接`，**输入密钥并设置独立下载目录**即可手动下载。
-- 如果连手动下载都失败（请反馈给我们），可以[点我进入网盘](http://bs.wgzeyu.com/drive/)来下载曲包，左侧两个网盘可直接下载，在`歌曲压缩包`文件夹。
+- 如果连手动下载都失败（请反馈给我们），可以[点我进入网盘](https://bs.wgzeyu.com/drive/)来下载曲包，左侧两个网盘可直接下载，在`歌曲压缩包`文件夹。
 
 | 名称 / ResilioSync链接（一键下载） | 更新 | 曲包整理者 | ResilioSync密钥（手动下载） |
 |---|---|---|---|
@@ -101,13 +101,13 @@ P2P是直接由用户之间点对点传输，你的下载速度是由其他用�
 ## 注意事项
 - 请确保你的系统时间/日期设置正确，时间不准将无法正常使用ResilioSync。
 - 如果卡在`等待批准`（请反馈给我们），或者由于其他原因无法一键下载，请点击左上方`+`号 → `输入密钥或链接`，输入密钥并设置独立下载目录即可手动下载。
-- 如果连手动下载都失败（请反馈给我们），可以[点我进入其他网盘](http://bs.wgzeyu.com/drive/)来下载曲包，前两个网盘可直接下载，在`歌曲压缩包`文件夹。
+- 如果连手动下载都失败（请反馈给我们），可以[点我进入其他网盘](https://bs.wgzeyu.com/drive/)来下载曲包，前两个网盘可直接下载，在`歌曲压缩包`文件夹。
 
 ## 推荐操作
 - 允许开机自启、保持软件运行，**每天将自动同步更新最新曲包**👍，并利用闲置带宽为他人提供下载速度👍
 - 如果担心软件上传会影响网速，可以设置上传限速（例如3072KB/s（3MB/s））
 - 点击同步目录右边的`三个点`，然后点击`首选项`，**取消勾选**`在文件夹存档中存储已删除的文件`
-- 按照 [PC-BS教程](http://bs.wgzeyu.com/pc-guide/#addsong_foldereditor)/[Quest-BS教程](http://bs.wgzeyu.com/oq-guide/#addsong_addsongpack) 中的 `添加自定义歌曲` → `添加曲包为单独歌单` 教程来添加歌曲包，每个曲包将分类显示为单独歌单
+- 按照 [PC-BS教程](https://bs.wgzeyu.com/pc-guide/#addsong_foldereditor)/[Quest-BS教程](https://bs.wgzeyu.com/oq-guide/#addsong_addsongpack) 中的 `添加自定义歌曲` → `添加曲包为单独歌单` 教程来添加歌曲包，每个曲包将分类显示为单独歌单
 
 ## 不推荐操作
 - 上传限速低到不能上传👎
