@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(mv buy/*.html old-archive/buy/)",
+      "Bash(mv pc-guide/*.html old-archive/pc-guide/)",
+      "Bash(mv oq-guide/*.html old-archive/oq-guide/)",
+      "Bash(mv oq-guide-qp/*.html old-archive/oq-guide-qp/)",
+      "Bash(mv oq-guide-bmbf/*.html old-archive/oq-guide-bmbf/)",
+      "Bash(for dir:*)",
+      "Bash(do mv:*)",
+      "Bash(done)",
+      "Bash(bundle exec:*)",
+      "Bash(curl -s \"http://localhost:4000/pc-guide/guide.html\")",
+      "Bash(sed 's|https://bs\\\\.wgzeyu\\\\.com/|/|g; s|href=\"\"/pc-guide/\"\"|href=\"\"../pc-guide/\"\"|g; s|href=\"\"/pc-faq/\"\"|href=\"\"../pc-faq/\"\"|g; s|href=\"\"/oq-guide/\"\"|href=\"\"../oq-guide/\"\"|g; s|href=\"\"/buy/\"\"|href=\"\"../buy/\"\"|g; s|href=\"\"/drive/\"\"|href=\"\"../drive/\"\"|g; s|href=\"\"/songs/\"\"|href=\"\"../songs/\"\"|g' \"old-archive/drive/drive.html\")",
+      "Bash(\"drive/drive.html\")",
+      "Bash(sed 's|https://bs\\\\.wgzeyu\\\\.com/|/|g; s|href=\"\"/pc-guide/\"\"|href=\"\"../pc-guide/\"\"|g; s|href=\"\"/pc-faq/\"\"|href=\"\"../pc-faq/\"\"|g; s|href=\"\"/oq-guide/\"\"|href=\"\"../oq-guide/\"\"|g; s|href=\"\"/buy/\"\"|href=\"\"../buy/\"\"|g; s|href=\"\"/drive/\"\"|href=\"\"../drive/\"\"|g; s|href=\"\"/songs/\"\"|href=\"\"../songs/\"\"|g' \"old-archive/drive/index.html\")",
+      "Bash(\"drive/index.html\")",
+      "Bash(sed 's|https://bs\\\\.wgzeyu\\\\.com/|/|g; s|href=\"\"/pc-guide/\"\"|href=\"\"../pc-guide/\"\"|g; s|href=\"\"/pc-faq/\"\"|href=\"\"../pc-faq/\"\"|g; s|href=\"\"/oq-guide/\"\"|href=\"\"../oq-guide/\"\"|g; s|href=\"\"/buy/\"\"|href=\"\"../buy/\"\"|g; s|href=\"\"/drive/\"\"|href=\"\"../drive/\"\"|g; s|href=\"\"/songs/\"\"|href=\"\"../songs/\"\"|g' \"old-archive/pc-faq/index.html\")",
+      "Bash(\"pc-faq/index.html\")",
+      "Bash(sed 's|https://bs\\\\.wgzeyu\\\\.com/|/|g; s|href=\"\"/pc-guide/\"\"|href=\"\"../pc-guide/\"\"|g; s|href=\"\"/pc-faq/\"\"|href=\"\"../pc-faq/\"\"|g; s|href=\"\"/oq-guide/\"\"|href=\"\"../oq-guide/\"\"|g; s|href=\"\"/buy/\"\"|href=\"\"../buy/\"\"|g; s|href=\"\"/drive/\"\"|href=\"\"../drive/\"\"|g; s|href=\"\"/songs/\"\"|href=\"\"../songs/\"\"|g' \"old-archive/pc-faq/drive.html\")",
+      "Bash(\"pc-faq/drive.html\")",
+      "Bash(sed 's|https://bs\\\\.wgzeyu\\\\.com/|/|g; s|href=\"\"/pc-guide/\"\"|href=\"\"../pc-guide/\"\"|g; s|href=\"\"/pc-faq/\"\"|href=\"\"../pc-faq/\"\"|g; s|href=\"\"/oq-guide/\"\"|href=\"\"../oq-guide/\"\"|g; s|href=\"\"/buy/\"\"|href=\"\"../buy/\"\"|g; s|href=\"\"/drive/\"\"|href=\"\"../drive/\"\"|g; s|href=\"\"/songs/\"\"|href=\"\"../songs/\"\"|g' \"old-archive/songs/index.html\")",
+      "Bash(\"songs/index.html\")",
+      "Bash(node -e \":*)"
+    ]
+  }
+}

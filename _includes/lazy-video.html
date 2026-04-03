@@ -1,0 +1,12 @@
+{%- assign video_id = include.id | default: '' -%}
+{%- assign video_src = include.src -%}
+{%- assign video_class = include.class | default: '' -%}
+<video id="{{ video_id }}"
+       muted
+       data-src="{{ video_src }}"
+       class="img-responsive img-thumbnail lzy_img {{ video_class }}"
+       autoplay="autoplay"
+       loop="loop"
+       style="height:480px !important;">
+  你的浏览器不支持播放当前视频
+</video>

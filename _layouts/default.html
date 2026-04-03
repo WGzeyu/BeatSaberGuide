@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link id="codyframe" rel="stylesheet" href="{{ '/assets/codyhouse/css/style.css' | relative_url }}?v=3">
+  <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {
+      var cfStyle = document.getElementById('codyframe');
+      if(cfStyle) {
+        var href = cfStyle.getAttribute('href');
+        href = href.replace('style.css', 'style-fallback.css');
+        cfStyle.setAttribute('href', href);
+      }
+    }
+  </script>
+  <link rel="alternate icon" type="image/png" href="{{ '/favicon.webp' | relative_url }}">
+  {% if page.title %}<title>{{ page.title }}</title>{% else %}<title>BeatSaber新手教程、问题解答、曲包网盘</title>{% endif %}
+  {% if page.keywords %}<meta itemprop="keywords" name="keywords" content="{{ page.keywords }}">{% endif %}
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <style>
+  .hzw { /*导航栏占位*/
+    height:70px;
+  }
+  .nav{ /*固定导航栏*/
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:70px;
+      z-index:8;
+  }
+  @media only screen and (max-width: 959px) {
+    .nav{
+        height:50px;
+    }
+    .hzw{
+      height:50px;
+    }
+  }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125410658-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-125410658-2');
+  </script>
+</head>
+<body>
+
+{{ content }}
+
+<script src="{{ '/assets/codyhouse/js/scripts.min.js' | relative_url }}?v=3"></script>
+<script>
+  if (!!window.ActiveXObject || "ActiveXObject" in window) {
+      alert("您正在使用的浏览器版本过低，可能会导致网页加载不正常！\n\n\n推荐更换浏览器打开本网页：\n\n如果你开启了系统更新、正在使用Win10/11，\n请使用系统自带的Edge浏览器来打开本网页；\n\n其他情况下请安装Chrome浏览器：google.cn/chrome");
+  } else if (!('IntersectionObserver' in window) || navigator.userAgent.includes("Edge") || getChromiumVersion() < 58) {
+      console.log('兼容性警告');
+  } else {
+      document.getElementById("oldbrowser").style.display = "none";
+  }
+  function getChromiumVersion() {
+    try {
+      if (window.chrome) {
+        const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+        const version = raw ? parseInt(raw[2], 10) : false;
+        return version || 404;
+      }
+    } catch (error) {
+      return 500;
+    }
+    return 501;
+  }
+</script>
+</body>
+</html>

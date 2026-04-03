@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link id="codyframe" rel="stylesheet" href="{{ '/assets/codyhouse/css/style.css' | relative_url }}?v=3">
+    <script>
+      if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+    </script>
+    <title>{{ page.title }}</title>
+    <link rel="alternate icon" type="image/png" href="{{ '/favicon.webp' | relative_url }}">
+    {% if page.keywords %}<meta data-vue-meta="true" itemprop="keywords" name="keywords" content="{{ page.keywords }}">{% endif %}
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <style>
+      body{
+        margin:0;
+        padding:0;
+        overflow-y:hidden
+      }
+    </style>
+    <link rel="stylesheet" href="{{ '/assets/css/animations.css' | relative_url }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125410658-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-125410658-2');
+    </script>
+
+  </head>
+  <body>
+    <div id="nheader">
+
+      {% include header.html %}
+
+    </div>
+
+    <iframe id="iframea" frameborder="0" src="{{ page.guide_path | default: 'guide.html' }}" style="width:100%;" height="2560" importance="high"></iframe>
+
+    {% include modal-qq.html %}
+    {% include modal-dashang.html %}
+    {% include notice-oldbrowser.html %}
+    {% include notice-outdated.html %}
+    {% include modal-jiangji.html %}
+
+    <script src="{{ '/assets/codyhouse/js/scripts.min.js' | relative_url }}?v=3"></script>
+    <script>
+      function ciframe() {
+        var diva = document.getElementById("nheader");
+        document.getElementById("iframea").height = window.innerHeight - diva.offsetHeight;
+      }
+      function cimg(imgid,imgurl){
+        document.getElementById(imgid).src = imgurl;
+      }
+      window.onresize = ciframe;
+
+      window.onload = function() {
+        ciframe();
+      }
+    </script>
+    <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window || !('IntersectionObserver' in window)) {
+          alert("您正在使用的浏览器版本过低，可能会导致网页加载不正常！\n\n\n推荐更换浏览器打开本网页：\n\n如果你开启了系统更新、正在使用Win10/11，\n请使用系统自带的Edge浏览器来打开本网页；\n\n其他情况下请安装Chrome浏览器：google.cn/chrome");
+      } else if (navigator.userAgent.includes("Edge") || getChromiumVersion() < 58) {
+          console.log('兼容性警告');
+      } else {
+          document.getElementById('oldbrowser').style.display = 'none';
+      }
+      function getChromiumVersion() {
+        try {
+          if (window.chrome) {
+            const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+            const version = raw ? parseInt(raw[2], 10) : false;
+            return version || 404;
+          }
+        } catch (error) {
+          return 500;
+        }
+        return 501;
+      }
+    </script>
+  </body>
+</html>

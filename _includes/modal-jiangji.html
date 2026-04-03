@@ -1,0 +1,91 @@
+<div id="steamjiangji" class="modal modal--animate-translate-up flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xs max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog" aria-labelledby="modal-title-jj" aria-describedby="modal-description-jj">
+    <header class="bg-contrast-lower bg-opacity-50% padding-y-sm padding-x-md flex items-center justify-between">
+      <h1 id="modal-title-jj" class="text-truncate text-md">降级教程</h1>
+      <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+        <svg class="icon icon--xs" viewBox="0 0 16 16">
+          <title>关闭提示</title>
+          <g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+            <line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line>
+            <line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line>
+          </g>
+        </svg>
+      </button>
+    </header>
+    <div class="padding-y-sm padding-x-md">
+      <div class="text-component">
+        <p>
+         <strong> 【新降级方案】</strong>（限1.29.1版本）
+        </p>
+        <p>
+          降级教程：<br>
+          　0. 关闭ModAssistant<br>
+          　1. 在Steam中找到Beat Saber<br>
+          　2. 右键 → 属性 → 测试版<br>
+          　3. 将「参与测试」右侧的「无」切换至「legacy1.29.1…<br>
+          　4. 等待下载完成，即可完成降级
+        </p>
+        <p>
+          注：请不要填写测试代码，也不要点击「检查代码」。<br>
+          理论来说，你无需再按传统方案的繁琐步骤来恢复数据，<br>
+          如果以前给1.29.1打过Mod，切换测试分支后应该会恢复。<br>
+          如果你没打过Mod，降级完成后即可按教程来安装Mod。<br>
+          这不是测试版，只是利用该功能提供了引擎更新前的正式版
+        </p>
+        <hr>
+        <p>
+        <strong>  【传统降级方案】</strong>
+        </p>
+        <p>
+          下载方法：<br>
+          　1. <a target="_blank" href="{{ '/drive/' | relative_url }}"><s>点我进入网盘</s></a><br>
+          　2. 选择任意一个网盘，点击【进入下载】<br>
+          　3. 进入【游戏备份与懒人包】文件夹<br>
+          　4. 找到1.29.1的原版备份<br>
+          　5. 对着找到的文件右键，点击下载<br>
+        </p>
+        <p>
+          降级教程：<br>
+          　0. 确保已经通过Steam更新了游戏<br>
+          　1. 对着下载的原版备份右键<br>
+          　2. 点击解压至单独文件夹<br>
+          　3. 通过Steam打开游戏目录<br>
+          　4. 点击游戏目录的上一级目录<br>
+          　5. 更改游戏目录文件夹名称，随便改<br>
+          　6. 将原版备份解压出的文件夹移动过来<br>
+          　7. 将原版备份文件夹名称重命名为Beat Saber<br>
+        </p>
+        <p>
+          恢复数据教程：<br>
+          　1. 打开降级教程第⑤步改名的游戏目录<br>
+          　2. 删除UserData文件夹内的Beat Saber IPA<br>
+          　3. 复制以下文件夹<br>
+          　　UserData（Mod设置）<br>
+          　　CustomSabers（光剑模型）<br>
+          　　CustomPlatforms（场景模型）<br>
+          　　CustomAvatars（人物模型）<br>
+          　　CustomNotes（方块模型）<br>
+          　4. 进入新的游戏目录<br>
+          　5. 粘贴复制的那些文件夹<br>
+          　6. 在弹出的提示中，选择【替换】<br>
+          　7. 打开降级教程第⑤步改名的游戏目录<br>
+          　8. 进入Beat Saber_Data文件夹<br>
+          　9. 剪切CustomLevels文件夹<br>
+          　10. 进入新的游戏目录<br>
+          　11. 进入Beat Saber_Data文件夹<br>
+          　12. 粘贴剪切的那个文件夹<br>
+          　13. 在弹出的提示中，选择【替换】<br>
+        </p>
+        <p>
+          降级后安装Mod教程：<br>
+          　0. 确保降级后至少打开过一次游戏<br>
+          　1. 退出游戏与降级以前打开的ModAssistant<br>
+          　2. 按正常流程打开ModAssistant就可以安装Mod了<br>
+        </p>
+        <p>
+          （其实这一套步骤做下来，就是把游戏文件整个更换为旧版备份，不包含任何残留的Mod或游戏文件，只恢复以前的设置与资源文件）
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

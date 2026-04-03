@@ -1,0 +1,9 @@
+{%- if include.type == 'rainbow' -%}
+<div class="intro2 clearfix rainbownote">
+{%- else -%}
+<div class="intro2 clearfix">
+{%- endif -%}
+  <p>
+    <i class="fa fa-exclamation-triangle"></i> {{ include.content }}
+  </p>
+</div>

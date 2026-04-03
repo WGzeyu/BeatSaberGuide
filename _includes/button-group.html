@@ -1,0 +1,8 @@
+{%- for btn in include.buttons -%}
+<a href="{{ btn.url }}"
+   {%- if btn.target %} target="{{ btn.target }}"{% else %} target="_blank"{% endif -%}
+   {%- if btn.rel %} rel="{{ btn.rel }}"{% endif -%}
+   class="btn {{ btn.class | default: 'btn-primary' }}">
+  {{ btn.text }}
+</a>
+{%- endfor -%}
