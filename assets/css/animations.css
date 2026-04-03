@@ -1,0 +1,72 @@
+/* 彩虹文字动画 */
+@keyframes rainbow_keyframe2 {
+  0% {
+    color: red;
+  }
+  33% {
+    color: green;
+  }
+  67% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.rainbow2 {
+  color: red;
+  animation-name: rainbow_keyframe2;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+/* 彩虹背景动画（警告框） */
+@keyframes rainbownote_keyframe {
+  0% {
+    background-color: red;
+    border: DarkRed;
+  }
+  33% {
+    background-color: green;
+    border: DarkGreen;
+  }
+  67% {
+    background-color: blue;
+    border: DarkBlue;
+  }
+  100% {
+    background-color: red;
+    border: DarkRed;
+  }
+}
+
+.rainbownote {
+  background-color: red;
+  border: DarkRed;
+  animation-name: rainbownote_keyframe;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* 按钮彩虹动画 */
+@keyframes rainbownote_keyframe_btn {
+  0% {
+    background-color: hsl(349, 75%, 51%);
+  }
+  33% {
+    background-color: hsl(94, 48%, 42%);
+  }
+  67% {
+    background-color: hsl(220, 90%, 56%);
+  }
+  100% {
+    background-color: hsl(349, 75%, 51%);
+  }
+}
+
+.rainbowbut {
+  animation-name: rainbownote_keyframe_btn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

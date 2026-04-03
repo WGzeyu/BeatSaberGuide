@@ -1,0 +1,18 @@
+{%- assign img_id = include.id | default: '' -%}
+{%- assign img_src = include.src -%}
+{%- assign img_alt = include.alt | default: '' -%}
+{%- assign img_class = include.class | default: '' -%}
+{%- if include.lazy == false -%}
+<img src="{{ img_src }}"
+     id="{{ img_id }}"
+     class="img-responsive img-thumbnail {{ img_class }}"
+     alt="{{ img_alt }}"
+     {% if include.onclick %}onclick="{{ include.onclick }}"{% endif %}>
+{%- else -%}
+<img src="{{ img_src | replace: '.webp', '.s.webp' }}"
+     data-src="{{ img_src }}"
+     id="{{ img_id }}"
+     class="lzy_img img-responsive img-thumbnail {{ img_class }}"
+     alt="{{ img_alt }}"
+     {% if include.onclick %}onclick="{{ include.onclick }}"{% endif %}>
+{%- endif -%}

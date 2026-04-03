@@ -1,0 +1,61 @@
+<header class="f-header position-relative js-f-header">
+  <div class="f-header__mobile-content container max-width-lg">
+    <a href="https://space.bilibili.com/557131" target="_blank" class="f-header__logo">
+      <img width="100%" src="{{ '/assets/avatar/wgzeyu.webp' | relative_url }}">
+    </a>
+    <button class="reset anim-menu-btn js-anim-menu-btn js-tab-focus f-header__nav-control" aria-label="Toggle menu">
+      <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="f-header__nav" role="navigation">
+    <div class="f-header__nav-grid container max-width-lg">
+      <div class="f-header__nav-logo-wrapper margin-right-lg@md">
+        <a href="https://space.bilibili.com/557131" target="_blank" class="f-header__logo">
+          <img width="100%" src="{{ '/assets/avatar/wgzeyu.webp' | relative_url }}">
+        </a>
+      </div>
+      <ul class="f-header__list">
+        <li class="f-header__item">
+          <a href="{{ '/' | relative_url }}" class="f-header__link">
+            <span>BS基础教程与问题解答</span>
+            <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+          </a>
+          <ul class="f-header__dropdown">
+            <li><a href="{{ '/pc-guide/' | relative_url }}" class="f-header__dropdown-link">PC平台 - BS新手教程</a></li>
+            <li><a href="{{ '/pc-faq/' | relative_url }}" class="f-header__dropdown-link">PC平台 - BS问题解答</a></li>
+            <li><a href="{{ '/oq-guide/' | relative_url }}" class="f-header__dropdown-link">Quest平台-BS新手教程</a></li>
+            <li><a href="{{ '/buy/' | relative_url }}" class="f-header__dropdown-link">Beat Saber 购买教程</a></li>
+          </ul>
+        </li>
+        <li class="f-header__item">
+          <a href="{{ '/drive/' | relative_url }}" class="f-header__link">
+            <span>游戏资源共享</span>
+            <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+          </a>
+          <ul class="f-header__dropdown">
+            <li><a href="#012" class="f-header__dropdown-link">主站 | 推荐用于小文件</a></li>
+            <li><a href="{{ '/drive/' | relative_url }}" class="f-header__dropdown-link">网盘 | 推荐用于大文件</a></li>
+            <li><a href="{{ '/songs/' | relative_url }}" class="f-header__dropdown-link">同步 | 曲包文件夹同步</a></li>
+          </ul>
+        </li>
+        <li class="f-header__item"><a href="https://milkvio.github.io/beatsaber-cn-guide/" class="f-header__link">打分指南</a></li>
+        <li class="f-header__item">
+          <a href="#0" class="f-header__link">
+            <span>相关网站</span>
+            <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+          </a>
+          <ul class="f-header__dropdown">
+            <li><a href="https://beatsaver.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">歌曲 | BeatSaver</a></li>
+            <li><a href="https://modelsaber.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">模型 | ModelSaber</a></li>
+            <li><a href="https://scoresaber.com/" class="f-header__dropdown-link" target="_blank" rel="nofollow">排名 | ScoreSaber</a></li>
+            <li><a href="https://www.beatleader.xyz/" class="f-header__dropdown-link" target="_blank" rel="nofollow">排名 | BeatLeader</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="f-header__list margin-left-auto@md">
+        <li class="f-header__item"><a href="#0" class="f-header__btn btn btn--accent" aria-controls="dashang-window" onclick="cimg('ds-img','{{ '/assets/img/dashang.png' | relative_url }}');">捐助</a></li>
+        <li class="f-header__item"><a href="#0" class="f-header__btn btn btn--primary" aria-controls="qq-group">社区Q群</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="zh"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="zh"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="zh"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{{ page.title }}</title>
+  {% if page.keywords %}<meta data-vue-meta="true" itemprop="keywords" name="keywords" content="{{ page.keywords }}">{% endif %}
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <link rel="alternate icon" type="image/png" href="{{ '/favicon.webp' | relative_url }}">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/css/stroke.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/css/bootstrap.css' | relative_url }}?v=6">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/css/animate.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/css/prettyPhoto.css' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/css/style.css' | relative_url }}?v=6">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/js/syntax-highlighter/styles/shCore.css' | relative_url }}" media="all">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/js/syntax-highlighter/styles/shThemeRDark.css' | relative_url }}" media="all">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/guide/css/custom.css' | relative_url }}?v=2">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/animations.css' | relative_url }}">
+  <!--[if lt IE 9]>
+    <script src="{{ '/assets/guide/js/html5shiv.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/guide/js/respond.min.js' | relative_url }}"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <div class="container">
+
+    <section id="top" class="section docs-heading">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="big-title text-center">
+            <h1>{{ page.heading | default: page.title }}</h1>
+            <p class="lead">{{ page.lead | default: page.description | strip | markdownify | strip | remove: '<p>' | remove: '</p>' }}</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+    </section>
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+          <ul class="nav">
+            {% for item in page.sidebar %}
+            <li><a href="#{{ item.id }}">{{ item.title }}</a>
+              {% if item.children %}
+              <ul class="nav">
+                {% for child in item.children %}
+                <li><a href="#{{ child.id }}">{{ child.title }}</a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-md-9">
+
+        {{ content }}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/guide/js/jquery.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/retina.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/jquery.fitvids.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/wow.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/jquery.prettyPhoto.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/custom.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/main.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/syntax-highlighter/scripts/shCore.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/syntax-highlighter/scripts/shBrushXml.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/syntax-highlighter/scripts/shBrushCss.js' | relative_url }}"></script>
+<script src="{{ '/assets/guide/js/syntax-highlighter/scripts/shBrushJScript.js' | relative_url }}"></script>
+
+<script>
+  window.onload = function() {
+    var link = $("<link />");
+    link.attr("href", "{{ '/assets/guide/fonts/font-awesome-4.3.0/css/font-awesome.min.css' | relative_url }}");
+    link.attr("rel", "stylesheet");
+    link.attr("type", "text/css");
+    link.appendTo($("head"));
+    link.load(function () {
+      console.info("CSS延迟加载");
+    });
+  };
+  function limg(imgid){
+    var el = document.getElementById(imgid);
+    el.src = el.dataset.src;
+    // 对于 video 元素，需要调用 load() 方法
+    if (el.tagName === 'VIDEO') {
+      el.load();
+    }
+  };
+  function cimg(imgid, imgurl){
+    document.getElementById(imgid).src = imgurl;
+  };
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  const lazyElement = entry.target;
+                  if (lazyElement.loaded != "yes" && lazyElement.dataset.src)
+                  {
+                    lazyElement.src = lazyElement.dataset.src;
+                    // 对于 video 元素，需要调用 load() 方法
+                    if (lazyElement.tagName === 'VIDEO') {
+                      lazyElement.load();
+                    }
+                    lazyElement.loaded = "yes";
+                  }
+              }
+          })
+      });
+      const arr = document.querySelectorAll('img.lzy_img, video.lzy_img');
+      arr.forEach((v) => {
+          imageObserver.observe(v);
+      })
+  });
+</script>
+<script>
+  window.addEventListener("load", () => {
+      setTimeout(() => {
+          if (window == window.top) {
+              var match = /bs\.wgzeyu\.com\/(\S+)\/index\.php/.exec(document.location.href);
+              if (match) {
+                  document.location.href = `{{ '/' | absolute_url }}${match[1]}${document.location.hash}`;
+              }
+          } else {
+              var hash = window.parent.document.location.hash;
+              if (hash && hash.length > 1) {
+                  $(`a[href=${hash}]`)[0].click();
+                  parent.document.location.hash = "";
+                  delete localStorage["_hashStore"];
+              }
+          }
+      }, 100)
+  });
+
+  // 处理跨页面跳转：在顶层窗口中打开其他教程页面，避免iframe嵌套
+  document.addEventListener("click", function(e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href) return;
+
+      // 检查是否是跨教程页面的链接（相对路径指向其他目录）
+      var isCrossPage = /^(\.\.\/|\/pc-guide|\/oq-guide|\/buy|\/pc-faq|\/drive|\/songs)/.test(href);
+      // 排除锚点链接和当前页面内的链接
+      var isAnchor = href.startsWith('#');
+
+      if (isCrossPage && !isAnchor && window !== window.top) {
+          e.preventDefault();
+          // 构建完整URL
+          var targetUrl = href;
+          if (href.startsWith('../')) {
+              // 解析相对路径
+              var basePath = window.location.pathname.replace(/\/[^\/]+$/, '');
+              var upCount = (href.match(/\.\.\//g) || []).length;
+              for (var i = 0; i < upCount; i++) {
+                  basePath = basePath.replace(/\/[^\/]*$/, '');
+              }
+              targetUrl = basePath + '/' + href.replace(/\.\.\//g, '');
+          }
+          top.location.href = targetUrl;
+      }
+  });
+</script>
+
+</body>
+</html>

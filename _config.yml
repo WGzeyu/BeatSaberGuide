@@ -1,0 +1,61 @@
+title: BeatSaber Guide
+description: BeatSaber节奏光剑的新手指南、详细教程与问题解答合集，支持PC平台(Steam、Oculus)与Quest平台
+url: "https://bs.wgzeyu.com"
+baseurl: ""
+
+# Markdown 配置
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# 集合配置（教程页面）
+collections_dir: _guides
+collections:
+  pc-guide:
+    output: true
+  oq-guide:
+    output: true
+  oq-guide-qp:
+    output: true
+  oq-guide-bmbf:
+    output: true
+  pc-faq:
+    output: true
+  buy:
+    output: true
+  drive:
+    output: true
+  songs:
+    output: true
+
+# 默认值配置
+defaults:
+  # guide.md 文件使用 guide 布局（教程内容页）
+  - scope:
+      path: "**/guide.md"
+    values:
+      layout: "guide"
+  # index.md 文件使用 guide-frame 布局（iframe框架页）
+  - scope:
+      path: "**/index.md"
+    values:
+      layout: "guide-frame"
+
+# 排除文件
+exclude:
+  - README.md
+  - LICENSE
+  - 协议
+  - "*.old"
+  - "*.bak"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - old-archive
+
+# 插件（GitHub Pages支持）
+plugins:
+  - jekyll-seo-tag

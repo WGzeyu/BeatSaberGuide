@@ -1,0 +1,5 @@
+{%- if include.url -%}
+<a href="{{ include.url }}"{% if include.target %} target="{{ include.target }}"{% endif %} class="rainbow2"><b>{{ include.text }}</b></a>
+{%- else -%}
+<b class="rainbow2">{{ include.text }}</b>
+{%- endif -%}
